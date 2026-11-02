@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array,xcolor,longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[round]{natbib}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={Islands on Land},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Islands on Land\par}
+\vspace{0.4em}
+{\large Enclaves, Exclaves, Tripoints and Other Oddities of the World's Borders:\\a Catalogue from Wikipedia Measured Against Natural Earth\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/{{meta.doi}}}{https://doi.org/{{meta.doi}}}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+I compile the national-level border oddities listed in English Wikipedia (true enclaves, enclaved countries, exclaves, semi-enclaves and semi-exclaves, pene-exclaves, divided islands, former enclaves, condominiums and unclaimed land) and compare them with what can be computed from Natural Earth's 1:10m map of the world's countries. Wikipedia lists {{wiki.true_enclaves|int}} true international enclaves, pieces of one country entirely surrounded by one other, in {{wiki.true_parcels|int}} separate pieces, owned by {{wiki.n_owner_countries|int}} countries; Germany owns the most entries ({{wiki.top_owner_n|int}}) and Belgium the most pieces ({{wiki.top_parcels|int}}, all at Baarle). Their areas run from {{wiki.smallest_entry_m2|int}} square metres (Rückschlag) to {{wiki.largest_land_km2|int}} km² (Sokh) on land, and the enclaved countries reach {{wiki.lesotho_km2|int}} km² (Lesotho). Only {{wiki.true_in_ne|int}} of the {{wiki.true_enclaves|int}} appear as separate pieces in Natural Earth. From Natural Earth's shared boundary vertices I find {{tri.n|int}} international tripoints and one quadripoint, at Kazungula, where Wikipedia's sources describe two tripoints about 100 to 150 m apart. China has the most tripoints ({{tri.leader_n|int}}); China and Russia have the most neighbours ({{nei.china|int}} each). Natural Earth and Wikipedia agree on the number of neighbours for {{nei.cmp_same|int}} of {{nei.cmp_n|int}} countries, and most disagreements are themselves oddities. Treating the Caspian as a lake, {{land.n|int}} countries are landlocked and two, Liechtenstein and Uzbekistan, are doubly landlocked. Natural Earth contains {{ne.exclave_parts|int}} detached pieces of countries that touch another country, {{ne.n_enclave|int}} of them enclaves. All borders are Natural Earth's de facto lines and Wikipedia's descriptions; neither is an endorsement of any territorial claim.
+
+\textbf{Keywords:} political geography; enclaves; exclaves; tripoints; land borders; landlocked countries; Natural Earth; Wikipedia; open data; mapping
+\end{quote}
+
+\section{Introduction}
+Most of the world's land is divided into countries whose territory is a single connected piece, or a mainland with islands. The exceptions are few but persistent, and they attract attention out of proportion to their size: a Belgian house number on one half of a front door in a Dutch town, a field in Bengal that belonged to India while surrounded by Bangladesh, surrounded by India, surrounded by Bangladesh, or an island in the Bidasoa that France and Spain govern in turn. They are the residue of medieval land deals, colonial treaties written from poor maps, railway lines, and choices made by villagers about which ruler to follow \citep{wlist,wenclave}.
+
+There is no official register of such places. The most complete public catalogue is English Wikipedia's List of enclaves and exclaves \citep{wlist}, together with articles on individual cases. Separately, Natural Earth's 1:10m countries \citep{naturalearth} are the standard free outlines used in countless maps. This paper does three things. It turns Wikipedia's national-level lists into a structured, located catalogue. It computes from Natural Earth what can be computed by machine: neighbours, border lengths, tripoints, detached pieces of countries and landlocked status. And it compares the two, which shows both how much of the world's border geography a generalised map leaves out and where the map adds oddities of its own. The paper accompanies an interactive map with a tour of {{tour_n|int}} cases (\url{{{meta.page}}}).
+
+\section{Data}
+\textbf{Wikipedia.} I use {{source.articles|int}} English Wikipedia articles saved as parsed HTML with their revision ids (listed in the references): the List of enclaves and exclaves; the articles on enclaves and exclaves, Baarle-Hertog and Baarle-Nassau, the India and Bangladesh enclaves and Dahagram-Angarpota, tripoints, the list of tripoints and quadripoints, condominiums, terra nullius, landlocked countries, the list of countries by land borders and the list of countries with one neighbour; and the articles on each place visited by the tour. The list article has tables for national and sub-national enclaves and exclaves (with area, owner, surrounding country and coordinates as a geo microformat) and bulleted lists for semi-enclaves, pene-exclaves and divided islands.
+
+\textbf{Wikidata.} A Wikidata query of items that are instances of enclave and related types returned {{source.wd_rows|int}} rows for {{source.wd_types|int}} item types, most of them ghettos, ethnic quarters and townships. {{source.wd_enclave_items|int}} items are typed as enclaves; {{source.wd_intl|int}} match an entry in Wikipedia's national-level list, and {{source.wd_layers.subnational|int}} sub-national enclaves with coordinates are kept as a separate map layer.
+
+\textbf{Natural Earth.} Natural Earth 1:10m admin-0 countries ({{ne.features|int}} features, {{ne.polygons|int}} polygons) supply the geometry, and its 1:10m populated places the capitals used to choose each country's main part. Natural Earth draws de facto lines and marks some areas, including Bir Tawil and the Siachen Glacier, as indeterminate zones.
+
+\section{Methods}
+\subsection{The catalogue}
+From Wikipedia's list I take the national-level sections only. Each table row becomes one entry: true enclaves (enclaves that are also exclaves), enclaved countries, exclaves that are not enclaves, and historic enclaves. {{wiki.maritime|int}} rows describing pockets of high seas surrounded by exclusive economic zones are set aside. Each bulleted item in the national-level lists of semi-enclaves and semi-exclaves, pene-exclaves and divided islands becomes one entry. The number of separate pieces in a table entry is read from the entry (for example, Baarle-Hertog's 22 parcels). Entries are placed by the table's coordinates; list items by coordinates written in the item, by the infobox of the article about the place, or by the representative point of the Natural Earth piece that is the place; otherwise they are kept but not mapped. Condominiums come from Wikipedia's table of current condominiums and are mapped where a source gives a position. The parcel tables for Baarle and the tables of former India and Bangladesh enclaves supply areas for the size comparison. {{source.facts_checked|int}} sentences quoted in the text are checked word for word against the saved articles by the code.
+
+\subsection{Natural Earth topology}
+Each Natural Earth feature is assigned to a country: its sovereignty group, so that Hong Kong and Macao count with China, Gibraltar and the Cyprus base areas with the United Kingdom, and Saint-Martin with France. Natural Earth's de facto units (Kosovo, Northern Cyprus, Somaliland, Taiwan and Western Sahara) are kept as they are, and Palestine, which Natural Earth groups with Israel, is kept separate. Indeterminate zones are not countries. Neighbouring polygons share their vertices exactly, so each polygon edge (consecutive vertices rounded to $10^{-7}$ degrees) records the countries on its two sides: no edge is shared by more than two polygons. An edge between two countries is land border, measured on the WGS84 ellipsoid; an edge with one country is coast, unless it faces water enclosed by land (a hole in the union of all land, of which the largest is the Caspian Sea, {{land.caspian_km2|int}} km²), in which case it is lake shore. A tripoint is a vertex on the boundary of three countries.
+
+\subsection{Detached pieces and landlocked countries}
+A country's polygons are joined into pieces wherever they share an edge; touching at a single point does not join them. The main piece is the largest piece containing the country's principal feature, unless the piece containing the capital is at least half its size (so Peninsular Malaysia rather than Malaysian Borneo, and Jutland rather than Zealand). Every other piece that shares land border with another country is classified: an enclave if it has no sea coast and one neighbour; a landlocked exclave if it has no sea coast and several; a coastal exclave if it has a sea coast and lies on a landmass of more than two million km²; and otherwise part of a shared island. A country is landlocked if it has no sea coast, and doubly landlocked if all its neighbours are landlocked as well.
+
+\section{Results}
+\subsection{The catalogue}
+The catalogue has {{wiki.catalogue_rows|int}} entries, {{wiki.mapped|int}} of them mapped (Figure~\ref{fig:map}). Wikipedia lists {{wiki.true_enclaves|int}} true enclaves at national level, {{wiki.true_land|int}} on land and {{wiki.true_water|int}} islands or water areas, in {{wiki.true_parcels|int}} pieces, owned by {{wiki.n_owner_countries|int}} countries and surrounded by {{wiki.n_within_countries|int}} (Table~\ref{tab:enclaves}, Figure~\ref{fig:owners}). It also lists {{wiki.enclaved_countries|int}} enclaved countries, {{wiki.exclaves|int}} exclaves that are not enclaves, {{wiki.semi|int}} semi-enclaves and semi-exclaves, {{wiki.pene|int}} pene-exclaves and {{wiki.divided|int}} divided islands, as well as {{wiki.subnational_rows|int}} sub-national table rows, which are counted but not mapped. {{wiki.unplaced.pene|int}} pene-exclaves, {{wiki.unplaced.divided_island|int}} divided islands and {{wiki.unplaced.semi|int}} semi-exclave could not be placed from the sources.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_map.png}
+\caption{The mapped catalogue by type, with tripoints computed from Natural Earth.}\label{fig:map}\end{figure}
+
+Germany owns the most true enclaves ({{wiki.top_owner_n|int}}): Büsingen and {{wiki.vennbahn_n|int}} pieces left west of the Vennbahn railway, whose trackbed the Treaty of Versailles gave to Belgium \citep{wvenn}. Belgium owns the most pieces, {{wiki.top_parcels|int}}, all at Baarle. The largest true enclave on land is Uzbekistan's Sokh in Kyrgyzstan ({{wiki.largest_land_km2|int}} km²) and the largest in water Argentina's Apipé islands ({{wiki.largest_island_km2|int}} km²); the smallest entry is Germany's Rückschlag, {{wiki.smallest_entry_m2|int}} m², a house and garden. Among the enclaved countries Lesotho ({{wiki.lesotho_km2|int}} km²) is the largest and the Vatican ({{wiki.vatican_km2|f2}} km²) the smallest. Figure~\ref{fig:sizes} plots every area in the sources: from Baarle's parcel H7 ({{baarle.smallest_m2|int}} m²) to Lesotho is a factor of more than ten million.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_owners.png}
+\caption{True international enclaves by owner, from Wikipedia's national-level table; labels give the number of separate pieces where it differs from the number of entries.}\label{fig:owners}\end{figure}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_sizes.png}
+\caption{Areas of enclaves and exclaves in the sources, on a log scale.}\label{fig:sizes}\end{figure}
+
+{{TABLE_ENCLAVES}}
+
+\subsection{Nested enclaves}
+Baarle's parcel tables list {{baarle.belgian|int}} Belgian exclaves in the Netherlands, from H1 ({{baarle.h1_ha|f1}} ha) to H7 ({{baarle.smallest_m2|int}} m²), and {{baarle.dutch|int}} Dutch parcels, seven of them counter-enclaves inside Belgian exclaves (Figure~\ref{fig:baarle}) \citep{wbh,wbn}. The tables have the boundary running through about {{baarle.houses_split|int}} homes; in H7 it divides a front door, which has a Belgian and a Dutch house number. Along the India and Bangladesh border there were {{chhits.indian|int}} Indian enclaves in Bangladesh, containing {{chhits.counter_bd|int}} Bangladeshi counter-enclaves, and {{chhits.bangladeshi|int}} Bangladeshi enclaves in India, containing {{chhits.counter_in|int}} Indian counter-enclaves, one of which contained the only third-order enclave, Dahala Khagrabari ({{chhits.dk_m2|int}} m²) \citep{wib}. A joint census in 2010 counted {{chhits.people_2010|int}} residents. The enclaves were exchanged at midnight on {{chhits.swap_date|raw}}: Bangladesh received {{chhits.to_bangladesh|int}} and India {{chhits.to_india|int}}; Dahagram-Angarpota alone remains, linked to Bangladesh by the Tin Bigha Corridor \citep{wdahagram}. The only nested pair now at national level is Madha, a piece of Oman in the United Arab Emirates, and Nahwa, a piece of Sharjah inside Madha \citep{wmadha,wnahwa}.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_baarle.png}
+\caption{Baarle's 30 parcels by area (log scale), from Wikipedia's parcel tables.}\label{fig:baarle}\end{figure}
+
+\subsection{Tripoints and the quadripoint}
+Natural Earth yields {{tri.n|int}} tripoints between three countries, one point where four meet, and {{tri.zone|int}} more points where two countries meet an indeterminate zone. Wikipedia's tripoint article gave {{tri.wiki_article|int}} international tripoints in 2020 and its list has {{tri.wiki_list|int}} rows, including de facto states that Natural Earth does not separate \citep{wtri,wtrilist}. China has the most ({{tri.leader_n|int}}; Wikipedia's list, {{tri.wiki_china|int}}), then Russia ({{tri.second_n|int}}; {{tri.wiki_russia|int}}). {{tri.zero_countries|int}} countries with land neighbours have no tripoint. Natural Earth's single quadripoint is at Kazungula, between Botswana, Namibia, Zambia and Zimbabwe; Wikipedia reports that all four states agreed in the late 2000s that Botswana and Zambia share a border of about 150 m, so there are two tripoints about 100 to 150 m apart \citep{wquad}. At 1:10m the gap is not drawn.
+
+\subsection{Neighbours, borders and landlocked countries}
+China and Russia each have {{nei.china|int}} neighbours, France {{nei.france|int}} (through French Guiana and Saint-Martin) and Brazil {{nei.brazil|int}} (Figure~\ref{fig:nei}). Natural Earth and Wikipedia's land border table \citep{wland} agree on the number of neighbours for {{nei.cmp_same|int}} of the {{nei.cmp_n|int}} countries found in both. The {{nei.cmp_diff_n|int}} differences arise from borders too short to draw (Botswana and Zambia; Bahrain and Saudi Arabia on the King Fahd Causeway), from Hans Island, split between Canada and Denmark in 2022 \citep{whans}, from Natural Earth's de facto lines (Kashmir, Somaliland) and from counting dependencies with their sovereign. {{nei.n_one|int}} countries have one neighbour in Natural Earth. The longest border between two countries is Canada and the United States ({{borders.cus_km|int}} km), then Kazakhstan and Russia ({{borders.kzru_km|int}} km). Russia's land borders total {{borders.russia_km|int}} km and China's {{borders.china_km|int}} km in Natural Earth, against {{borders.wiki_russia_km|int}} km and {{borders.wiki_china_km|int}} km in Wikipedia's table: generalisation shortens lines, and shrinks the border of Italy and the Vatican to {{borders.vatican_m|int}} m.
+
+With the Caspian as a lake, {{land.n|int}} countries are landlocked, exactly Wikipedia's {{facts.landlocked_wiki|int}} sovereign landlocked countries plus Kosovo \citep{wlandlocked}. Liechtenstein (between Austria and Switzerland) and Uzbekistan (between Afghanistan, Kazakhstan, Kyrgyzstan, Tajikistan and Turkmenistan) are doubly landlocked (Figure~\ref{fig:landlocked}); Uzbekistan's status depends on treating the Caspian as a lake.
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_neighbours.png}
+\caption{Neighbours and tripoints per country in Natural Earth (bars) and Wikipedia (ticks).}\label{fig:nei}\end{figure}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_landlocked.png}
+\caption{Landlocked and doubly landlocked countries, and countries with one neighbour, in Natural Earth.}\label{fig:landlocked}\end{figure}
+
+\subsection{What Natural Earth contains}
+Natural Earth contains {{ne.exclave_parts|int}} detached pieces that touch another country: {{ne.n_enclave|int}} enclaves, {{ne.n_landlocked|int}} landlocked exclave (Nakhchivan), {{ne.n_coastal|int}} coastal exclaves and {{ne.n_island|int}} pieces of shared islands (Table~\ref{tab:ne}). The United Kingdom has the most ({{ne.most_n|int}}). The largest is Alaska ({{ne.largest_km2|int}} km²) and the smallest a lagoon of Nicaragua's on the Costa Rican coast ({{ne.smallest_km2|f2}} km²). Two are artefacts of drawing rather than oddities of sovereignty: Canada south and east of the St Lawrence, separated because the river is drawn as water, and Crimea, which Natural Earth's de facto line shows with Russia. Of Wikipedia's {{wiki.true_enclaves|int}} true enclaves, {{wiki.true_in_ne|int}} are drawn as separate pieces; Baarle, Büsingen, Campione and Jungholz are absent. Figure~\ref{fig:insets} shows the tour's {{tour_n|int}} places as Natural Earth draws them.
+
+{{TABLE_NE}}
+
+\begin{figure}[tbp]\centering\includegraphics[width=\textwidth]{f_insets.png}
+\caption{The {{tour_n|int}} places on the tour, drawn from Natural Earth 1:10m. Shaded: the owner's land.}\label{fig:insets}\end{figure}
+
+\subsection{Shared and unclaimed land}
+Wikipedia's table lists {{wiki.condominiums|int}} current condominiums \citep{wcondo}. The smallest and oldest is Pheasant Island ({{facts.pheasant_m2|int}} m²), shared by France and Spain since the Treaty of the Pyrenees of 1659 and administered by each in turn for six months \citep{wpheasant}. Bir Tawil ({{facts.bir_tawil_km2|int}} km²) is claimed by neither Egypt nor Sudan, because each claims the boundary that gives it the larger Halaib Triangle \citep{wbir}; on the Danube, four pockets including Gornja Siga are claimed by neither Croatia nor Serbia \citep{wnullius}. Märket, a {{facts.marked_ha|f1}} ha skerry, has been divided between Sweden and Finland since 1809, and its border was redrawn in 1985 to put its lighthouse in Finland with no net transfer of territory \citep{wmarket}.
+
+\section{Limitations}
+Wikipedia's list is a crowd-sourced catalogue; its categories overlap, some entries are disputed, occupied or de facto, and its areas are often rounded. I follow its wording and categories and do not adjudicate. Bulleted items vary in scope (one item can describe several places), so their counts are counts of list items. Natural Earth is generalised: a millimetre at 1:10m is 10 km on the ground, so small enclaves and short borders are lost, areas and lengths differ from official figures, and its lines are de facto. Detached pieces depend on how rivers and estuaries are drawn. The choice of each country's main piece is a rule, not a fact. Neither the sources nor this paper endorse any territorial claim.
+
+\section{Conclusion}
+A machine reading of the world map recovers the large and famous oddities, Kaliningrad, Nakhchivan, Cabinda, Musandam and Madha, the tripoints and the countries with the most neighbours, and it agrees with Wikipedia's counts of neighbours for nearly every country. But most true enclaves are too small for it, and where it disagrees with the written record the disagreement is usually an oddity in itself: a 150 m border, an island split in 2022, or a quadripoint that is really two tripoints. The strangest borders are best found by reading as well as by measuring.
+
+\section*{Data and code availability}
+The interactive map is at \url{{{meta.page}}}. Data and code are at \url{{{meta.repo}}} and archived with this paper at \url{https://doi.org/{{meta.doi}}}. Text, figures and derived data are released under CC BY 4.0, tables derived from Wikipedia under CC BY-SA 4.0, and code under the MIT licence. Natural Earth is public domain; Wikidata is CC0.
+
+\section*{AI statement}
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+{{TABLE_BIB}}
+\end{document}

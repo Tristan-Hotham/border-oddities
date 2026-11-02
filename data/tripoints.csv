@@ -1,0 +1,183 @@
+lat,lon,countries,n_units,involves_zone
+-17.506588,-69.510089,Bolivia; Chile; Peru,3,0
+-22.822223,-67.193904,Argentina; Bolivia; Chile,3,0
+-49.272754,-73.098247,Argentina; Chile; Southern Patagonian Ice Field,3,1
+-49.759959,-73.465098,Argentina; Chile; Southern Patagonian Ice Field,3,1
+-10.952302,-69.577635,Bolivia; Brazil; Peru,3,0
+-20.165125,-58.158797,Bolivia; Brazil; Paraguay,3,0
+-22.234456,-62.650357,Argentina; Bolivia; Paraguay,3,0
+-0.107021,-75.283488,Colombia; Ecuador; Peru,3,0
+-4.236484,-69.96495,Brazil; Colombia; Peru,3,0
+-25.574945,-54.600203,Argentina; Brazil; Paraguay,3,0
+-30.182963,-57.611698,Argentina; Brazil; Brazilian Island,3,1
+-30.193092,-57.642466,Argentina; Uruguay; Brazilian Island,3,1
+34.987943,33.702935,Cyprus; United Kingdom; Cyprus UN buffer zone,3,1
+35.033899,33.679435,Northern Cyprus; United Kingdom; Cyprus UN buffer zone,3,1
+35.069105,33.906505,Northern Cyprus; United Kingdom; Cyprus UN buffer zone,3,1
+35.061272,33.898116,Cyprus; United Kingdom; Cyprus UN buffer zone,3,1
+35.495406,77.800346,China; India; Siachen Glacier,3,1
+30.196969,80.996017,China; India; Nepal,3,0
+27.860885,88.118218,China; India; Nepal,3,0
+27.315543,88.892331,Bhutan; China; India,3,0
+27.852694,91.628339,Bhutan; China; India,3,0
+28.217478,97.323496,China; India; Myanmar,3,0
+21.977574,92.575879,Bangladesh; India; Myanmar,3,0
+35.110442,77.048971,India; Pakistan; Siachen Glacier,3,1
+35.646112,76.777351,China; Pakistan; Siachen Glacier,3,1
+37.021669,74.542354,Afghanistan; China; Pakistan,3,0
+37.231114,74.892307,Afghanistan; China; Tajikistan,3,0
+39.448343,73.632642,China; Kyrgyzstan; Tajikistan,3,0
+42.189519,80.210328,China; Kazakhstan; Kyrgyzstan,3,0
+49.085274,87.323796,China; Kazakhstan; Russia,3,0
+49.165837,87.816324,China; Mongolia; Russia,3,0
+49.823265,116.684278,China; Mongolia; Russia,3,0
+42.53048,130.530771,China; North Korea; Russia,3,0
+22.397549,102.118655,China; Laos; Vietnam,3,0
+21.552691,101.159024,China; Laos; Myanmar,3,0
+31.211449,34.248351,Egypt; Israel; Palestine,3,0
+33.406722,35.8211,Israel; Lebanon; Syria,3,0
+32.744347,35.75759,Israel; Jordan; Syria,3,0
+32.384717,35.560961,Israel; Jordan; Palestine,3,0
+31.491929,35.458125,Israel; Jordan; Palestine,3,0
+9.454592,34.070698,Ethiopia; Sudan; South Sudan,3,0
+14.263523,36.52638,Eritrea; Ethiopia; Sudan,3,0
+12.465907,42.379459,Djibouti; Eritrea; Ethiopia,3,0
+10.998787,42.923715,Djibouti; Ethiopia; Somaliland,3,0
+7.996567,47.979169,Ethiopia; Somaliland; Somalia,3,0
+3.977226,41.885019,Ethiopia; Kenya; Somalia,3,0
+4.619332,35.920835,Ethiopia; Kenya; South Sudan,3,0
+4.219692,33.977078,Kenya; South Sudan; Uganda,3,0
+3.490202,30.839543,DR Congo; South Sudan; Uganda,3,0
+5.070725,27.441301,Central African Republic; DR Congo; South Sudan,3,0
+8.689327,24.170328,Central African Republic; Sudan; South Sudan,3,0
+-1.002573,33.904214,Kenya; Tanzania; Uganda,3,0
+-11.573556,34.964615,Mozambique; Malawi; Tanzania,3,0
+-14.013872,33.202707,Mozambique; Malawi; Zambia,3,0
+-9.4079,32.920863,Malawi; Tanzania; Zambia,3,0
+-8.194124,30.752107,DR Congo; Tanzania; Zambia,3,0
+-4.449805,29.404179,Burundi; DR Congo; Tanzania,3,0
+-2.400628,30.5546,Burundi; Rwanda; Tanzania,3,0
+-1.066837,30.471786,Rwanda; Tanzania; Uganda,3,0
+37.109984,42.357238,Iraq; Syria; Turkey,3,0
+33.371685,38.774511,Iraq; Jordan; Syria,3,0
+2.326267,-54.615292,Brazil; France; Suriname,3,0
+49.537753,5.790685,Belgium; France; Luxembourg,3,0
+49.455349,6.345307,Germany; France; Luxembourg,3,0
+47.584619,7.586028,Switzerland; Germany; France,3,0
+45.92526,7.022083,Switzerland; France; Italy,3,0
+42.502781,1.707006,Andorra; Spain; France,3,0
+42.595386,1.429297,Andorra; Spain; France,3,0
+1.941614,-56.481819,Brazil; Guyana; Suriname,3,0
+5.202138,-60.739854,Brazil; Guyana; Venezuela,3,0
+27.661439,-8.682385,Algeria; Morocco; Western Sahara,3,0
+27.285416,-8.682385,Algeria; Mauritania; Western Sahara,3,0
+3.476869,18.626387,Central African Republic; DR Congo; Republic of the Congo,3,0
+-4.635323,13.073703,Angola; DR Congo; Republic of the Congo,3,0
+2.161058,13.294568,Cameroon; Republic of the Congo; Gabon,3,0
+2.236454,16.196665,Central African Republic; Cameroon; Republic of the Congo,3,0
+-1.38839,29.577915,DR Congo; Rwanda; Uganda,3,0
+-2.720711,29.015365,Burundi; DR Congo; Rwanda,3,0
+-10.872307,23.967457,Angola; DR Congo; Zambia,3,0
+52.100568,31.764345,Belarus; Russia; Ukraine,3,0
+45.461774,28.199498,Moldova; Romania; Ukraine,3,0
+48.258968,26.617889,Moldova; Romania; Ukraine,3,0
+47.946739,22.877601,Hungary; Romania; Ukraine,3,0
+48.404798,22.13284,Hungary; Slovakia; Ukraine,3,0
+49.0722,22.539637,Poland; Slovakia; Ukraine,3,0
+51.517399,23.606238,Belarus; Poland; Ukraine,3,0
+53.939293,23.485625,Belarus; Lithuania; Poland,3,0
+55.666991,26.594531,Belarus; Lithuania; Latvia,3,0
+56.142414,28.148907,Belarus; Latvia; Russia,3,0
+-17.641144,23.381652,Angola; Namibia; Zambia,3,0
+-17.794107,25.259781,Botswana; Namibia; Zambia; Zimbabwe,4,0
+-24.752493,19.981447,Botswana; Namibia; South Africa,3,0
+-22.186707,29.350074,Botswana; South Africa; Zimbabwe,3,0
+-22.39734,31.288922,Mozambique; South Africa; Zimbabwe,3,0
+-25.958104,31.949243,Mozambique; Eswatini; South Africa,3,0
+-26.840014,32.113884,Mozambique; Eswatini; South Africa,3,0
+18.995638,51.978615,Oman; Saudi Arabia; Yemen,3,0
+22.703577,55.186843,United Arab Emirates; Oman; Saudi Arabia,3,0
+40.238372,70.958955,Kyrgyzstan; Tajikistan; Uzbekistan,3,0
+37.188868,67.780544,Afghanistan; Tajikistan; Uzbekistan,3,0
+37.36418,66.519588,Afghanistan; Turkmenistan; Uzbekistan,3,0
+41.321717,55.978422,Kazakhstan; Turkmenistan; Uzbekistan,3,0
+42.248146,70.947793,Kazakhstan; Kyrgyzstan; Uzbekistan,3,0
+54.35627,22.76722,Lithuania; Poland; Russia,3,0
+-30.190517,-57.602793,Brazil; Uruguay; Brazilian Island,3,1
+1.22251,-66.875061,Brazil; Colombia; Venezuela,3,0
+41.890442,46.430892,Azerbaijan; Georgia; Russia,3,0
+57.527601,27.352935,Estonia; Latvia; Russia,3,0
+69.027261,28.954077,Finland; Norway; Russia,3,0
+50.858447,14.810393,Czechia; Germany; Poland,3,0
+49.510261,18.833196,Czechia; Poland; Slovakia,3,0
+48.604166,16.945043,Austria; Czechia; Slovakia,3,0
+48.76643,13.815725,Austria; Czechia; Germany,3,0
+47.534547,9.547482,Austria; Switzerland; Germany,3,0
+50.120456,6.117487,Belgium; Germany; Luxembourg,3,0
+50.749927,5.99491,Belgium; Germany; Netherlands,3,0
+69.036356,20.623165,Finland; Norway; Sweden,3,0
+14.704582,107.520393,Cambodia; Laos; Vietnam,3,0
+14.34574,105.184308,Cambodia; Laos; Thailand,3,0
+41.290452,45.0024,Armenia; Azerbaijan; Georgia,3,0
+41.106588,43.440428,Armenia; Georgia; Turkey,3,0
+41.873182,20.567147,Albania; Kosovo; North Macedonia,3,0
+42.246289,21.564066,Kosovo; North Macedonia; Serbia,3,0
+42.313439,22.345023,Bulgaria; North Macedonia; Serbia,3,0
+41.335773,22.916978,Bulgaria; Greece; North Macedonia,3,0
+40.849394,20.965262,Albania; Greece; North Macedonia,3,0
+42.546758,20.064956,Albania; Kosovo; Montenegro,3,0
+38.882176,46.514039,Armenia; Azerbaijan; Iran,3,0
+38.863701,46.135871,Armenia; Azerbaijan; Iran,3,0
+39.639902,44.806993,Azerbaijan; Iran; Turkey,3,0
+39.702797,44.774559,Armenia; Azerbaijan; Turkey,3,0
+42.827439,20.345352,Kosovo; Montenegro; Serbia,3,0
+37.14192,44.766135,Iran; Iraq; Turkey,3,0
+41.713036,26.333359,Bulgaria; Greece; Turkey,3,0
+20.317805,100.099295,Laos; Myanmar; Thailand,3,0
+21.995351,24.981245,Egypt; Libya; Sudan,3,0
+19.496124,23.981306,Libya; Sudan; Chad,3,0
+22.995664,14.979909,Libya; Niger; Chad,3,0
+23.517351,11.968861,Algeria; Libya; Niger,3,0
+30.228905,9.519708,Algeria; Libya; Tunisia,3,0
+44.228435,22.69164,Bulgaria; Romania; Serbia,3,0
+46.108091,20.242826,Hungary; Romania; Serbia,3,0
+45.931203,18.901306,Croatia; Hungary; Serbia,3,0
+46.501711,16.515302,Croatia; Hungary; Slovenia,3,0
+46.862774,16.094035,Austria; Hungary; Slovenia,3,0
+48.005443,17.148338,Austria; Hungary; Slovakia,3,0
+-15.635995,30.396263,Mozambique; Zambia; Zimbabwe,3,0
+8.484625,-10.282236,Guinea; Liberia; Sierra Leone,3,0
+12.673388,-13.728279,Guinea; Guinea-Bissau; Senegal,3,0
+12.403895,-11.388422,Guinea; Mali; Senegal,3,0
+10.161991,-7.989663,Ivory Coast; Guinea; Mali,3,0
+7.557989,-8.485446,Ivory Coast; Guinea; Liberia,3,0
+10.919154,22.861064,Central African Republic; Sudan; Chad,3,0
+7.523263,15.481049,Central African Republic; Cameroon; Chad,3,0
+21.995409,33.181136,Egypt; Sudan; Bir Tawil,3,1
+21.995454,34.084179,Egypt; Sudan; Bir Tawil,3,1
+46.519746,13.700951,Austria; Italy; Slovenia,3,0
+46.864427,10.453811,Austria; Switzerland; Italy,3,0
+47.05687,9.581203,Austria; Switzerland; Liechtenstein,3,0
+47.262801,9.521155,Austria; Switzerland; Liechtenstein,3,0
+29.095745,46.532436,Iraq; Kuwait; Saudi Arabia,3,0
+32.118144,39.146375,Iraq; Jordan; Saudi Arabia,3,0
+35.618499,61.269676,Afghanistan; Iran; Turkmenistan,3,0
+29.858179,60.844379,Afghanistan; Iran; Pakistan,3,0
+10.425489,-5.522578,Burkina Faso; Ivory Coast; Mali,3,0
+9.488724,-2.689211,Burkina Faso; Ivory Coast; Ghana,3,0
+43.532796,19.195345,Bosnia and Herzegovina; Montenegro; Serbia,3,0
+44.865635,19.015821,Bosnia and Herzegovina; Croatia; Serbia,3,0
+14.774939,-12.26413,Mali; Mauritania; Senegal,3,0
+24.995065,-4.821613,Algeria; Mali; Mauritania,3,0
+19.142244,4.22861,Algeria; Mali; Niger,3,0
+14.910977,0.218467,Burkina Faso; Mali; Niger,3,0
+11.695773,3.5964,Benin; Niger; Nigeria,3,0
+13.7041,13.607314,Niger; Nigeria; Chad,3,0
+13.077988,14.064908,Cameroon; Nigeria; Chad,3,0
+10.992741,0.901474,Benin; Burkina Faso; Togo,3,0
+11.896536,2.390169,Benin; Burkina Faso; Niger,3,0
+42.559212,18.437355,Bosnia and Herzegovina; Croatia; Montenegro,3,0
+14.415478,-89.361621,Guatemala; Honduras; El Salvador,3,0
+17.814314,-89.160496,Belize; Guatemala; Mexico,3,0
+2.16576,11.322078,Cameroon; Gabon; Equatorial Guinea,3,0
+11.13498,-0.166109,Burkina Faso; Ghana; Togo,3,0

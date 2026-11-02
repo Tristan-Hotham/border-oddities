@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Strange Borders</title>
+<meta name="description" content="A map of the world's strangest borders: {{wiki.true_enclaves|int}} true international enclaves in {{wiki.true_parcels|int}} pieces, Baarle's patchwork, the old India and Bangladesh enclaves, {{tri.n|int}} tripoints, a quadripoint that is not, condominiums, unclaimed land and the countries with the most neighbours.">
+<meta property="og:title" content="The world's strangest borders: every enclave, exclave and tripoint">
+<meta property="og:description" content="Pieces of countries inside other countries, a village inside an enclave inside a country, {{tri.n|int}} places where three countries meet and an island that changes hands every six months.">
+<meta property="og:image" content="https://maps.tristanhotham.com/border-oddities/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/border-oddities/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>
+/* Atlas paper: pale paper, survey red for enclaves, chart blue for exclaves, a teal sea edge. */
+:root{
+  --bg:#F6F4EF; --panel:#EAE7DF; --fg:#1D2128; --muted:#636A72; --rule:#DDD8CC; --card:#FFFEFA; --border:#CBC5B8;
+  --hot:#C8322B; --cool:#2F5FA7; --gold:#E0A11B; --ink:#1F2F4D; --land:#E6E2D8; --land2:#D9D3C6; --sea:#EEF1F2; --line:#9C9384; --zone:#B9B2A4;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151B; --panel:#1C2029; --fg:#ECEEF1; --muted:#A2A8B0; --rule:#30353F; --card:#171B22; --border:#444B57;
+  --hot:#FF6A5C; --cool:#7DA7E6; --gold:#F2B54E; --ink:#A9BBDD; --land:#262B34; --land2:#313742; --sea:#161A20; --line:#6E7480; --zone:#4A505B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151B; --panel:#1C2029; --fg:#ECEEF1; --muted:#A2A8B0; --rule:#30353F; --card:#171B22; --border:#444B57;
+  --hot:#FF6A5C; --cool:#7DA7E6; --gold:#F2B54E; --ink:#A9BBDD; --land:#262B34; --land2:#313742; --sea:#161A20; --line:#6E7480; --zone:#4A505B; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:700px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1180px,calc(100vw - 32px));margin-left:calc((100% - min(1180px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--ink);color:#fff;padding:5px 8px;font-weight:500}
+:root[data-theme="dark"] .kicker b{color:#12151B}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(42px,10vw,88px)/.92 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .a{color:var(--hot)}
+.mark{width:clamp(78px,16vw,128px);height:auto;display:block;color:var(--fg)}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:56ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:54px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hot);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(22px,4.4vw,32px)/1 var(--display);letter-spacing:-.01em}
+.stats b.h{color:var(--hot)} .stats b.c{color:var(--cool)} .stats b.g{color:var(--gold)} .stats b.p{color:var(--ink)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:300px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;align-items:center;margin:0 0 10px;flex-wrap:wrap}
+.scrollrow{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:2px;max-width:100%}
+.scrollrow .btn{flex:0 0 auto;white-space:nowrap}
+.ctl-l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px;flex:0 0 auto;align-self:center}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn[aria-pressed="false"].kind{opacity:.55}
+.btn i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:1px solid rgba(0,0,0,.2)}
+.btn small{margin-left:6px;opacity:.75}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+#mapbox > .controls{padding-right:46px}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}}
+#mapbox{position:relative;background:var(--bg)}
+.lmap{height:640px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:600px){.lmap{height:min(62vh,470px)}}
+#mapbox:fullscreen,#mapbox.mfs-fake{padding:10px 12px;overflow:auto;background:var(--bg)}
+#mapbox:fullscreen .lmap,#mapbox.mfs-fake .lmap{height:calc(100vh - 80px);height:calc(100dvh - 80px)}
+#mapbox:fullscreen .side,#mapbox.mfs-fake .side{max-height:calc(100dvh - 80px)}
+@media (max-width:900px){#mapbox:fullscreen .side,#mapbox.mfs-fake .side{display:none}#mapbox:fullscreen .lmap,#mapbox.mfs-fake .lmap{height:calc(100dvh - 120px)}}
+.side{background:var(--card);border:1px solid var(--border);padding:12px 12px 10px;font:400 13px/1.45 var(--mono);max-height:640px;overflow:auto}
+@media (max-width:900px){.side{max-height:none}}
+.side h4{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.side h4:first-child{margin-top:2px}
+.side .big{font:800 24px/1.1 var(--display);margin:2px 0 4px}
+.side .sub{color:var(--muted);font-size:12px;margin:0 0 8px}
+.side .story{font:400 15px/1.5 var(--body);margin:6px 0 10px}
+.side ol{margin:4px 0 8px;padding-left:24px}
+.side li{margin:3px 0}
+.side li.on{font-weight:500;color:var(--hot)}
+.side .nav{display:flex;gap:6px;margin:8px 0 4px}
+.side .nav .btn{flex:1}
+.inset{display:block;width:100%;height:auto;border:1px solid var(--rule);background:var(--sea);margin:4px 0 2px}
+.inset path{stroke:var(--card);stroke-width:.7;fill:var(--land)}
+.inset path.own{fill:var(--hot);fill-opacity:.55}
+.inset path.zn{fill:var(--zone)}
+.inset circle{fill:var(--fg);stroke:var(--card);stroke-width:1.5}
+.inset text{font:500 10.5px var(--mono);paint-order:stroke;stroke:var(--sea);stroke-width:3px;stroke-linejoin:round}
+.go{cursor:pointer;text-decoration:underline;text-decoration-color:var(--border);text-underline-offset:3px}
+.maplibregl-map{font:400 12px/1.4 var(--mono)}
+.maplibregl-popup-content{background:var(--card);color:var(--fg);font:400 12.5px/1.45 var(--mono);padding:10px 12px;border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.2);max-width:300px}
+.maplibregl-popup-content b.t{font:700 15px/1.2 var(--display);display:block;margin-bottom:2px}
+.maplibregl-popup-content small{color:var(--muted)}
+.maplibregl-popup-tip{border-top-color:var(--card)!important;border-bottom-color:var(--card)!important}
+.maplibregl-popup-close-button{color:var(--fg);font-size:18px;padding:0 6px}
+.maplibregl-ctrl-attrib{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.maplibregl-ctrl-attrib a{color:var(--fg)}
+.maplibregl-ctrl-group{background:var(--card)}
+:root[data-theme="dark"] .maplibregl-ctrl-icon{filter:invert(1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .maplibregl-ctrl-icon{filter:invert(1)}}
+.lyrWrap{position:absolute;top:10px;left:10px;z-index:3}
+.lyrBtn{background:var(--card,var(--bg));color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card,var(--bg));color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:260px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono);max-height:min(70vh,520px);overflow:auto}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel .sub{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px;margin-top:3px}
+.lyrPanel .sub span{flex:0 0 58px}
+.lyrPanel .hd{font:500 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:10px 0 7px;border-top:1px solid var(--rule);padding-top:9px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:500 13px var(--mono);color:var(--muted);pointer-events:none;z-index:1;text-align:center;padding:20px}
+.mapnote{position:absolute;left:10px;bottom:10px;z-index:2;background:color-mix(in srgb,var(--card) 92%,transparent);border:1px solid var(--border);border-radius:3px;padding:6px 9px;font:400 12px/1.35 var(--mono);max-width:min(300px,62%);box-shadow:0 1px 4px rgba(0,0,0,.12);pointer-events:none}
+.mapnote:empty{display:none}
+.stopL{font:600 12px/1.15 var(--mono);color:var(--fg);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 3px var(--bg);pointer-events:none;padding:0 10px}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px;align-items:center}
+.legend span{display:inline-flex;align-items:center}
+.legend i{display:inline-block;width:13px;height:13px;margin-right:6px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}
+.legend i.sq{border-radius:2px}
+.legend i.tri{width:0;height:0;border-radius:0;border:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid var(--fg)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.tbl{width:100%;border-collapse:collapse;font:400 13px/1.4 var(--mono)}
+table.tbl th{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:6px 6px 6px 0;border-bottom:2px solid var(--fg);position:sticky;top:0;background:var(--card)}
+table.tbl td{padding:6px 6px 6px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+table.tbl td.r,table.tbl th.r{text-align:right;white-space:nowrap}
+table.tbl tr[data-i]{cursor:pointer}
+table.tbl tr[data-i]:hover td{background:var(--panel)}
+.tablebox{max-height:460px;overflow:auto;border:1px solid var(--border);background:var(--card);padding:0 10px}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--hot);border-color:var(--hot);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Borders</span><span>World, 2026</span></div>
+<header class="hero">
+  <h1>The world's <span class="a">strangest</span> borders</h1>
+  <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Pieces of countries marooned inside other countries, a village inside an enclave inside a country, borders that meet in threes and almost in fours, an island that changes hands every six months and a patch of desert nobody wants. Every one I could find in Wikipedia's lists, measured against Natural Earth's map of the world.</p>
+</header>
+<div class="byline">Dr Tristan Hotham · Independent researcher · 2026 · Data: Wikipedia (CC BY-SA 4.0), Wikidata (CC0), Natural Earth (public domain)</div>
+
+<div class="stats">
+  <div><b class="h">{{wiki.true_enclaves|int}}</b><span>true international enclaves in Wikipedia's list, in {{wiki.true_parcels|int}} separate pieces</span></div>
+  <div><b class="p">{{tri.n|int}}</b><span>places where three countries meet on Natural Earth's map; China has the most, {{tri.leader_n|int}}</span></div>
+  <div><b class="c">{{nei.china|int}}</b><span>neighbours each for China and Russia, more than any other country</span></div>
+  <div><b class="g">{{land.n_doubly|int}}</b><span>doubly landlocked countries, Liechtenstein and Uzbekistan</span></div>
+</div>
+
+<p class="lede">An enclave is a piece of one country surrounded on every side by another. There are more of them than you might think, and they are stranger than you might expect. In the Dutch town of Baarle, {{baarle.belgian|int}} fragments of Belgium are scattered through the streets, and {{baarle.dutch|int}} fragments of the Netherlands sit inside those or inside Belgium proper. Until 2015 there was a patch of India, inside a patch of Bangladesh, inside a patch of India, inside Bangladesh. And on a river between France and Spain there is an island that is French for half the year and Spanish for the other half.</p>
+<p>This page maps them all: every national-level enclave, exclave, semi-enclave, pene-exclave, divided island, condominium and piece of unclaimed land in Wikipedia's lists, {{wiki.mapped|int}} places in all, with every tripoint I could compute from Natural Earth's map of the world's borders. Take the tour of {{tour_n|int}} of the strangest, or explore on your own. Further down: who owns the most enclaves, how small they get, where three countries meet, and which countries have the most neighbours.</p>
+
+<h2><span class="n">01 · The map</span>{{wiki.mapped|int}} oddities and {{tri.n|int}} tripoints</h2>
+<div class="bleed" id="atlas">
+<div id="mapbox" data-fullscreen-map>
+<div class="controls"><div class="scrollrow" id="kindRow"><span class="ctl-l">Show</span></div></div>
+<div class="mapgrid">
+  <div><div style="position:relative"><div id="map" class="lmap" role="application" aria-label="World map of enclaves, exclaves, tripoints and other border oddities"></div><div class="loading" id="loading">Loading the map...</div><div class="mapnote" id="mapnote"></div></div>
+    <div class="legend" id="legend"></div></div>
+  <div class="side" id="side" aria-live="polite"></div>
+</div>
+</div>
+<p class="src">Circles: places in Wikipedia's national-level lists of enclaves and exclaves, coloured by type, at the coordinates the list or the place's own article gives, or at the Natural Earth part that is the place. {{wiki.unplaced.pene|int}} pene-exclaves, {{wiki.unplaced.divided_island|int}} divided islands and {{wiki.unplaced.semi|int}} semi-exclave have no position in the sources and are not drawn. Triangles: tripoints computed from Natural Earth 1:10m boundaries. Shaded shapes (Map layers): the {{ne.exclave_parts|int}} detached parts of countries that touch another country in Natural Earth. Borders are Natural Earth's de facto lines, which are not an endorsement of any claim. Map labels: OpenFreeMap, © OpenMapTiles, © OpenStreetMap contributors. Hillshade: Esri.</p>
+</div>
+
+<h2><span class="n">02 · Counting enclaves</span>{{wiki.true_enclaves|int}} true enclaves, owned by {{wiki.n_owner_countries|int}} countries</h2>
+<p>Wikipedia's List of enclaves and exclaves is the most complete public catalogue. At the level of whole countries it lists {{wiki.true_enclaves|int}} true enclaves: pieces of one country that are entirely surrounded by one other country. Some are single villages, some are clusters (Baarle-Hertog counts as one entry with {{baarle.belgian|int}} parcels), so together they come to {{wiki.true_parcels|int}} separate pieces. They belong to {{wiki.n_owner_countries|int}} countries and sit inside {{wiki.n_within_countries|int}}. {{wiki.true_water|int}} are islands, lagoons or reefs in someone else's waters, such as Malawi's Likoma and Chizumulu islands in the Mozambican part of Lake Malawi; the other {{wiki.true_land|int}} are on dry land.</p>
+<div class="figure"><p class="fig-h">Who owns the world's true enclaves</p><p class="fig-sub">National-level entries in Wikipedia's list of enclaves that are also exclaves, by the country that owns them. Bars: entries (dark: on land; light: islands and water). Labels: separate pieces. Hover a bar.</p><div class="chart" id="ownerChart"></div></div>
+<p>Germany owns the most entries, {{wiki.top_owner_n|int}}: Büsingen on the Rhine, and {{wiki.vennbahn_n|int}} scraps of farmland and forest cut off when the Treaty of Versailles gave Belgium the trackbed of the Vennbahn railway, which runs through German land. Belgium owns the most pieces, {{wiki.top_parcels|int}}, all of them in Baarle. Kyrgyzstan surrounds the largest on dry land: Uzbekistan's Sokh ({{wiki.largest_land_km2|int}} km²), Tajikistan's Vorukh ({{wiki.vorukh_km2|f1}} km²) and Uzbekistan's Shakhimardan. Armenia and Azerbaijan each hold enclaves inside the other, most of them controlled by the other side since the war of the early 1990s.</p>
+<p>Beyond these, the list counts {{wiki.enclaved_countries|int}} whole countries that are enclaves (Lesotho inside South Africa, and San Marino and the Vatican inside Italy), {{wiki.exclaves|int}} exclaves that are not enclaves because they touch more than one country or the sea (Azerbaijan's Nakhchivan, {{wiki.nakhchivan_km2|int}} km², is the largest), {{wiki.semi|int}} semi-enclaves and semi-exclaves with a coast (Kaliningrad, Cabinda, Alaska), {{wiki.pene|int}} pene-exclaves that you can only reach by road through another country, and {{wiki.divided|int}} divided islands. It also lists {{wiki.maritime|int}} pockets of high seas surrounded by countries' exclusive economic zones, which I leave out because they are water, and {{wiki.subnational_rows|int}} enclaves of provinces, counties and towns, which I count but do not map.</p>
+<div class="figure"><p class="fig-h">From a front garden to a kingdom</p><p class="fig-sub">Area of every enclave and exclave with an area in the sources, log scale: Baarle's parcels, the former India and Bangladesh enclaves, today's true enclaves, the three enclaved countries and the exclaves that are not enclaves. Hover a dot.</p><div class="chart" id="sizeChart"></div></div>
+<p>The range is enormous. The smallest entry in the list is Germany's Rückschlag, {{wiki.smallest_entry_m2|int}} square metres, a house and its garden on the wrong side of the Vennbahn. The smallest single parcel is Baarle's H7, {{baarle.smallest_m2|int}} square metres. At the other end, Lesotho ({{wiki.lesotho_km2|int}} km²) is more than ten million times the size of H7. Among the enclaves that are not countries, Sokh is the largest on land and Argentina's Apipé islands in the Paraná ({{wiki.largest_island_km2|int}} km²) the largest in water.</p>
+<div class="figure"><p class="fig-h">Every true international enclave</p><p class="fig-sub">The {{wiki.true_enclaves|int}} national-level entries, with Wikipedia's areas. "In NE" marks the {{wiki.true_in_ne|int}} that Natural Earth's 1:10m map draws as a separate piece. Click a row to see it on the map.</p><div class="tablebox"><table class="tbl" id="encTable"></table></div></div>
+
+<h2><span class="n">03 · Enclaves within enclaves</span>Baarle and Cooch Behar</h2>
+<p><b>Baarle.</b> The border between Baarle-Hertog in Belgium and Baarle-Nassau in the Netherlands is the result of medieval land deals between the Lords of Breda and the Dukes of Brabant, written down in the Treaty of Maastricht in 1843. Wikipedia's parcel tables list {{baarle.belgian|int}} Belgian exclaves inside the Netherlands, the largest (H1) {{baarle.h1_ha|f1}} hectares and the smallest (H7) {{baarle.smallest_m2|int}} square metres, and {{baarle.dutch|int}} Dutch parcels: seven counter-enclaves inside the Belgian ones and an eighth inside Belgium proper. The tables have the line running through about {{baarle.houses_split|int}} homes, as well as shops, sheds, a warehouse and a liquor store's loading dock. In H7 it runs through the middle of a front door, which has one Belgian and one Dutch house number. The border is marked on the streets with iron pins, and restaurants that sat across it once moved their customers to the Belgian tables when Dutch closing time came.</p>
+<p><b>Cooch Behar.</b> Along the border of India and Bangladesh there was something far stranger. Wikipedia's article counts {{chhits.indian|int}} Indian enclaves inside Bangladesh, containing {{chhits.counter_bd|int}} Bangladeshi counter-enclaves, and {{chhits.bangladeshi|int}} Bangladeshi enclaves inside India, containing {{chhits.counter_in|int}} Indian counter-enclaves. Inside one of those counter-enclaves lay Dahala Khagrabari, a piece of India of {{chhits.dk_m2|int}} square metres: India, inside Bangladesh, inside India, inside Bangladesh, the only third-order enclave in the world. Legend says the enclaves were stakes in card or chess games between two local rulers; the records point to a confused treaty of 1713. A joint census in 2010 found {{chhits.people_2010|int}} people living in them. At midnight on {{chhits.swap_date|raw}} the two countries swapped: Bangladesh received {{chhits.to_bangladesh|int}} Indian enclaves and India {{chhits.to_india|int}} Bangladeshi ones. Only Dahagram-Angarpota ({{chhits.dahagram_km2|f2}} km²) remains, joined to Bangladesh by the Tin Bigha Corridor, a strip of Indian land {{facts.tin_bigha|raw}} that Bangladesh may use.</p>
+<p class="pull">Until 2015, a farmer in Dahala Khagrabari lived in India, inside Bangladesh, inside India, inside Bangladesh.</p>
+<p><b>Madha and Nahwa.</b> The only nested pair left at country level is in the mountains of the Arabian peninsula. Madha, a piece of Oman of about {{wiki.madha_km2|int}} km², sits inside the United Arab Emirates, and inside Madha sits Nahwa, a village of about 40 buildings that belongs to the emirate of Sharjah. The villagers chose their rulers in the 1930s or 1940s, and the lines were settled in 1969. Natural Earth draws both.</p>
+
+<h2><span class="n">04 · Where three countries meet</span>{{tri.n|int}} tripoints and one quadripoint that is not</h2>
+<p>Natural Earth's countries share their border points exactly, so every place where three countries meet can be found by machine: a point on the boundary of three countries. I find {{tri.n|int}} such tripoints, one point where four meet, and {{tri.zone|int}} more where two countries meet an indeterminate zone such as the Siachen Glacier or the Cyprus buffer zone. Wikipedia's article on tripoints counted {{tri.wiki_article|int}} in 2020, and its list has {{tri.wiki_list|int}} rows, which include de facto states such as Abkhazia that Natural Earth does not separate.</p>
+<div class="figure"><p class="fig-h">The countries with the most tripoints</p><p class="fig-sub">Tripoints on each country's border in Natural Earth (bars; the quadripoint counts once), and in Wikipedia's list of tripoints (ticks). Hover a bar.</p><div class="chart" id="triChart"></div></div>
+<p>China has the most, {{tri.leader_n|int}} (Wikipedia's list has {{tri.wiki_china|int}}), then Russia with {{tri.second_n|int}} (Wikipedia: {{tri.wiki_russia|int}}). Austria, landlocked and with {{nei.austria|int}} neighbours, has {{tri.by_name.Austria|int}}, as does DR Congo. The {{tri.zero_countries|int}} countries with land neighbours but no tripoint include Portugal, Canada and the United States, whose neighbours do not touch each other.</p>
+<p>The one point in Natural Earth where four countries meet is at Kazungula on the Zambezi, where Botswana, Namibia, Zambia and Zimbabwe come together. It is a quadripoint only on the map. Wikipedia's articles say that all four states agreed in the late 2000s that Botswana and Zambia share a border of about 150 m, so there are two tripoints about 100 to 150 m apart. The Kazungula Bridge has crossed that short border since May 2021. At 1:10 million, 150 m is too short to draw. Austria's Jungholz shows the opposite case: it touches the rest of Austria at a single point, the summit of the Sorgschrofen, where two Austrian and two German municipalities meet, and every road in comes through Germany.</p>
+
+<h2><span class="n">05 · Neighbours</span>China and Russia, {{nei.china|int}} each</h2>
+<div class="figure"><p class="fig-h">The countries with the most neighbours</p><p class="fig-sub">Countries sharing a land border, in Natural Earth (bars, with total land border length), and in Wikipedia's table of land borders (ticks). Dependencies count with their sovereign. Hover a bar.</p><div class="chart" id="neiChart"></div></div>
+<p>Counting countries the way Natural Earth draws them, with dependencies such as Hong Kong or French Guiana counted with the country that holds them, China and Russia each touch {{nei.china|int}} others. France comes third with {{nei.france|int}}, thanks to French Guiana (Brazil and Suriname) and Saint-Martin (the Netherlands' Sint Maarten), then Brazil with {{nei.brazil|int}}. Of the {{nei.cmp_n|int}} countries in both sources, Natural Earth and Wikipedia agree on the number of neighbours for {{nei.cmp_same|int}}. Most of the {{nei.cmp_diff_n|int}} differences are oddities themselves. The 150 m border between Botswana and Zambia and the little island on the causeway between Bahrain and Saudi Arabia are too small for the map. Canada gained Denmark as a neighbour when they split Hans Island in 2022, which Natural Earth does not show. Natural Earth's de facto line in Kashmir takes away the border between Afghanistan and India, and its separate Somaliland gives Ethiopia an extra neighbour. And counting dependencies with their sovereign gives the United Kingdom neighbours through Gibraltar and its bases on Cyprus, and the Netherlands one through Sint Maarten.</p>
+<p>On Natural Earth's lines the longest border between two countries is Canada and the United States, {{borders.cus_km|int}} km, then Kazakhstan and Russia, {{borders.kzru_km|int}} km. Russia's land borders add up to {{borders.russia_km|int}} km and China's to {{borders.china_km|int}} km, shorter than the {{borders.wiki_russia_km|int}} km and {{borders.wiki_china_km|int}} km in Wikipedia's table, because a map at 1:10 million smooths out the wiggles. The same smoothing shrinks the Vatican's border with Italy to {{borders.vatican_m|int}} m.</p>
+<p>{{nei.n_one|int}} countries have exactly one neighbour on Natural Earth's map: {{txt.one_ne|raw}}. Three of them, Lesotho, San Marino and the Vatican, have no coast either: they are the world's enclaved countries.</p>
+<p><b>Landlocked, twice.</b> {{land.n|int}} countries in Natural Earth have no sea coast, if the Caspian Sea, which the map draws as {{land.caspian_km2|int}} km² of water enclosed by land, counts as a lake. That is Wikipedia's {{facts.landlocked_wiki|int}} plus Kosovo. Two are doubly landlocked: every neighbour is landlocked too, so reaching the sea means crossing at least two borders. Liechtenstein's neighbours are Austria and Switzerland; Uzbekistan's are Afghanistan, Kazakhstan, Kyrgyzstan, Tajikistan and Turkmenistan. Uzbekistan's status depends on the Caspian: treat it as a sea, and Kazakhstan and Turkmenistan have coasts.</p>
+
+<h2><span class="n">06 · Shared and unclaimed</span>An island with two owners, a desert with none</h2>
+<p>A condominium is territory that two or more countries rule together. Wikipedia's table lists {{wiki.condominiums|int}}, from Antarctica to stretches of rivers and lakes. The smallest and oldest is Pheasant Island in the Bidasoa between France and Spain, {{facts.pheasant_m2|int}} square metres, shared since the Treaty of the Pyrenees of 1659. France runs it from 1 August to 31 January and Spain from 1 February to 31 July. Louis XIV met his future wife there. There are no pheasants.</p>
+<div class="figure"><p class="fig-h">Condominiums</p><p class="fig-sub">Wikipedia's table of current condominiums. Click a mapped row to see it on the map.</p><div class="tablebox"><table class="tbl" id="conTable"></table></div></div>
+<p>Bir Tawil is the opposite: {{facts.bir_tawil_km2|int}} km² of desert between Egypt and Sudan that neither country claims. Two British lines disagree. The straight political boundary of 1899 follows the 22nd parallel; the irregular administrative boundary of 1902 does not. Egypt claims the first and Sudan the second, because each gives it the much larger Halaib Triangle on the Red Sea, which leaves Bir Tawil to nobody. Natural Earth draws it as an indeterminate zone, which this page does not count as a country. On the Danube, four pockets of land on the western bank, the largest Gornja Siga, are claimed by neither Croatia nor Serbia.</p>
+<p>Some islands are simply split. Märket, a {{facts.marked_ha|f1}} hectare skerry in the Baltic, has been divided between Sweden and Finland since 1809. Finland built a lighthouse on it in 1885, on the highest point, which turned out to be on the Swedish half; in 1985 the line was redrawn as an inverted S, about 480 m long, that puts the lighthouse in Finland with no net change of territory. Hans Island, a barren rock between Canada and Greenland that the two countries argued over for years in the so-called Whisky War, was split on 14 June 2022 by a {{facts.hans_m|int}} m border.</p>
+
+<h2><span class="n">07 · What the map sees</span>Natural Earth's {{ne.exclave_parts|int}} detached pieces</h2>
+<p>Natural Earth is the standard free map of the world's countries. At its most detailed scale, 1:10 million, a millimetre on the map is 10 km on the ground, so many oddities are too small for it. Of Wikipedia's {{wiki.true_enclaves|int}} true enclaves, only {{wiki.true_in_ne|int}} appear as a separate piece in Natural Earth; Baarle, Büsingen, Campione and Jungholz are not there at all. What it does contain can be found by machine. Joining each country's polygons wherever they share an edge, and setting aside its main part, I find {{ne.exclave_parts|int}} detached pieces that touch another country: {{ne.n_enclave|int}} enclaves with no coast and one neighbour, {{ne.n_landlocked|int}} landlocked exclave with several (Nakhchivan), {{ne.n_coastal|int}} exclaves with a coast on a continent, such as Kaliningrad, Cabinda and Alaska, and {{ne.n_island|int}} pieces of islands shared with another country, such as Northern Ireland, Timor and Borneo. The United Kingdom has the most, {{ne.most_n|int}}: Northern Ireland, Gibraltar and the two base areas on Cyprus.</p>
+<p>The {{ne.n_enclave|int}} enclaves Natural Earth draws are {{txt.ne_enclaves|raw}}. Its largest detached piece is Alaska ({{ne.largest_km2|int}} km²) and its smallest Nicaragua's lagoon of Los Portillos, {{ne.smallest_km2|f2}} km². Two pieces come from the way the map is drawn rather than from the world: the St Lawrence is drawn as water, so Canada south of it becomes a separate piece, and Natural Earth's de facto line puts Crimea with Russia. Like all the borders on this page, that line describes who controls what on the ground according to Natural Earth; it is not an endorsement of any claim.</p>
+
+<h2><span class="n">08 · How I did this</span>Methods and caveats</h2>
+<p><b>Wikipedia.</b> I read {{source.articles|int}} English Wikipedia articles, saved with their revision ids: the List of enclaves and exclaves and the articles on enclaves, Baarle, the India and Bangladesh enclaves, tripoints, quadripoints, condominiums, terra nullius, landlocked countries, land borders, countries with one neighbour, and each place on the tour. From the list I take the national-level tables (with their own coordinates and areas) and the national-level bulleted lists of semi-enclaves, pene-exclaves and divided islands, one entry per item. Places in the lists without coordinates are placed by the infobox of their own article, or by the Natural Earth piece that is the place, or left off the map. {{source.facts_checked|int}} sentences quoted on this page are checked word for word against the saved articles by the code.</p>
+<p><b>Natural Earth.</b> Countries are Natural Earth 1:10m admin-0 units grouped by sovereignty, so Hong Kong counts with China and Gibraltar with the United Kingdom; de facto units such as Kosovo, Northern Cyprus, Somaliland, Taiwan and Western Sahara are kept as Natural Earth has them, and Palestine is kept separate. Indeterminate zones (Bir Tawil, the Siachen Glacier, the Cyprus buffer zone, Brazilian Island, the Southern Patagonian Ice Field) are not countries. Because neighbouring countries share their vertices exactly, each polygon edge records the countries on either side: shared edges are border (measured on the WGS84 ellipsoid), unshared edges are coast, unless they face water enclosed by land, such as the Caspian, which counts as lake shore. A tripoint is a vertex on three countries' boundaries. A country's main part is its largest, unless the part with its capital is at least half that size.</p>
+<p><b>Wikidata.</b> The Wikidata query returned {{source.wd_rows|int}} rows for {{source.wd_types|int}} item types, most of them ghettos, ethnic quarters and townships. I keep the {{source.wd_enclave_items|int}} items typed as enclaves: {{source.wd_intl|int}} match an entry in Wikipedia's national-level list, and the {{source.wd_layers.subnational|int}} sub-national enclaves with coordinates (towns surrounded by other towns, from Quebec to Spain) form a separate layer, off by default.</p>
+<p><b>Caveats.</b> Wikipedia's list is a crowd-sourced catalogue and its categories overlap; some entries are disputed, de facto or occupied, and I follow the list's wording. Areas are the list's, often rounded. Natural Earth is a generalised map: its areas and lengths differ from official figures, it misses small enclaves and short borders, and it draws de facto lines. Neither source endorses any territorial claim, and nor does this page.</p>
+<details><summary>Sources and licences</summary>
+<ul>
+<li>Wikipedia contributors, "List of enclaves and exclaves" and {{source.articles_minus1|int}} other articles (revision ids in the data), CC BY-SA 4.0. Tables derived from Wikipedia are shared under the same licence.</li>
+<li>Wikidata, items typed as enclaves, CC0.</li>
+<li>Natural Earth 1:10m and 1:50m admin-0 countries, 1:10m populated places (public domain).</li>
+<li>Map labels: OpenFreeMap, © OpenMapTiles, © OpenStreetMap contributors. Hillshade tiles © Esri.</li>
+</ul></details>
+
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23873011">Read the paper</a><a href="https://github.com/Tristan-Hotham/border-oddities">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/31/border-oddities/">Blog post</a></div>
+
+<footer>
+<p>Dr Tristan Hotham, Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+<p>Cite as: Hotham, T. (2026) Islands on land: enclaves, exclaves, tripoints and other oddities of the world's borders. Zenodo. <a href="https://doi.org/10.5281/zenodo.23873011">https://doi.org/10.5281/zenodo.23873011</a></p>
+<p>Data: Wikipedia (CC BY-SA 4.0), Wikidata (CC0), Natural Earth (public domain). Licence: text, figures and derived data CC BY 4.0, Wikipedia-derived tables CC BY-SA 4.0, code MIT.</p>
+<p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+const R = /*RESULTS*/;
+const SITE = /*SITE*/;
+const fmt = n => n == null || n === "" ? "n/a" : Math.round(n).toLocaleString("en-GB");
+const fa = a => a == null ? "n/a" : a >= 100 ? fmt(a) + " km²" : a >= 1 ? a.toFixed(1) + " km²" : a >= .01 ? (a * 100).toFixed(1) + " ha" : fmt(a * 1e6) + " m²";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+document.addEventListener("click", hideTip);
+const NS = "http://www.w3.org/2000/svg";
+const el = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const redraws = [];
+function resp(box, render) { let last = 0; const go = force => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const small = () => innerWidth < 900;
+const KINDS = SITE.kinds, KC = KINDS.map(k => k[2]);
+const KCOL = () => KINDS.map(k => k[0] === "nullius" && isDark() ? "#E6E6E6" : k[2]);
+const ODD = SITE.odd;   // [lat, lon, kind, name, owner, within, area, sub, inNE, coord_src, text]
+
+/* hero mark: a country with a hole, and a dot inside the hole */
+(function () {
+  const g = document.getElementById("heroMark");
+  el("path", { d: "M14 30 L60 12 L106 34 L100 92 L58 108 L16 88 Z", fill: "none", stroke: "currentColor", "stroke-width": 3, "stroke-linejoin": "round" }, g);
+  el("path", { d: "M44 46 L74 42 L82 66 L62 80 L40 70 Z", fill: "#C8322B", "fill-opacity": .8, stroke: "currentColor", "stroke-width": 2.2, "stroke-linejoin": "round" }, g);
+  el("path", { d: "M56 56 L66 55 L68 64 L58 67 Z", fill: "#FFFEFA", stroke: "currentColor", "stroke-width": 1.8 }, g);
+  el("circle", { cx: 62, cy: 61, r: 2.2, fill: "#2F5FA7" }, g);
+  el("path", { d: "M14 30 L36 22 L30 52 Z", fill: "#2F5FA7", "fill-opacity": .5, stroke: "currentColor", "stroke-width": 2 }, g);
+})();
+
+/* ---------- map ---------- */
+const OFM = "https://tiles.openfreemap.org";
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+const LYDEF = { relief: true, reliefK: 35, borders: true, labels: true, tri: true, parts: true, wd: false, size: 3 };
+const LY = { ...LYDEF };
+try { Object.assign(LY, JSON.parse(localStorage.getItem("bo_layers") || "{}")); } catch (e) {}
+const saveLY = () => { try { localStorage.setItem("bo_layers", JSON.stringify(LY)); } catch (e) {} };
+const HIDE = new Set();
+const HOME = () => small() ? { center: [12, 25], zoom: .3 } : { center: [8, 22], zoom: 1.05 };
+let map = null, ready = false, popup = null, stopMarkers = [], CUR = -1;
+const EMPTY = { type: "FeatureCollection", features: [] };
+function colours() { return { sea: css("--sea"), land: css("--land"), line: css("--line"), zone: css("--zone"), fg: css("--fg"), bg: css("--bg"), card: css("--card") }; }
+const kindExpr = () => { const e = ["match", ["get", "k"]]; KCOL().forEach((c, i) => e.push(i, c)); e.push("#888"); return e; };
+const rad = (k = 1) => { const s = LY.size / 3 * k; return ["interpolate", ["linear"], ["zoom"], 0, 2.6 * s, 4, 4 * s, 8, 6 * s, 12, 8 * s]; };
+const PTYPE = ["enclave", "landlocked exclave", "coastal exclave", "part of a shared island"];
+function baseStyle() {
+  const c = colours();
+  return {
+    version: 8, glyphs: OFM + "/fonts/{fontstack}/{range}.pbf",
+    sources: {
+      world: { type: "geojson", data: EMPTY }, borders: { type: "geojson", data: EMPTY }, parts: { type: "geojson", data: EMPTY },
+      odd: { type: "geojson", data: EMPTY }, tri: { type: "geojson", data: EMPTY }, wd: { type: "geojson", data: EMPTY },
+      hills: { type: "raster", tiles: [ESRI + "Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}"], tileSize: 256, maxzoom: 16, attribution: "Hillshade: Esri, USGS, NASA, CGIAR" }
+    },
+    layers: [
+      { id: "bg", type: "background", paint: { "background-color": c.sea } },
+      { id: "land", type: "fill", source: "world", filter: ["==", ["get", "z"], 0], paint: { "fill-color": c.land } },
+      { id: "zone", type: "fill", source: "world", filter: ["==", ["get", "z"], 1], paint: { "fill-color": c.zone } },
+      { id: "nullius", type: "fill", source: "world", filter: ["==", ["get", "u"], "Z:BRT"], paint: { "fill-color": isDark() ? "#E6E6E6" : "#1D2128", "fill-opacity": .35 } },
+      { id: "hills", type: "raster", source: "hills", paint: { "raster-opacity": .35 } },
+      { id: "parts", type: "fill", source: "parts", paint: { "fill-color": ["match", ["get", "type"], "enclave", KC[0], "landlocked exclave", KC[2], "coastal exclave", KC[2], KC[3]], "fill-opacity": .32 } },
+      { id: "parts-l", type: "line", source: "parts", paint: { "line-color": ["match", ["get", "type"], "enclave", KC[0], "landlocked exclave", KC[2], "coastal exclave", KC[2], KC[3]], "line-width": ["interpolate", ["linear"], ["zoom"], 2, .4, 8, 1.4] } },
+      { id: "borders", type: "line", source: "borders", filter: ["==", ["get", "z"], 0], paint: { "line-color": c.line, "line-width": ["interpolate", ["linear"], ["zoom"], 0, .35, 5, .9, 10, 1.6] } },
+      { id: "borders-z", type: "line", source: "borders", filter: ["==", ["get", "z"], 1], paint: { "line-color": c.line, "line-width": ["interpolate", ["linear"], ["zoom"], 0, .35, 5, .9, 10, 1.6], "line-dasharray": [3, 2] } },
+      { id: "wd", type: "circle", source: "wd", layout: { visibility: "none" }, paint: { "circle-radius": rad(.55), "circle-color": c.fg, "circle-opacity": .35, "circle-stroke-width": 0 } },
+      { id: "tri", type: "symbol", source: "tri", layout: { "icon-image": "tri", "icon-size": ["interpolate", ["linear"], ["zoom"], 0, .45, 5, .7, 10, 1], "icon-allow-overlap": true, "icon-ignore-placement": true } },
+      { id: "odd", type: "circle", source: "odd", paint: { "circle-radius": rad(), "circle-color": kindExpr(), "circle-opacity": .92, "circle-stroke-color": isDark() ? "rgba(0,0,0,.6)" : "rgba(255,255,255,.9)", "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 0, .6, 6, 1.2] } },
+      { id: "sel", type: "circle", source: "odd", filter: ["==", ["get", "i"], -1], paint: { "circle-radius": rad(1.9), "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": c.fg, "circle-stroke-width": 2 } }
+    ]
+  };
+}
+function labelLayers() {
+  const c = colours();
+  return [
+    { id: "places", type: "symbol", source: "ofm", "source-layer": "place", minzoom: 4, filter: ["in", ["get", "class"], ["literal", ["city", "town", "village"]]], layout: { "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]], "text-font": ["Noto Sans Regular"], "text-size": ["interpolate", ["linear"], ["zoom"], 4, 10, 10, 13], "symbol-sort-key": ["get", "rank"] }, paint: { "text-color": c.fg, "text-halo-color": c.bg, "text-halo-width": 1.4, "text-opacity": .8 } },
+    { id: "cnames", type: "symbol", source: "ofm", "source-layer": "place", maxzoom: 8, filter: ["==", ["get", "class"], "country"], layout: { "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]], "text-font": ["Noto Sans Bold"], "text-size": ["interpolate", ["linear"], ["zoom"], 1, 9, 6, 13], "text-transform": "uppercase", "text-letter-spacing": .08, "text-max-width": 7 }, paint: { "text-color": c.fg, "text-opacity": .5, "text-halo-color": c.bg, "text-halo-width": 1.2 } }
+  ];
+}
+function addLabels() {
+  try {
+    map.addSource("ofm", { type: "vector", url: OFM + "/planet", attribution: '<a href="https://openfreemap.org">OpenFreeMap</a> © <a href="https://www.openmaptiles.org/">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' });
+    labelLayers().forEach(l => map.addLayer(l, "wd"));
+  } catch (e) { console.warn("labels unavailable", e); }
+}
+function triImage() {
+  const s = 32, cv = document.createElement("canvas"); cv.width = cv.height = s; const x = cv.getContext("2d");
+  x.beginPath(); x.moveTo(s / 2, 4); x.lineTo(s - 5, s - 6); x.lineTo(5, s - 6); x.closePath();
+  x.fillStyle = isDark() ? "#ECEEF1" : "#2B2F36"; x.strokeStyle = isDark() ? "#12151B" : "#FFFFFF"; x.lineWidth = 3; x.lineJoin = "round"; x.stroke(); x.fill();
+  return x.getImageData(0, 0, s, s);
+}
+function oddFeats() { return { type: "FeatureCollection", features: ODD.map((r, i) => ({ type: "Feature", geometry: { type: "Point", coordinates: [r[1], r[0]] }, properties: { i, k: r[2] } })) }; }
+function triFeats() { return { type: "FeatureCollection", features: SITE.tri.filter(t => !t[4]).map((t, i) => ({ type: "Feature", geometry: { type: "Point", coordinates: [t[1], t[0]] }, properties: { i, n: t[2], c: t[3] } })) }; }
+function wdFeats() { return { type: "FeatureCollection", features: SITE.wd.map((t, i) => ({ type: "Feature", geometry: { type: "Point", coordinates: [t[1], t[0]] }, properties: { n: t[2], c: t[3] } })) }; }
+function applyFilters() {
+  if (!ready) return;
+  const h = [...HIDE]; map.setFilter("odd", h.length ? ["!", ["in", ["get", "k"], ["literal", h]]] : null);
+}
+function applyLayers() {
+  if (!ready) return;
+  const c = colours(), vis = (id, on) => { if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", on ? "visible" : "none"); };
+  vis("hills", LY.relief); map.setPaintProperty("hills", "raster-opacity", Math.min(1, LY.reliefK / 100));
+  vis("borders", LY.borders); vis("borders-z", LY.borders); vis("places", LY.labels); vis("cnames", LY.labels);
+  vis("tri", LY.tri); vis("parts", LY.parts); vis("parts-l", LY.parts); vis("wd", LY.wd);
+  map.setPaintProperty("bg", "background-color", c.sea); map.setPaintProperty("land", "fill-color", c.land); map.setPaintProperty("zone", "fill-color", c.zone);
+  map.setPaintProperty("nullius", "fill-color", isDark() ? "#E6E6E6" : "#1D2128");
+  ["borders", "borders-z"].forEach(id => map.setPaintProperty(id, "line-color", c.line));
+  ["places", "cnames"].filter(id => map.getLayer(id)).forEach(id => { map.setPaintProperty(id, "text-color", c.fg); map.setPaintProperty(id, "text-halo-color", c.bg); });
+  map.setPaintProperty("odd", "circle-color", kindExpr()); map.setPaintProperty("odd", "circle-stroke-color", isDark() ? "rgba(0,0,0,.6)" : "rgba(255,255,255,.9)");
+  map.setPaintProperty("wd", "circle-color", c.fg); map.setPaintProperty("sel", "circle-stroke-color", c.fg);
+  ["odd", "sel", "wd"].forEach((id, k) => map.setPaintProperty(id, "circle-radius", rad([1, 1.9, .55][k])));
+  if (map.hasImage("tri")) map.updateImage("tri", triImage());
+  applyFilters();
+}
+function oddHTML(i) {
+  const r = ODD[i];
+  return `<b class="t">${esc(r[3])}</b><span style="color:${KCOL()[r[2]]}">●</span> ${esc(KINDS[r[2]][1])}${r[7] && r[7] !== KINDS[r[2]][1].toLowerCase() ? ` <small>(${esc(r[7])})</small>` : ""}` +
+    (r[4] ? `<br>${r[2] === 7 ? "Shared by" : r[2] === 8 ? "" : "Belongs to"} ${esc(r[4])}` : "") + (r[5] ? `<br>Inside ${esc(r[5])}` : "") + (r[6] != null ? `<br>Area: ${fa(r[6])} <small>(Wikipedia)</small>` : "") +
+    `<br><small>${r[8] ? "Drawn as a separate piece in Natural Earth" : "Not a separate piece in Natural Earth"}. Position: ${esc(r[9])}.</small>` + (r[10] ? `<br><small>${esc(r[10].slice(0, 220))}${r[10].length > 220 ? "..." : ""}</small>` : "");
+}
+function openOdd(i, fly) {
+  const r = ODD[i]; if (!r || !map) return;
+  if (HIDE.has(r[2])) { HIDE.delete(r[2]); kindRow(); applyFilters(); }
+  if (fly) map.flyTo({ center: [r[1], r[0]], zoom: Math.max(map.getZoom(), r[6] && r[6] > 5000 ? 5 : 9), speed: 1.4 });
+  if (popup) popup.remove();
+  popup = new maplibregl.Popup({ maxWidth: "300px", offset: 8 }).setLngLat([r[1], r[0]]).setHTML(oddHTML(i)).addTo(map);
+  map.setFilter("sel", ["==", ["get", "i"], i]);
+}
+let syncLayers = () => {};
+function layerPanel() {
+  const box = document.createElement("div"); box.className = "lyrWrap";
+  box.innerHTML = `<button class="lyrBtn" aria-expanded="false">Map layers</button>
+<div class="lyrPanel" hidden>
+ <div class="row"><label><input type="checkbox" data-k="relief"> Relief (hill shading)</label><div class="sub"><span>strength</span><input type="range" data-k="reliefK" min="10" max="100" step="5" aria-label="Relief strength"></div></div>
+ <div class="row"><label><input type="checkbox" data-k="borders"> Borders</label></div>
+ <div class="row"><label><input type="checkbox" data-k="labels"> Labels (place and country names)</label></div>
+ <div class="hd">Oddities</div>
+ <div class="row"><label style="font-weight:600">Dot size</label><div class="sub"><span>size</span><input type="range" data-k="size" min="1.5" max="6" step=".5" aria-label="Dot size"></div></div>
+ <div class="row"><label><input type="checkbox" data-k="tri"> Tripoints (triangles)</label></div>
+ <div class="row"><label><input type="checkbox" data-k="parts"> Detached pieces in Natural Earth</label></div>
+ <div class="row"><label><input type="checkbox" data-k="wd"> Sub-national enclaves (Wikidata)</label></div>
+ <button class="reset">Reset layers</button>
+</div>`;
+  ["click", "dblclick", "mousedown", "touchstart", "wheel"].forEach(t => box.addEventListener(t, e => e.stopPropagation(), { passive: t !== "click" }));
+  document.getElementById("map").appendChild(box);
+  const btn = box.querySelector(".lyrBtn"), pan = box.querySelector(".lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => pan.querySelectorAll("[data-k]").forEach(i => { const k = i.dataset.k; if (i.type === "checkbox") i.checked = LY[k]; else i.value = LY[k]; });
+  pan.querySelectorAll("[data-k]").forEach(i => i.addEventListener(i.type === "range" ? "input" : "change", () => {
+    const k = i.dataset.k; LY[k] = i.type === "checkbox" ? i.checked : +i.value;
+    if (k === "reliefK") LY.relief = true;
+    sync(); saveLY(); applyLayers(); legend();
+  }));
+  pan.querySelector(".reset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); applyLayers(); legend(); };
+  sync(); syncLayers = sync;
+}
+function kindRow() {
+  const row = document.getElementById("kindRow"); row.querySelectorAll(".btn").forEach(b => b.remove());
+  const cnt = KINDS.map(() => 0); ODD.forEach(r => cnt[r[2]]++);
+  KINDS.forEach(([k, n], i) => { if (!cnt[i]) return; const b = document.createElement("button"); b.className = "btn kind"; b.setAttribute("aria-pressed", !HIDE.has(i));
+    b.innerHTML = `<i style="background:${KCOL()[i]}"></i>${esc(n)}<small>${cnt[i]}</small>`; b.onclick = () => { HIDE.has(i) ? HIDE.delete(i) : HIDE.add(i); kindRow(); applyFilters(); }; row.appendChild(b); });
+}
+function legend() {
+  const box = document.getElementById("legend");
+  let h = `<span><i class="tri"></i>tripoint (${fmt(R.tri.n)} between three countries, ${R.tri.quad} quadripoint)</span>`;
+  h += `<span><i class="sq" style="background:${KC[0]};opacity:.5"></i>detached piece in Natural Earth: enclave</span><span><i class="sq" style="background:${KC[2]};opacity:.5"></i>exclave</span><span><i class="sq" style="background:${KC[3]};opacity:.5"></i>piece of a shared island</span>`;
+  h += `<span><i class="sq" style="background:${css("--zone")}"></i>indeterminate zone</span>`;
+  if (LY.wd) h += `<span><i style="background:${css("--fg")};opacity:.4"></i>sub-national enclave (Wikidata)</span>`;
+  box.innerHTML = h;
+}
+/* ---------- tour ---------- */
+const TOUR = SITE.tour;
+function insetSVG(t) {
+  const I = t.inset, own = new Set(t.own);
+  let s = `<svg class="inset" viewBox="0 0 ${I.w} ${I.h}" role="img" aria-label="Inset map of ${esc(t.t)}">`;
+  I.units.forEach(u => { s += `<path class="${own.has(u.u) ? "own" : u.u.startsWith("Z:") ? "zn" : ""}" d="${u.d}"><title>${esc(u.n)}</title></path>`; });
+  I.pts.forEach(([x, y, n, dir]) => { const right = dir ? dir !== "l" : x < I.w * .62; s += `<circle cx="${x}" cy="${y}" r="3.6"></circle><text x="${right ? x + 7 : x - 7}" y="${y + 4}" text-anchor="${right ? "start" : "end"}">${esc(n)}</text>`; });
+  return s + "</svg>";
+}
+function side() {
+  const box = document.getElementById("side");
+  let h = "";
+  if (CUR < 0) {
+    h = `<h4>Tour</h4><div class="big">${TOUR.length} strange borders</div><p class="sub">Press start, or pick one. The map flies to each place; a small map from Natural Earth sits under each story. Click any circle on the map for its details.</p><div class="nav"><button class="btn" data-go="0">Start the tour</button></div>`;
+  } else {
+    const t = TOUR[CUR];
+    h = `<h4>Tour · ${CUR + 1} of ${TOUR.length} · ${esc(t.k)}</h4><div class="big">${esc(t.t)}</div><p class="story">${esc(t.s)}</p>${insetSVG(t)}<p class="sub">Inset: Natural Earth 1:10m${t.own.length ? "; the owner's land shaded" : ""}.</p>` +
+      `<div class="nav"><button class="btn" data-go="${CUR - 1}" ${CUR === 0 ? "disabled" : ""}>Previous</button><button class="btn" data-go="${CUR + 1 < TOUR.length ? CUR + 1 : -1}">${CUR + 1 < TOUR.length ? "Next" : "Back to the world"}</button></div>`;
+  }
+  h += `<h4>All stops</h4><ol>` + TOUR.map((t, i) => `<li class="${i === CUR ? "on" : ""}"><span class="go" data-go="${i}">${esc(t.t)}</span></li>`).join("") + `</ol>`;
+  box.innerHTML = h;
+  box.querySelectorAll("[data-go]").forEach(e => e.onclick = () => goStop(+e.dataset.go));
+}
+function goStop(i) {
+  CUR = i; side();
+  stopMarkers.forEach(m => m.remove()); stopMarkers = [];
+  if (!ready) return;
+  if (popup) popup.remove(); map.setFilter("sel", ["==", ["get", "i"], -1]);
+  if (i < 0) { map.flyTo({ ...HOME(), speed: 1.4 }); note(""); return; }
+  const t = TOUR[i];
+  if (t.pts.length > 1 || small()) map.fitBounds([[t.bb[0], t.bb[1]], [t.bb[2], t.bb[3]]], { padding: 24, duration: 2200, maxZoom: t.z });
+  else map.flyTo({ center: [t.c[1], t.c[0]], zoom: t.z, speed: 1.3 });
+  t.pts.forEach(([la, lo, n, dir]) => { const d = document.createElement("div"); d.className = "stopL"; d.textContent = n; stopMarkers.push(new maplibregl.Marker({ element: d, anchor: dir === "l" ? "right" : "left" }).setLngLat([lo, la]).addTo(map)); });
+  note(`<b>${esc(t.t)}</b> · ${esc(t.k)}`);
+  if (small()) document.getElementById("side").scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+function note(h) { const n = document.getElementById("mapnote"); if (n) n.innerHTML = h; }
+function toMap() { document.getElementById("atlas").scrollIntoView({ behavior: "smooth", block: "start" }); }
+function startMap() {
+  if (typeof maplibregl === "undefined") { document.getElementById("loading").textContent = "The interactive map could not load here. The charts and tables below still work."; return; }
+  try {
+    map = new maplibregl.Map({ container: "map", style: baseStyle(), ...HOME(), minZoom: 0, maxZoom: 15, renderWorldCopies: false, attributionControl: { compact: true }, fadeDuration: 0 });
+  } catch (e) { document.getElementById("loading").textContent = "The interactive map needs WebGL, which this browser does not offer. The charts and tables below still work."; return; }
+  window.map = map;
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
+  map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-right");
+  map.on("error", e => { const m = String((e && e.error && (e.error.message || e.error)) || ""); if (/Failed to fetch|NetworkError|AJAXError|404|Could not load|load/.test(m)) return; console.warn(m); });
+  layerPanel();
+  map.on("load", async () => {
+    map.addImage("tri", triImage(), { pixelRatio: 2 });
+    map.getSource("odd").setData(oddFeats()); map.getSource("tri").setData(triFeats()); map.getSource("wd").setData(wdFeats());
+    addLabels(); ready = true; const ld = document.getElementById("loading"); if (ld) ld.remove();
+    applyLayers(); legend(); if (CUR >= 0) goStop(CUR);
+    const get = (u, s) => fetch(u).then(r => r.json()).then(d => map.getSource(s).setData(d)).catch(() => {});
+    await Promise.all([get("data/world.json", "world"), get("data/borders.json", "borders"), get("data/ne_exclaves.geojson", "parts")]);
+    window.geoReady = true;
+  });
+  map.on("click", "odd", e => { const f = e.features && e.features[0]; if (f) openOdd(f.properties.i, false); });
+  map.on("click", "tri", e => { const f = e.features && e.features[0]; if (!f) return; if (popup) popup.remove();
+    popup = new maplibregl.Popup({ offset: 8 }).setLngLat(f.geometry.coordinates).setHTML(`<b class="t">${f.properties.c > 3 ? "Quadripoint" : "Tripoint"}</b>${esc(f.properties.n)}<br><small>From Natural Earth 1:10m boundaries.</small>`).addTo(map); });
+  map.on("click", "wd", e => { const f = e.features && e.features[0]; if (!f) return; if (popup) popup.remove();
+    popup = new maplibregl.Popup({ offset: 8 }).setLngLat(f.geometry.coordinates).setHTML(`<b class="t">${esc(f.properties.n)}</b>Sub-national enclave, ${esc(f.properties.c)}<br><small>Wikidata (CC0).</small>`).addTo(map); });
+  map.on("click", e => { const f = map.queryRenderedFeatures(e.point, { layers: ["odd", "tri", "wd"] }); if (f.length) return;
+    const p = map.queryRenderedFeatures(e.point, { layers: ["parts"] })[0]; if (!p) return; if (popup) popup.remove(); const q = p.properties;
+    popup = new maplibregl.Popup({ offset: 8 }).setLngLat(e.lngLat).setHTML(`<b class="t">${esc(q.place || q.name)}</b>Detached piece of ${esc(q.name)}: ${esc(q.type)}<br>${fa(q.area)} in Natural Earth<br>Touches ${esc(q.nb)}`).addTo(map); });
+  ["odd", "tri", "wd", "parts"].forEach(id => { map.on("mouseenter", id, () => map.getCanvas().style.cursor = "pointer"); map.on("mouseleave", id, () => map.getCanvas().style.cursor = ""); });
+}
+
+/* ---------- charts ---------- */
+function hbars(boxId, rows, opt) {
+  resp(document.getElementById(boxId), (w, sm) => {
+    const rh = sm ? 22 : 24, m = { l: sm ? 128 : 170, r: opt.mr ? (sm ? opt.mr * .8 : opt.mr) : (sm ? 70 : 96), t: 22, b: 8 }, h = m.t + m.b + rows.length * rh;
+    const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": opt.aria }, document.getElementById(boxId));
+    const mx = opt.max || Math.max(...rows.map(opt.v), ...(opt.tick ? rows.map(r => opt.tick(r) || 0) : [0])), X = v => m.l + (w - m.l - m.r) * v / mx;
+    for (let v = 0; v <= mx; v += opt.step) { el("line", { x1: X(v), x2: X(v), y1: m.t - 4, y2: h - m.b, stroke: css("--rule") }, svg); lbl(svg, X(v), m.t - 8, fmt(v), "lab s m", "middle"); }
+    rows.forEach((r, i) => {
+      const y = m.t + i * rh, v = opt.v(r);
+      lbl(svg, m.l - 8, y + rh / 2 + 4, sm && opt.name(r).length > 17 ? opt.name(r).slice(0, 16) + "." : opt.name(r), "lab", "end");
+      const parts = opt.parts ? opt.parts(r) : [[v, opt.col(r)]]; let x0 = 0;
+      parts.forEach(([pv, pc]) => { if (pv <= 0) return; const b = el("rect", { x: X(x0), y: y + 3, width: Math.max(1, X(x0 + pv) - X(x0)), height: rh - 7, fill: pc }, svg); x0 += pv;
+        b.addEventListener("mousemove", ev => showTip(opt.tip(r), ev.clientX, ev.clientY)); b.addEventListener("mouseleave", hideTip); });
+      if (opt.tick) { const tv = opt.tick(r); if (tv != null && tv >= 0) el("line", { x1: X(tv), x2: X(tv), y1: y + 1, y2: y + rh - 2, stroke: css("--fg"), "stroke-width": 2.4 }, svg); }
+      lbl(svg, X(Math.max(v, opt.tick ? (opt.tick(r) || 0) : 0)) + 6, y + rh / 2 + 4, opt.label(r), "lab s m");
+    });
+  });
+}
+const OW = R.wiki.owners;
+hbars("ownerChart", OW, { aria: "Bar chart of true enclaves by owner country", v: r => r.n, step: 1, name: r => r.owner,
+  parts: r => [[r.n - r.water, css("--hot")], [r.water, "color-mix(in srgb, " + css("--hot") + " 40%, " + css("--card") + ")"]],
+  label: r => r.parcels > r.n ? `${r.parcels} pieces` : "", tip: r => `<b>${esc(r.owner)}</b><br>${r.n} entr${r.n > 1 ? "ies" : "y"}${r.water ? ` (${r.water} in water)` : ""}, ${r.parcels} piece${r.parcels > 1 ? "s" : ""}` });
+hbars("triChart", R.tri.top, { aria: "Bar chart of tripoints per country", v: r => r.n, step: 2, name: r => r.name, col: () => css("--ink"), tick: r => r.wiki,
+  label: r => `${r.n}`, tip: r => `<b>${esc(r.name)}</b><br>Natural Earth: ${r.n} tripoints<br>Wikipedia's list: ${r.wiki}` });
+hbars("neiChart", R.nei.top, { aria: "Bar chart of neighbours per country", v: r => r.n, step: 2, name: r => r.name, col: () => css("--cool"), tick: r => r.wiki,
+  mr: 128, label: r => `${r.n} · ${fmt(r.km)} km`, tip: r => `<b>${esc(r.name)}</b><br>Natural Earth: ${r.n} neighbours, ${fmt(r.km)} km of land border<br>Wikipedia's table: ${r.wiki == null ? "n/a" : r.wiki} neighbours` });
+(function sizeChart() {
+  const G = ["Baarle parcels", "Former India and Bangladesh enclaves", "True enclaves on land", "True enclaves: islands and water", "Exclaves that are not enclaves", "Enclaved countries"];
+  const GC = [css("--gold"), "#8C8478", css("--hot"), "#E07A70", css("--cool"), "#7B2D8E"];
+  resp(document.getElementById("sizeChart"), (w, sm) => {
+    const rh = sm ? 46 : 50, m = { l: 10, r: 14, t: 12, b: 30 }, h = m.t + m.b + G.length * rh;
+    const svg = el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": "Strip chart of enclave areas on a log scale" }, document.getElementById("sizeChart"));
+    const lo = -3.5, hi = 4.8, X = v => m.l + (w - m.l - m.r) * (Math.log10(v) - lo) / (hi - lo);
+    const T = [[1e-3, "1,000 m²"], [1e-2, "1 ha"], [1, "1 km²"], [100, "100 km²"], [1e4, "10,000 km²"]];
+    const yb = m.t + G.length * rh;
+    T.forEach(([v, s], i) => { el("line", { x1: X(v), x2: X(v), y1: m.t, y2: yb, stroke: css("--rule") }, svg); if (!(sm && i === 1)) lbl(svg, X(v), yb + 16, s, "lab s m", i === 0 ? "start" : "middle"); });
+    const Y0 = gi => m.t + gi * rh + 16;
+    G.forEach((g, gi) => {
+      const y0 = Y0(gi);
+      const rows = SITE.sizes.filter(s => s[0] === g && s[2] > 0);
+      lbl(svg, m.l, y0 - 4, `${g} (${rows.length})`, "lab s b");
+      rows.forEach((s, k) => { const jitter = ((k * 7919) % 13) / 13 - .5;
+        const c = el("circle", { cx: X(s[2]), cy: y0 + 14 + jitter * 14, r: sm ? 3.2 : 4, fill: GC[gi], "fill-opacity": .78, stroke: css("--card"), "stroke-width": .8 }, svg);
+        c.addEventListener("mousemove", ev => showTip(`<b>${esc(s[1])}</b><br>${esc(g)}<br>${fa(s[2])}`, ev.clientX, ev.clientY)); c.addEventListener("mouseleave", hideTip); });
+    });
+    const ann = (v, gi, s, anc) => lbl(svg, X(v) + (anc === "end" ? -8 : 8), Y0(gi) + 18, s, "lab s b", anc);
+    ann(R.wiki.lesotho_km2, 5, "Lesotho", "end");
+  });
+})();
+(function tables() {
+  const E = SITE.enclaves; const t = document.getElementById("encTable");
+  t.innerHTML = `<thead><tr><th>Enclave</th><th>Belongs to</th><th>Inside</th><th class="r">Area</th><th class="r">Pieces</th><th class="r">In NE</th></tr></thead><tbody>` +
+    E.map((r, i) => `<tr data-i="${i}"><td>${esc(r[0])}${r[5] ? " <small>(water)</small>" : ""}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td class="r">${fa(r[3])}</td><td class="r">${r[4]}</td><td class="r">${r[8] ? "yes" : ""}</td></tr>`).join("") + "</tbody>";
+  t.querySelectorAll("tr[data-i]").forEach(tr => tr.onclick = () => { const r = E[+tr.dataset.i]; const k = ODD.findIndex(o => o[3] === r[0] && o[2] === 0); toMap(); setTimeout(() => openOdd(k, true), 500); });
+  const C = R.condos, tc = document.getElementById("conTable");
+  tc.innerHTML = `<thead><tr><th>Condominium</th><th>Shared by</th><th class="r">Area</th><th>Since</th></tr></thead><tbody>` +
+    C.map((r, i) => { const k = ODD.findIndex(o => o[3] === r.name && o[2] === 7); return `<tr ${k >= 0 ? `data-i="${k}"` : ""}><td>${esc(r.name)}${k >= 0 ? " <small>(map)</small>" : ""}</td><td>${esc(r.states)}</td><td class="r">${fa(r.km2)}</td><td>${esc(r.created)}</td></tr>`; }).join("") + "</tbody>";
+  tc.querySelectorAll("tr[data-i]").forEach(tr => tr.onclick = () => { toMap(); setTimeout(() => openOdd(+tr.dataset.i, true), 500); });
+})();
+kindRow(); side(); legend(); startMap();
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; redraws.forEach(f => f()); kindRow(); legend(); side(); applyLayers(); };
+</script>
+/*FULLSCREEN*/
+</body>
+</html>

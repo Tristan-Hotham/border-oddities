@@ -1,0 +1,326 @@
+a,b,km
+Canada,United States,7935.9
+Kazakhstan,Russia,6657.57
+Argentina,Chile,4945.66
+China,Mongolia,4377.76
+China,Russia,3544.43
+Mongolia,Russia,2913.03
+Bolivia,Brazil,2664.44
+India,Pakistan,2657.14
+Mexico,United States,2641.15
+Bangladesh,India,2383.04
+Angola,DR Congo,2303.22
+China,India,2245.62
+Afghanistan,Pakistan,2244.69
+Kazakhstan,Uzbekistan,2183.28
+Mali,Mauritania,2168.89
+Colombia,Venezuela,2111.09
+DR Congo,Zambia,2034.9
+Sudan,South Sudan,1891.67
+Myanmar,Thailand,1832.23
+Brazil,Peru,1800.03
+Laos,Vietnam,1749.68
+China,Myanmar,1699.34
+Republic of the Congo,Gabon,1672.04
+Russia,Ukraine,1670.41
+Argentina,Paraguay,1644.68
+Laos,Thailand,1616.42
+Botswana,South Africa,1615.28
+Brazil,Venezuela,1601.95
+Turkmenistan,Uzbekistan,1595.98
+Norway,Sweden,1594.54
+Cameroon,Nigeria,1584.57
+Algeria,Morocco,1550.63
+Mauritania,Western Sahara,1537.65
+China,Kazakhstan,1503.27
+Indonesia,Malaysia,1494.84
+India,Nepal,1483.92
+DR Congo,Republic of the Congo,1468.17
+Mozambique,Malawi,1460.93
+Central African Republic,DR Congo,1453.24
+Niger,Nigeria,1447.41
+Brazil,Colombia,1396.9
+Botswana,Namibia,1363.8
+Morocco,Western Sahara,1332.46
+Angola,Namibia,1331.55
+Iran,Iraq,1310.18
+Sudan,Chad,1291.82
+Ecuador,Peru,1291.13
+India,Myanmar,1268.03
+Algeria,Mali,1266.1
+Finland,Russia,1225.5
+Saudi Arabia,Yemen,1222.83
+Colombia,Peru,1220.4
+Burkina Faso,Mali,1211.87
+Mozambique,Zimbabwe,1190.71
+Egypt,Sudan,1179.82
+Central African Republic,Chad,1171.36
+Afghanistan,Tajikistan,1170.16
+Niger,Chad,1165.09
+Tajikistan,Uzbekistan,1119.93
+China,Nepal,1111.76
+Egypt,Libya,1098.37
+Brazil,Paraguay,1097.32
+Brazil,Guyana,1079.64
+Angola,Zambia,1079.53
+Spain,Portugal,1064.47
+Libya,Chad,1051.23
+Kyrgyzstan,Uzbekistan,1049.34
+China,Vietnam,1048.99
+Cameroon,Chad,1023.35
+Kazakhstan,Kyrgyzstan,1017.13
+China,North Korea,1004.92
+Argentina,Brazil,985.25
+Cambodia,Vietnam,966.69
+Algeria,Libya,963.86
+Iran,Turkmenistan,957.63
+Bolivia,Peru,953.57
+Algeria,Niger,952.22
+Namibia,South Africa,940.37
+Belarus,Russia,919.55
+Algeria,Tunisia,916.02
+Moldova,Ukraine,897.98
+Guatemala,Mexico,894.81
+Eritrea,Ethiopia,892.31
+Ethiopia,South Sudan,882.09
+Afghanistan,Iran,866.22
+Belarus,Ukraine,861.52
+Ethiopia,Somalia,857.53
+Guinea,Mali,855.95
+Ghana,Togo,851.74
+Mali,Niger,842.5
+China,Kyrgyzstan,838.71
+Kyrgyzstan,Tajikistan,837.55
+Bolivia,Chile,825.65
+Iran,Pakistan,816.59
+Iraq,Saudi Arabia,812.73
+Malawi,Zambia,802.69
+Bosnia and Herzegovina,Croatia,798.98
+Brazil,Uruguay,791.89
+Ethiopia,Kenya,788.39
+Central African Republic,Cameroon,788.31
+Lesotho,South Africa,784.23
+Syria,Turkey,775.56
+Botswana,Zimbabwe,772.13
+Honduras,Nicaragua,765.93
+Kenya,Tanzania,762.07
+Ethiopia,Somaliland,760.77
+Armenia,Azerbaijan,753.91
+Indonesia,Papua New Guinea,748.63
+Kenya,Uganda,746.03
+Bolivia,Paraguay,742.53
+Benin,Nigeria,735.74
+The Gambia,Senegal,730.99
+Jordan,Saudi Arabia,727.76
+DR Congo,Uganda,727.16
+Mozambique,Tanzania,724.76
+Afghanistan,Turkmenistan,722.95
+Mauritania,Senegal,720.8
+Zambia,Zimbabwe,716.42
+Argentina,Bolivia,715.21
+Ethiopia,Sudan,712.72
+Central African Republic,South Sudan,708.57
+Georgia,Russia,705.05
+Kenya,Somalia,684.84
+Finland,Norway,678.28
+Cambodia,Thailand,663.4
+Oman,Saudi Arabia,656.89
+Guyana,Suriname,656.05
+Austria,Germany,653.13
+Guinea,Sierra Leone,627.66
+Guyana,Venezuela,622.31
+Benin,Togo,621.85
+Bhutan,India,607.25
+Ivory Coast,Ghana,602.27
+Burkina Faso,Niger,599.98
+Czechia,Poland,599.29
+Iraq,Syria,598.88
+DR Congo,South Sudan,597.91
+Switzerland,Italy,595.99
+Eritrea,Sudan,593.29
+Czechia,Germany,587.57
+Azerbaijan,Iran,585.53
+Bulgaria,Romania,583.91
+Spain,France,567.7
+United Arab Emirates,Oman,567.31
+Ivory Coast,Liberia,565.54
+Ivory Coast,Guinea,561.67
+Burkina Faso,Ghana,537.13
+Colombia,Ecuador,520.94
+Brazil,France,516.71
+Romania,Ukraine,515.83
+Burkina Faso,Ivory Coast,510.29
+Ivory Coast,Mali,495.85
+Mozambique,South Africa,494.29
+Hungary,Slovakia,483.82
+Finland,Sweden,483.13
+Belarus,Lithuania,481.9
+Germany,Netherlands,476.92
+DR Congo,Tanzania,473.77
+Cameroon,Republic of the Congo,471.78
+Guinea,Liberia,464.67
+Belgium,France,463.47
+Algeria,Mauritania,461.96
+Switzerland,France,460.27
+Romania,Serbia,458.8
+United Arab Emirates,Saudi Arabia,457.12
+Malawi,Tanzania,452.34
+Libya,Tunisia,449.77
+Iran,Turkey,440.51
+South Sudan,Uganda,435.97
+Lithuania,Latvia,435.26
+Malaysia,Thailand,432.92
+Cambodia,Laos,431.91
+Eswatini,South Africa,428.38
+Moldova,Romania,426.47
+Central African Republic,Republic of the Congo,426.35
+Mozambique,Zambia,422.26
+France,Suriname,420.43
+Bhutan,China,419.78
+Croatia,Slovenia,418.08
+Burundi,Tanzania,413.5
+Poland,Ukraine,412.46
+Poland,Slovakia,407.97
+Bulgaria,Greece,406.26
+China,Tajikistan,403.69
+France,Italy,403.13
+Mali,Senegal,400.97
+Brunei,Malaysia,399.12
+Somaliland,Somalia,391.33
+Germany,Poland,390.39
+Central African Republic,Sudan,387.23
+Tanzania,Uganda,386.54
+Israel,Palestine,384.17
+Libya,Sudan,380.93
+Kazakhstan,Turkmenistan,373.27
+Germany,France,373.22
+United Kingdom,Ireland,370.08
+Brazil,Suriname,366.36
+Belgium,Netherlands,361.8
+China,Laos,361.52
+Hungary,Romania,359.2
+China,Pakistan,351.41
+Guinea,Guinea-Bissau,351.03
+Libya,Niger,346.38
+Jordan,Syria,342.46
+Belarus,Poland,340.09
+Guinea-Bissau,Senegal,337.23
+Austria,Czechia,336.07
+Austria,Italy,329.71
+Djibouti,Ethiopia,328.62
+Tanzania,Zambia,321.06
+Honduras,El Salvador,318.81
+Gabon,Equatorial Guinea,308.39
+Kenya,South Sudan,306.79
+Azerbaijan,Georgia,302.56
+Guinea,Senegal,299.91
+Argentina,Uruguay,299.29
+Bulgaria,Serbia,298.74
+Israel,Jordan,293.84
+Costa Rica,Nicaragua,293.35
+Lebanon,Syria,291.57
+Iraq,Turkey,291.02
+Bosnia and Herzegovina,Serbia,290.57
+Oman,Yemen,290.19
+Costa Rica,Panama,285.26
+Benin,Burkina Faso,284.74
+Estonia,Russia,283.85
+Azerbaijan,Russia,277.69
+Colombia,Panama,272.68
+Austria,Hungary,272.21
+Kosovo,Serbia,270.43
+Burundi,Rwanda,263.44
+Dominican Republic,Haiti,260.89
+Armenia,Turkey,258.77
+Croatia,Hungary,257.96
+Estonia,Latvia,256.04
+Switzerland,Germany,253.66
+Cameroon,Gabon,251.07
+Belize,Guatemala,249.45
+Liberia,Sierra Leone,247.17
+Austria,Slovenia,242.08
+Georgia,Turkey,235.73
+Benin,Niger,232.54
+Laos,Myanmar,229.07
+Croatia,Serbia,227.91
+Namibia,Zambia,224.94
+Guatemala,Honduras,222.65
+Kuwait,Saudi Arabia,220.8
+Albania,Greece,220.75
+Burundi,DR Congo,218.74
+South Africa,Zimbabwe,218.3
+Rwanda,Tanzania,216.86
+Greece,North Macedonia,213.64
+Latvia,Russia,212.93
+Indonesia,Timor-Leste,208.37
+Bosnia and Herzegovina,Montenegro,206.53
+Poland,Russia,206.23
+Czechia,Slovakia,205.81
+South Korea,North Korea,203.89
+Egypt,Israel,203.61
+DR Congo,Rwanda,202.96
+Iraq,Kuwait,200.78
+Lithuania,Russia,200.49
+Bulgaria,Turkey,197.48
+Italy,Slovenia,183.48
+Bangladesh,Myanmar,183.03
+Iraq,Jordan,180.43
+Cameroon,Equatorial Guinea,180.35
+Greece,Turkey,180.02
+Angola,Republic of the Congo,173.5
+Norway,Russia,165.1
+Chile,Peru,161.6
+Armenia,Georgia,159.68
+Albania,Montenegro,159.0
+Albania,North Macedonia,156.7
+Guatemala,El Salvador,156.54
+Belize,Mexico,153.99
+Bulgaria,North Macedonia,141.96
+Montenegro,Serbia,140.02
+Rwanda,Uganda,138.96
+Austria,Switzerland,137.32
+Afghanistan,Uzbekistan,136.74
+Belarus,Latvia,135.86
+Kosovo,North Macedonia,132.71
+Hungary,Serbia,131.69
+Burkina Faso,Togo,128.64
+Belgium,Germany,115.33
+Djibouti,Eritrea,111.75
+Jordan,Palestine,111.57
+Belgium,Luxembourg,110.0
+Mozambique,Eswatini,108.21
+Germany,Luxembourg,102.49
+Israel,Lebanon,97.96
+Albania,Kosovo,97.73
+Hungary,Ukraine,97.73
+Israel,Syria,89.45
+Cyprus,United Kingdom,88.35
+Lithuania,Poland,87.47
+Slovakia,Ukraine,87.03
+Nigeria,Chad,85.17
+Afghanistan,China,84.12
+Austria,Slovakia,81.87
+North Macedonia,Serbia,74.72
+Hungary,Slovenia,67.92
+Djibouti,Somaliland,64.23
+Kosovo,Montenegro,58.49
+Germany,Denmark,55.95
+Qatar,Saudi Arabia,53.31
+France,Luxembourg,50.77
+Andorra,Spain,50.74
+Andorra,France,45.87
+Northern Cyprus,United Kingdom,44.58
+Algeria,Western Sahara,41.67
+Armenia,Iran,35.36
+Switzerland,Liechtenstein,32.14
+North Korea,Russia,31.45
+Italy,San Marino,29.31
+Austria,Liechtenstein,27.08
+Spain,Morocco,21.49
+Croatia,Montenegro,17.91
+Egypt,Palestine,12.34
+France,Netherlands,10.02
+France,Monaco,9.54
+Azerbaijan,Turkey,7.63
+Spain,United Kingdom,1.77
+Italy,Vatican City,0.43

@@ -1,0 +1,51 @@
+unit,country,ne_features,type,area_km2,neighbours,border_km,sea_km,lake_km,landmass_km2,lon,lat,wiki_name
+US1,United States,USA,coastal exclave,1427512.39,Canada,2162.4,19046.9,0.0,37680319,-152.0063,63.0865,Alaska
+IDN,Indonesia,IDN,part of a shared island,381927.22,Papua New Guinea,748.6,5674.2,0.0,782049,138.714,-4.7256,New Guinea
+CAN,Canada,CAN,coastal exclave,203081.36,United States,1078.1,5331.9,0.0,37680319,-66.2055,46.3688,Canada south and east of the St Lawrence (river drawn as water)
+MYS,Malaysia,MYS,part of a shared island,194965.17,Brunei; Indonesia,1871.3,2664.9,0.0,730588,114.613,3.9373,Borneo
+FR1,France,FRA,coastal exclave,83183.7,Brazil; Suriname,937.1,567.2,0.0,37680319,-53.0366,3.926,French Guiana
+RUS,Russia,RUS,coastal exclave,27096.04,Ukraine,146.9,922.1,0.0,79363378,34.249,45.2993,Crimea (Natural Earth's de facto line)
+CHL,Chile,CHL,part of a shared island,26555.84,Argentina,248.3,2159.4,0.0,47136,-69.3261,-53.6992,Tierra del Fuego
+TUR,Turkey,TUR,coastal exclave,23386.89,Bulgaria; Greece,377.5,697.7,0.0,79363378,27.2255,41.0736,East Thrace (Turkey in Europe)
+ARG,Argentina,ARG,part of a shared island,20551.71,Chile,238.6,706.1,0.0,47136,-68.0947,-53.8418,Tierra del Fuego (Argentina)
+GB1,United Kingdom,GBR,part of a shared island,14238.77,Ireland,370.1,440.3,0.0,83416,-6.8888,54.6413,Northern Ireland
+IDN,Indonesia,IDN,part of a shared island,13830.08,Timor-Leste,208.4,462.3,0.0,28762,124.2968,-9.6935,Timor
+RUS,Russia,RUS,coastal exclave,13449.36,Lithuania; Poland,406.7,283.6,0.0,79363378,21.3971,54.8243,Kaliningrad
+AGO,Angola,AGO,coastal exclave,6701.71,DR Congo; Republic of the Congo,380.0,136.1,0.0,79363378,12.2719,-5.0778,Cabinda
+AZE,Azerbaijan,AZE,landlocked exclave,4782.85,Armenia; Iran; Turkey,383.5,0.0,0.0,79363378,45.4804,39.322,Nakhchivan
+OMN,Oman,OMN,coastal exclave,1579.34,United Arab Emirates,73.5,308.9,0.0,79363378,56.2992,26.0004,Musandam
+BRN,Brunei,BRN,part of a shared island,1298.94,Malaysia,152.5,23.1,0.0,730588,115.1594,4.6044,Temburong
+NL1,Netherlands,NLD,coastal exclave,824.65,Belgium,90.6,71.0,0.0,79363378,3.7655,51.3044,Zeelandic Flanders
+HRV,Croatia,HRV,coastal exclave,750.11,Bosnia and Herzegovina; Montenegro,101.2,258.3,0.0,79363378,17.9768,42.7349,Dubrovnik and southern Dalmatia
+TLS,Timor-Leste,TLS,part of a shared island,739.4,Indonesia,88.5,51.1,0.0,28762,124.2159,-9.3395,Oecusse
+UZB,Uzbekistan,UZB,enclave,399.45,Kyrgyzstan,106.5,0.0,0.0,79363378,71.0982,40.0151,Sokh
+DEU,Germany,DEU,coastal exclave,374.69,Poland,8.2,170.0,0.0,79363378,14.069,54.0112,Usedom (Germany)
+PSX,Palestine,PSX,coastal exclave,339.44,Egypt; Israel,70.4,40.5,0.0,79363378,34.3366,31.4003,Gaza Strip
+MYS,Malaysia,MYS,part of a shared island,212.41,Indonesia,22.6,46.3,0.0,425,117.7319,4.2094,Sebatik
+IDN,Indonesia,IDN,part of a shared island,212.28,Malaysia,22.6,43.5,0.0,425,117.8581,4.0844,Sebatik (Indonesia)
+CYP,Cyprus,CYP,part of a shared island,193.56,United Kingdom,30.3,33.1,0.0,9282,33.9443,35.0144,Famagusta and eastern Larnaca (Cyprus)
+LTU,Lithuania,LTU,coastal exclave,133.16,Russia,4.3,105.3,0.0,79363378,21.1021,55.5123,Curonian Spit (Lithuania)
+GB1,United Kingdom,ESB,part of a shared island,127.42,Northern Cyprus; Cyprus,89.0,19.8,0.0,9282,33.7597,35.0262,Dhekelia
+TJK,Tajikistan,TJK,enclave,119.46,Kyrgyzstan,51.9,0.0,0.0,79363378,70.6107,39.8288,Vorukh
+MWI,Malawi,MWI,enclave,119.24,Mozambique,40.0,0.0,0.0,79363378,34.7103,-12.0592,Likoma Island
+GB1,United Kingdom,WSB,part of a shared island,98.68,Cyprus,44.0,41.3,0.0,9282,32.9361,34.6369,Akrotiri
+OMN,Oman,OMN,enclave,98.18,United Arab Emirates,55.7,0.0,0.0,79363378,56.3163,25.2697,Madha
+MWI,Malawi,MWI,enclave,80.23,Mozambique,33.7,0.0,0.0,79363378,34.5992,-12.0294,Chizumulu Island
+FR1,France,MAF,part of a shared island,68.28,Netherlands,10.0,31.7,0.0,92,-63.0587,18.0767,Saint-Martin
+CIV,Ivory Coast,CIV,coastal exclave,64.71,Ghana,1.9,40.5,0.0,79363378,-3.2206,5.1267,
+UZB,Uzbekistan,UZB,enclave,58.3,Kyrgyzstan,31.8,0.0,0.0,79363378,71.7261,39.9476,Shakhimardan
+ESP,Spain,ESP,coastal exclave,42.73,Morocco,10.2,20.7,0.0,79363378,-5.3398,35.8861,Ceuta
+ARM,Armenia,ARM,enclave,35.24,Azerbaijan,22.0,0.0,0.0,79363378,45.5133,40.6351,Artsvashen
+TJK,Tajikistan,TJK,enclave,30.5,Uzbekistan,26.0,0.0,0.0,79363378,70.605,40.9786,Sarvan
+ARG,Argentina,ARG,part of a shared island,28.36,Chile,9.8,15.9,0.0,47136,-68.6165,-54.8475,
+AZE,Azerbaijan,AZE,enclave,26.81,Armenia,19.4,0.0,0.0,79363378,44.9954,41.0531,Yukhari Askipara
+NL1,Netherlands,SXM,part of a shared island,23.36,France,10.0,14.2,0.0,92,-63.0695,18.0395,Sint Maarten
+ESP,Spain,ESP,coastal exclave,18.1,Morocco,11.3,6.7,0.0,79363378,-2.9477,35.3009,Melilla
+ESP,Spain,ESP,enclave,13.18,France,14.6,0.0,0.0,79363378,1.9664,42.461,Llívia
+AZE,Azerbaijan,AZE,enclave,7.34,Armenia,10.8,0.0,0.0,79363378,45.1947,40.9864,Barkhudarli
+ARE,United Arab Emirates,ARE,enclave,7.28,Oman,10.5,0.0,0.0,79363378,56.2734,25.2637,Nahwa
+US1,United States,USA,coastal exclave,5.44,Canada,4.0,6.9,0.0,37680319,-123.0779,48.9783,Point Roberts
+GB1,United Kingdom,GIB,coastal exclave,3.69,Spain,1.8,7.2,0.0,79363378,-5.3463,36.1268,Gibraltar
+CYP,Cyprus,CYP,part of a shared island,2.08,United Kingdom,7.7,0.1,0.0,9282,33.7796,34.9832,Famagusta and eastern Larnaca (Cyprus)
+CYP,Cyprus,CYP,enclave,1.47,United Kingdom,4.6,0.0,0.0,9282,33.7458,35.0077,Famagusta and eastern Larnaca (Cyprus)
+NIC,Nicaragua,NIC,coastal exclave,1.19,Costa Rica,4.3,2.4,0.0,37680319,-83.6695,10.9323,Laguna Los Portillos

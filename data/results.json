@@ -1,0 +1,1738 @@
+{
+ "wiki": {
+  "true_enclaves": 42,
+  "true_parcels": 85,
+  "true_land": 32,
+  "true_water": 10,
+  "enclaved_countries": 3,
+  "exclaves": 4,
+  "maritime": 16,
+  "historic_rows": 6,
+  "semi": 17,
+  "pene": 62,
+  "divided": 36,
+  "unplaced": {
+   "semi": 1,
+   "pene": 51,
+   "divided_island": 17
+  },
+  "subnational_rows": 214,
+  "condominiums": 15,
+  "mapped": 107,
+  "catalogue_rows": 188,
+  "true_in_ne": 17,
+  "true_not_in_ne": 25,
+  "owners": [
+   {
+    "owner": "Germany",
+    "n": 6,
+    "parcels": 6,
+    "water": 0
+   },
+   {
+    "owner": "Azerbaijan",
+    "n": 4,
+    "parcels": 5,
+    "water": 0
+   },
+   {
+    "owner": "Cyprus",
+    "n": 4,
+    "parcels": 4,
+    "water": 0
+   },
+   {
+    "owner": "Argentina",
+    "n": 3,
+    "parcels": 6,
+    "water": 3
+   },
+   {
+    "owner": "Tajikistan",
+    "n": 3,
+    "parcels": 3,
+    "water": 0
+   },
+   {
+    "owner": "Colombia",
+    "n": 2,
+    "parcels": 2,
+    "water": 2
+   },
+   {
+    "owner": "Malawi",
+    "n": 2,
+    "parcels": 2,
+    "water": 2
+   },
+   {
+    "owner": "Uzbekistan",
+    "n": 2,
+    "parcels": 2,
+    "water": 0
+   },
+   {
+    "owner": "Belgium",
+    "n": 1,
+    "parcels": 22,
+    "water": 0
+   },
+   {
+    "owner": "Netherlands",
+    "n": 1,
+    "parcels": 8,
+    "water": 0
+   },
+   {
+    "owner": "Australia",
+    "n": 1,
+    "parcels": 7,
+    "water": 1
+   },
+   {
+    "owner": "Uruguay",
+    "n": 1,
+    "parcels": 5,
+    "water": 1
+   },
+   {
+    "owner": "Croatia",
+    "n": 1,
+    "parcels": 2,
+    "water": 0
+   },
+   {
+    "owner": "Armenia",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Austria",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Bangladesh",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Bosnia and Herzegovina",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "China",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Italy",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Nicaragua",
+    "n": 1,
+    "parcels": 1,
+    "water": 1
+   },
+   {
+    "owner": "Oman",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Russia",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "Spain",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   },
+   {
+    "owner": "United Arab Emirates",
+    "n": 1,
+    "parcels": 1,
+    "water": 0
+   }
+  ],
+  "n_owner_countries": 24,
+  "n_within_countries": 24,
+  "withins": [
+   {
+    "within": "Belgium",
+    "n": 6
+   },
+   {
+    "within": "Armenia",
+    "n": 4
+   },
+   {
+    "within": "Dhekelia Sovereign Base Area",
+    "n": 4
+   },
+   {
+    "within": "Kyrgyzstan",
+    "n": 4
+   },
+   {
+    "within": "Paraguay",
+    "n": 2
+   },
+   {
+    "within": "Nicaragua",
+    "n": 2
+   },
+   {
+    "within": "Mozambique",
+    "n": 2
+   },
+   {
+    "within": "Switzerland",
+    "n": 2
+   },
+   {
+    "within": "France",
+    "n": 1
+   },
+   {
+    "within": "Costa Rica",
+    "n": 1
+   },
+   {
+    "within": "Azerbaijan",
+    "n": 1
+   },
+   {
+    "within": "Belarus",
+    "n": 1
+   },
+   {
+    "within": "Argentina",
+    "n": 1
+   },
+   {
+    "within": "Hong Kong",
+    "n": 1
+   },
+   {
+    "within": "India",
+    "n": 1
+   },
+   {
+    "within": "Germany",
+    "n": 1
+   },
+   {
+    "within": "Oman",
+    "n": 1
+   },
+   {
+    "within": "Netherlands",
+    "n": 1
+   },
+   {
+    "within": "Serbia",
+    "n": 1
+   },
+   {
+    "within": "Papua New Guinea",
+    "n": 1
+   },
+   {
+    "within": "Slovenia",
+    "n": 1
+   },
+   {
+    "within": "United Arab Emirates",
+    "n": 1
+   },
+   {
+    "within": "Uruguay",
+    "n": 1
+   },
+   {
+    "within": "Uzbekistan",
+    "n": 1
+   }
+  ],
+  "top_owner": "Germany",
+  "top_owner_n": 6,
+  "top_parcels_owner": "Belgium",
+  "top_parcels": 22,
+  "smallest_entry": "Rückschlag",
+  "smallest_entry_m2": 16000,
+  "largest_land": "Sokh",
+  "largest_land_km2": 234.0,
+  "largest_island": "Apipé Islands",
+  "largest_island_km2": 320.0,
+  "lesotho_km2": 30355.0,
+  "vatican_km2": 0.44,
+  "sanmarino_km2": 61.2,
+  "nakhchivan_km2": 5500.0,
+  "sokh_km2": 234.0,
+  "vorukh_km2": 96.7,
+  "madha_km2": 75.0,
+  "nahwa_km2": 5.2,
+  "llivia_km2": 12.84,
+  "busingen_km2": 7.62,
+  "campione_km2": 1.6,
+  "ruckschlag_km2": 0.016,
+  "sankovo_km2": 4.54,
+  "dahagram_km2": 25.95,
+  "jungholz_km2": 7.05,
+  "baarle_h_km2": 2.3448,
+  "baarle_n_km2": 0.150684,
+  "kinds": {
+   "enclave": 42,
+   "enclaved_country": 3,
+   "exclave": 4,
+   "semi": 19,
+   "pene": 62,
+   "divided_island": 36,
+   "historic": 5,
+   "condominium": 15,
+   "nullius": 2
+  },
+  "span_x": 12294451,
+  "span_orders": 7.1,
+  "vennbahn_n": 5
+ },
+ "baarle": {
+  "belgian": 22,
+  "dutch": 8,
+  "smallest": "H7",
+  "smallest_m2": 2469,
+  "largest": "H1",
+  "largest_ha": 153.6,
+  "houses_split": 54,
+  "parcels_with_houses": 7,
+  "total_ha": 249.6,
+  "h1_ha": 153.6
+ },
+ "chhits": {
+  "indian": 102,
+  "bangladeshi": 71,
+  "counter_bd": 21,
+  "counter_in": 3,
+  "counter_counter": 1,
+  "people_2010": 51549,
+  "to_bangladesh": 111,
+  "to_india": 51,
+  "swap_date": "31 July 2015",
+  "dk_m2": 6880,
+  "natatoka_m2": 1050,
+  "table_rows": 226,
+  "dahagram_km2": 25.95,
+  "total": 198,
+  "sized_parcels": 189
+ },
+ "tri": {
+  "n": 167,
+  "quad": 1,
+  "zone": 14,
+  "all_vertices": 182,
+  "with_quad": 168,
+  "leader": "China",
+  "leader_n": 15,
+  "second": "Russia",
+  "second_n": 10,
+  "top": [
+   {
+    "unit": "CH1",
+    "name": "China",
+    "n": 15,
+    "wiki": 16
+   },
+   {
+    "unit": "RUS",
+    "name": "Russia",
+    "n": 10,
+    "wiki": 13
+   },
+   {
+    "unit": "AUT",
+    "name": "Austria",
+    "n": 9,
+    "wiki": 9
+   },
+   {
+    "unit": "COD",
+    "name": "DR Congo",
+    "n": 9,
+    "wiki": 9
+   },
+   {
+    "unit": "BRA",
+    "name": "Brazil",
+    "n": 8,
+    "wiki": 9
+   },
+   {
+    "unit": "SRB",
+    "name": "Serbia",
+    "n": 8,
+    "wiki": 8
+   },
+   {
+    "unit": "ETH",
+    "name": "Ethiopia",
+    "n": 7,
+    "wiki": 7
+   },
+   {
+    "unit": "FR1",
+    "name": "France",
+    "n": 7,
+    "wiki": 6
+   },
+   {
+    "unit": "DEU",
+    "name": "Germany",
+    "n": 7,
+    "wiki": 7
+   },
+   {
+    "unit": "HUN",
+    "name": "Hungary",
+    "n": 7,
+    "wiki": 7
+   },
+   {
+    "unit": "MLI",
+    "name": "Mali",
+    "n": 7,
+    "wiki": 7
+   },
+   {
+    "unit": "NER",
+    "name": "Niger",
+    "n": 7,
+    "wiki": 7
+   },
+   {
+    "unit": "TZA",
+    "name": "Tanzania",
+    "n": 7,
+    "wiki": 7
+   },
+   {
+    "unit": "UKR",
+    "name": "Ukraine",
+    "n": 7,
+    "wiki": 8
+   }
+  ],
+  "wiki_list": 176,
+  "wiki_article": 181,
+  "wiki_china": 16,
+  "wiki_russia": 13,
+  "countries_with": 135,
+  "zero_countries": 26,
+  "kazungula": {
+   "lat": -17.794107,
+   "lon": 25.259781,
+   "units": [
+    "Botswana",
+    "Namibia",
+    "Zambia",
+    "Zimbabwe"
+   ]
+  },
+  "by_name": {
+   "Bolivia": 5,
+   "Chile": 2,
+   "Peru": 4,
+   "Argentina": 3,
+   "Brazil": 8,
+   "Paraguay": 3,
+   "Colombia": 3,
+   "Ecuador": 1,
+   "China": 15,
+   "India": 6,
+   "Nepal": 2,
+   "Bhutan": 2,
+   "Myanmar": 4,
+   "Bangladesh": 1,
+   "Afghanistan": 6,
+   "Pakistan": 2,
+   "Tajikistan": 4,
+   "Kyrgyzstan": 4,
+   "Kazakhstan": 4,
+   "Russia": 10,
+   "Mongolia": 2,
+   "North Korea": 1,
+   "Laos": 5,
+   "Vietnam": 2,
+   "Egypt": 2,
+   "Israel": 5,
+   "Palestine": 3,
+   "Lebanon": 1,
+   "Syria": 4,
+   "Jordan": 5,
+   "Ethiopia": 7,
+   "Sudan": 6,
+   "South Sudan": 6,
+   "Eritrea": 2,
+   "Djibouti": 2,
+   "Somaliland": 2,
+   "Somalia": 2,
+   "Kenya": 4,
+   "Uganda": 5,
+   "DR Congo": 9,
+   "Central African Republic": 6,
+   "Tanzania": 7,
+   "Mozambique": 6,
+   "Malawi": 3,
+   "Zambia": 7,
+   "Burundi": 3,
+   "Rwanda": 4,
+   "Iraq": 5,
+   "Turkey": 6,
+   "France": 7,
+   "Suriname": 2,
+   "Belgium": 3,
+   "Luxembourg": 3,
+   "Germany": 7,
+   "Switzerland": 6,
+   "Italy": 3,
+   "Andorra": 2,
+   "Spain": 2,
+   "Guyana": 2,
+   "Venezuela": 2,
+   "Algeria": 6,
+   "Morocco": 1,
+   "Western Sahara": 2,
+   "Mauritania": 3,
+   "Republic of the Congo": 4,
+   "Angola": 3,
+   "Cameroon": 5,
+   "Gabon": 2,
+   "Belarus": 5,
+   "Ukraine": 7,
+   "Moldova": 2,
+   "Romania": 5,
+   "Hungary": 7,
+   "Slovakia": 5,
+   "Poland": 6,
+   "Lithuania": 3,
+   "Latvia": 3,
+   "Namibia": 3,
+   "Botswana": 3,
+   "South Africa": 5,
+   "Zimbabwe": 4,
+   "Eswatini": 2,
+   "Oman": 2,
+   "Saudi Arabia": 4,
+   "Yemen": 1,
+   "United Arab Emirates": 1,
+   "Uzbekistan": 5,
+   "Turkmenistan": 3,
+   "Azerbaijan": 6,
+   "Georgia": 3,
+   "Estonia": 1,
+   "Finland": 2,
+   "Norway": 2,
+   "Czechia": 4,
+   "Austria": 9,
+   "Netherlands": 1,
+   "Sweden": 1,
+   "Cambodia": 2,
+   "Thailand": 2,
+   "Armenia": 5,
+   "Albania": 3,
+   "Kosovo": 4,
+   "North Macedonia": 5,
+   "Serbia": 8,
+   "Bulgaria": 4,
+   "Greece": 3,
+   "Montenegro": 4,
+   "Iran": 6,
+   "Libya": 5,
+   "Chad": 6,
+   "Niger": 7,
+   "Tunisia": 1,
+   "Croatia": 4,
+   "Slovenia": 3,
+   "Guinea": 5,
+   "Liberia": 2,
+   "Sierra Leone": 1,
+   "Guinea-Bissau": 1,
+   "Senegal": 3,
+   "Mali": 7,
+   "Ivory Coast": 4,
+   "Liechtenstein": 2,
+   "Kuwait": 1,
+   "Burkina Faso": 6,
+   "Ghana": 2,
+   "Bosnia and Herzegovina": 3,
+   "Benin": 3,
+   "Nigeria": 3,
+   "Togo": 2,
+   "Guatemala": 2,
+   "Honduras": 1,
+   "El Salvador": 1,
+   "Belize": 1,
+   "Mexico": 1,
+   "Equatorial Guinea": 1
+  }
+ },
+ "nei": {
+  "top": [
+   {
+    "unit": "RUS",
+    "name": "Russia",
+    "n": 14,
+    "km": 19013,
+    "wiki": 14
+   },
+   {
+    "unit": "CH1",
+    "name": "China",
+    "n": 14,
+    "km": 18995,
+    "wiki": 14
+   },
+   {
+    "unit": "FR1",
+    "name": "France",
+    "n": 11,
+    "km": 3321,
+    "wiki": 11
+   },
+   {
+    "unit": "BRA",
+    "name": "Brazil",
+    "n": 10,
+    "km": 12300,
+    "wiki": 10
+   },
+   {
+    "unit": "COD",
+    "name": "DR Congo",
+    "n": 9,
+    "km": 9480,
+    "wiki": 9
+   },
+   {
+    "unit": "DEU",
+    "name": "Germany",
+    "n": 9,
+    "km": 3009,
+    "wiki": 9
+   },
+   {
+    "unit": "TZA",
+    "name": "Tanzania",
+    "n": 8,
+    "km": 3751,
+    "wiki": 8
+   },
+   {
+    "unit": "TUR",
+    "name": "Turkey",
+    "n": 8,
+    "km": 2387,
+    "wiki": 8
+   },
+   {
+    "unit": "AUT",
+    "name": "Austria",
+    "n": 8,
+    "km": 2080,
+    "wiki": 8
+   },
+   {
+    "unit": "SRB",
+    "name": "Serbia",
+    "n": 8,
+    "km": 1893,
+    "wiki": 8
+   },
+   {
+    "unit": "MLI",
+    "name": "Mali",
+    "n": 7,
+    "km": 7242,
+    "wiki": 7
+   },
+   {
+    "unit": "SDN",
+    "name": "Sudan",
+    "n": 7,
+    "km": 6438,
+    "wiki": 7
+   },
+   {
+    "unit": "DZA",
+    "name": "Algeria",
+    "n": 7,
+    "km": 6152,
+    "wiki": 7
+   },
+   {
+    "unit": "ZMB",
+    "name": "Zambia",
+    "n": 7,
+    "km": 5602,
+    "wiki": 8
+   },
+   {
+    "unit": "NER",
+    "name": "Niger",
+    "n": 7,
+    "km": 5586,
+    "wiki": 7
+   },
+   {
+    "unit": "ETH",
+    "name": "Ethiopia",
+    "n": 7,
+    "km": 5222,
+    "wiki": 6
+   }
+  ],
+  "china": 14,
+  "russia": 14,
+  "france": 11,
+  "brazil": 10,
+  "germany": 9,
+  "one": [
+   "Brunei",
+   "Canada",
+   "Cyprus",
+   "Denmark",
+   "Dominican Republic",
+   "Haiti",
+   "Ireland",
+   "Lesotho",
+   "Monaco",
+   "Northern Cyprus",
+   "Papua New Guinea",
+   "Portugal",
+   "Qatar",
+   "San Marino",
+   "South Korea",
+   "The Gambia",
+   "Timor-Leste",
+   "Vatican City"
+  ],
+  "n_one": 18,
+  "n_none": 39,
+  "n_with": 161,
+  "n_units": 200,
+  "cmp_n": 160,
+  "cmp_same": 150,
+  "cmp_diff": [
+   {
+    "name": "Afghanistan",
+    "ne": 6,
+    "wiki": 7
+   },
+   {
+    "name": "Bahrain",
+    "ne": 0,
+    "wiki": 1
+   },
+   {
+    "name": "Botswana",
+    "ne": 3,
+    "wiki": 4
+   },
+   {
+    "name": "Canada",
+    "ne": 1,
+    "wiki": 2
+   },
+   {
+    "name": "Ethiopia",
+    "ne": 7,
+    "wiki": 6
+   },
+   {
+    "name": "United Kingdom",
+    "ne": 4,
+    "wiki": 3
+   },
+   {
+    "name": "India",
+    "ne": 6,
+    "wiki": 7
+   },
+   {
+    "name": "Netherlands",
+    "ne": 3,
+    "wiki": 2
+   },
+   {
+    "name": "Saudi Arabia",
+    "ne": 7,
+    "wiki": 8
+   },
+   {
+    "name": "Zambia",
+    "ne": 7,
+    "wiki": 8
+   }
+  ],
+  "wiki_one": [
+   "Brunei",
+   "Dominican Republic",
+   "Haiti",
+   "Lesotho",
+   "Monaco",
+   "Papua New Guinea",
+   "Portugal",
+   "Qatar",
+   "Republic of Ireland",
+   "San Marino",
+   "South Korea",
+   "The Gambia",
+   "Timor-Leste",
+   "United Kingdom",
+   "Vatican City"
+  ],
+  "mean": 4.0,
+  "second_name": "China",
+  "austria": 8,
+  "cmp_diff_n": 10
+ },
+ "borders": {
+  "total_km": 231642,
+  "n_pairs": 325,
+  "longest": [
+   {
+    "a": "Canada",
+    "b": "United States",
+    "km": 7936
+   },
+   {
+    "a": "Kazakhstan",
+    "b": "Russia",
+    "km": 6658
+   },
+   {
+    "a": "Argentina",
+    "b": "Chile",
+    "km": 4946
+   },
+   {
+    "a": "China",
+    "b": "Mongolia",
+    "km": 4378
+   },
+   {
+    "a": "China",
+    "b": "Russia",
+    "km": 3544
+   },
+   {
+    "a": "Mongolia",
+    "b": "Russia",
+    "km": 2913
+   },
+   {
+    "a": "Bolivia",
+    "b": "Brazil",
+    "km": 2664
+   },
+   {
+    "a": "India",
+    "b": "Pakistan",
+    "km": 2657
+   }
+  ],
+  "shortest": [
+   {
+    "a": "Spain",
+    "b": "Morocco",
+    "km": 21.49
+   },
+   {
+    "a": "Croatia",
+    "b": "Montenegro",
+    "km": 17.91
+   },
+   {
+    "a": "Egypt",
+    "b": "Palestine",
+    "km": 12.34
+   },
+   {
+    "a": "France",
+    "b": "Netherlands",
+    "km": 10.02
+   },
+   {
+    "a": "France",
+    "b": "Monaco",
+    "km": 9.54
+   },
+   {
+    "a": "Azerbaijan",
+    "b": "Turkey",
+    "km": 7.63
+   },
+   {
+    "a": "Spain",
+    "b": "United Kingdom",
+    "km": 1.77
+   },
+   {
+    "a": "Italy",
+    "b": "Vatican City",
+    "km": 0.43
+   }
+  ],
+  "longest_country": "RUS",
+  "longest_country_name": "Russia",
+  "longest_country_km": 19013,
+  "china_km": 18995,
+  "russia_km": 19013,
+  "wiki_china_km": 22147,
+  "wiki_russia_km": 20017,
+  "vatican_m": 430,
+  "gib_m": 1770,
+  "cus_km": 7936,
+  "kzru_km": 6658
+ },
+ "land": {
+  "n": 45,
+  "doubly": [
+   "Liechtenstein",
+   "Uzbekistan"
+  ],
+  "names": [
+   "Afghanistan",
+   "Andorra",
+   "Armenia",
+   "Austria",
+   "Azerbaijan",
+   "Belarus",
+   "Bhutan",
+   "Bolivia",
+   "Botswana",
+   "Burkina Faso",
+   "Burundi",
+   "Central African Republic",
+   "Chad",
+   "Czechia",
+   "Eswatini",
+   "Ethiopia",
+   "Hungary",
+   "Kazakhstan",
+   "Kosovo",
+   "Kyrgyzstan",
+   "Laos",
+   "Lesotho",
+   "Liechtenstein",
+   "Luxembourg",
+   "Malawi",
+   "Mali",
+   "Moldova",
+   "Mongolia",
+   "Nepal",
+   "Niger",
+   "North Macedonia",
+   "Paraguay",
+   "Rwanda",
+   "San Marino",
+   "Serbia",
+   "Slovakia",
+   "South Sudan",
+   "Switzerland",
+   "Tajikistan",
+   "Turkmenistan",
+   "Uganda",
+   "Uzbekistan",
+   "Vatican City",
+   "Zambia",
+   "Zimbabwe"
+  ],
+  "liechtenstein_nb": [
+   "Austria",
+   "Switzerland"
+  ],
+  "uzbekistan_nb": [
+   "Afghanistan",
+   "Kazakhstan",
+   "Kyrgyzstan",
+   "Tajikistan",
+   "Turkmenistan"
+  ],
+  "largest": "KA1",
+  "largest_name": "Kazakhstan",
+  "caspian_km2": 397054,
+  "wiki_n": 44,
+  "enclaved": [
+   "Lesotho",
+   "San Marino",
+   "Vatican City"
+  ],
+  "n_doubly": 2
+ },
+ "ne": {
+  "features": 258,
+  "polygons": 4274,
+  "edges": 475559,
+  "exclave_parts": 50,
+  "types": {
+   "coastal exclave": 19,
+   "part of a shared island": 17,
+   "enclave": 13,
+   "landlocked exclave": 1
+  },
+  "units_with": 29,
+  "most_unit": "GB1",
+  "most_name": "United Kingdom",
+  "most_n": 4,
+  "largest": "United States",
+  "largest_km2": 1427512,
+  "smallest": "Nicaragua",
+  "smallest_km2": 1.19,
+  "enclaves": [
+   {
+    "name": "Uzbekistan",
+    "place": "Sokh",
+    "km2": 399.45,
+    "within": "Kyrgyzstan"
+   },
+   {
+    "name": "Tajikistan",
+    "place": "Vorukh",
+    "km2": 119.46,
+    "within": "Kyrgyzstan"
+   },
+   {
+    "name": "Malawi",
+    "place": "Likoma Island",
+    "km2": 119.24,
+    "within": "Mozambique"
+   },
+   {
+    "name": "Oman",
+    "place": "Madha",
+    "km2": 98.18,
+    "within": "United Arab Emirates"
+   },
+   {
+    "name": "Malawi",
+    "place": "Chizumulu Island",
+    "km2": 80.23,
+    "within": "Mozambique"
+   },
+   {
+    "name": "Uzbekistan",
+    "place": "Shakhimardan",
+    "km2": 58.3,
+    "within": "Kyrgyzstan"
+   },
+   {
+    "name": "Armenia",
+    "place": "Artsvashen",
+    "km2": 35.24,
+    "within": "Azerbaijan"
+   },
+   {
+    "name": "Tajikistan",
+    "place": "Sarvan",
+    "km2": 30.5,
+    "within": "Uzbekistan"
+   },
+   {
+    "name": "Azerbaijan",
+    "place": "Yukhari Askipara",
+    "km2": 26.81,
+    "within": "Armenia"
+   },
+   {
+    "name": "Spain",
+    "place": "Llívia",
+    "km2": 13.18,
+    "within": "France"
+   },
+   {
+    "name": "Azerbaijan",
+    "place": "Barkhudarli",
+    "km2": 7.34,
+    "within": "Armenia"
+   },
+   {
+    "name": "United Arab Emirates",
+    "place": "Nahwa",
+    "km2": 7.28,
+    "within": "Oman"
+   },
+   {
+    "name": "Cyprus",
+    "place": "Famagusta and eastern Larnaca (Cyprus)",
+    "km2": 1.47,
+    "within": "United Kingdom"
+   }
+  ],
+  "sokh_km2": 399.45,
+  "border_km": 231642,
+  "sea_km": 914513,
+  "by_unit": [
+   {
+    "name": "United Kingdom",
+    "n": 4
+   },
+   {
+    "name": "Indonesia",
+    "n": 3
+   },
+   {
+    "name": "Cyprus",
+    "n": 3
+   },
+   {
+    "name": "Spain",
+    "n": 3
+   },
+   {
+    "name": "Azerbaijan",
+    "n": 3
+   },
+   {
+    "name": "Oman",
+    "n": 2
+   },
+   {
+    "name": "Netherlands",
+    "n": 2
+   },
+   {
+    "name": "United States",
+    "n": 2
+   },
+   {
+    "name": "Russia",
+    "n": 2
+   },
+   {
+    "name": "Malaysia",
+    "n": 2
+   }
+  ],
+  "n_enclave": 13,
+  "n_coastal": 19,
+  "n_island": 17,
+  "n_landlocked": 1
+ },
+ "txt": {
+  "one_ne": "Brunei, Canada, Cyprus, Denmark, Dominican Republic, Haiti, Ireland, Lesotho, Monaco, Northern Cyprus, Papua New Guinea, Portugal, Qatar, San Marino, South Korea, The Gambia, Timor-Leste, Vatican City",
+  "landlocked": "Afghanistan, Andorra, Armenia, Austria, Azerbaijan, Belarus, Bhutan, Bolivia, Botswana, Burkina Faso, Burundi, Central African Republic, Chad, Czechia, Eswatini, Ethiopia, Hungary, Kazakhstan, Kosovo, Kyrgyzstan, Laos, Lesotho, Liechtenstein, Luxembourg, Malawi, Mali, Moldova, Mongolia, Nepal, Niger, North Macedonia, Paraguay, Rwanda, San Marino, Serbia, Slovakia, South Sudan, Switzerland, Tajikistan, Turkmenistan, Uganda, Uzbekistan, Vatican City, Zambia, Zimbabwe",
+  "ne_enclaves": "Sokh (Uzbekistan in Kyrgyzstan), Vorukh (Tajikistan in Kyrgyzstan), Likoma Island (Malawi in Mozambique), Madha (Oman in United Arab Emirates), Chizumulu Island (Malawi in Mozambique), Shakhimardan (Uzbekistan in Kyrgyzstan), Artsvashen (Armenia in Azerbaijan), Sarvan (Tajikistan in Uzbekistan), Yukhari Askipara (Azerbaijan in Armenia), Llívia (Spain in France), Barkhudarli (Azerbaijan in Armenia), Nahwa (United Arab Emirates in Oman), Famagusta and eastern Larnaca (Cyprus) (Cyprus in United Kingdom)"
+ },
+ "source": {
+  "articles": 35,
+  "pages": 37,
+  "facts_checked": 98,
+  "revids": {
+   "Baarle-Hertog": 1375646116,
+   "Baarle-Nassau": 1374958061,
+   "Bir Tawil": 1377306827,
+   "Büsingen am Hochrhein": 1381375892,
+   "Cabinda Province": 1379291246,
+   "Campione d'Italia": 1380840280,
+   "Ceuta": 1381896212,
+   "Condominium (international law)": 1379384271,
+   "Dahagram-Angarpota": 1375726745,
+   "Doubly landlocked country": 1377715267,
+   "Enclave and exclave": 1379038567,
+   "Hans Island": 1375816329,
+   "India-Bangladesh enclaves": 1376307970,
+   "Isla de los Faisanes": 1381049972,
+   "Jungholz": 1376263980,
+   "Kaliningrad Oblast": 1382459682,
+   "Kleinwalsertal": 1380258009,
+   "Landlocked country": 1377715267,
+   "List of countries and territories by land borders": 1382121948,
+   "List of countries that border only one other country": 1379580410,
+   "List of enclaves and exclaves": 1378450919,
+   "List of tripoints": 1367080204,
+   "Llívia": 1374532206,
+   "Madha": 1377951852,
+   "Melilla": 1381744763,
+   "Musandam Governorate": 1379359280,
+   "Märket": 1383238902,
+   "Nahwa": 1382973846,
+   "Nakhchivan Autonomous Republic": 1380806142,
+   "Northwest Angle": 1377833798,
+   "Pene-exclave": 1379038567,
+   "Point Roberts, Washington": 1382317302,
+   "Quadripoint": 1381298137,
+   "Sankovo-Medvezhye": 1352277197,
+   "Terra nullius": 1380971148,
+   "Tripoint": 1379426480,
+   "Vennbahn": 1359463274
+  },
+  "wd_rows": 2739,
+  "wd_enclave_items": 178,
+  "wd_layers": {
+   "subnational": 127,
+   "international": 29,
+   "historic or other": 16
+  },
+  "wd_intl": 29,
+  "wd_types": 32,
+  "year": 2026,
+  "articles_minus1": 34
+ },
+ "meta": {
+  "page": "https://maps.tristanhotham.com/border-oddities/",
+  "repo": "https://github.com/Tristan-Hotham/border-oddities",
+  "doi": "10.5281/zenodo.23873011",
+  "blog": "https://blog.tristanhotham.com/2026/10/31/border-oddities/",
+  "slug": "border-oddities"
+ },
+ "facts": {
+  "pheasant_m2": 6820,
+  "bir_tawil_km2": 2060,
+  "marked_ha": 3.3,
+  "hans_m": 1280,
+  "hans_year": 2022,
+  "busingen_m": 680,
+  "llivia_km": 1.6,
+  "campione_road_km": 14,
+  "point_roberts_km": 40,
+  "point_roberts_pop": 1191,
+  "nwangle_pop": 149,
+  "kaliningrad_km2": 15125,
+  "cabinda_km2": 7290,
+  "musandam_km2": 1800,
+  "tripoints_2020": 181,
+  "kazungula_m": "100 to 150",
+  "landlocked_wiki": 44,
+  "pyrenees": 1659,
+  "maastricht": 1843,
+  "tin_bigha": "178 by 85 m"
+ },
+ "tour": [
+  {
+   "id": "baarle",
+   "t": "Baarle",
+   "k": "Enclaves inside enclaves",
+   "c": [
+    51.441,
+    4.93
+   ],
+   "z": 10.6,
+   "bb": [
+    4.62,
+    51.3,
+    5.24,
+    51.58
+   ],
+   "own": [
+    "BEL"
+   ],
+   "pts": [
+    [
+     51.4369,
+     4.9286,
+     "Baarle"
+    ]
+   ],
+   "s": "Twenty-two pieces of Belgium sit inside the Netherlands here, and 8 pieces of the Netherlands sit inside those, or inside Belgium proper. The smallest Belgian parcel, H7, is 2,469 square metres. Wikipedia's parcel table has the border running through about 54 homes; in H7 it splits a front door, which has one Belgian and one Dutch house number. Natural Earth draws none of this: at 1:10 million Baarle is just the Netherlands."
+  },
+  {
+   "id": "cooch",
+   "t": "Cooch Behar",
+   "k": "The world's only counter-counter-enclave",
+   "c": [
+    26.2,
+    88.85
+   ],
+   "z": 8.6,
+   "bb": [
+    88.35,
+    25.85,
+    89.35,
+    26.55
+   ],
+   "own": [
+    "IND"
+   ],
+   "pts": [
+    [
+     26.149911,
+     88.762161,
+     "Dahala Khagrabari"
+    ],
+    [
+     26.300278,
+     88.945278,
+     "Dahagram"
+    ]
+   ],
+   "s": "Until midnight on 31 July 2015, 102 pieces of India sat inside Bangladesh and 71 pieces of Bangladesh inside India, with 24 counter-enclaves inside those. One, Dahala Khagrabari, was a patch of India, inside Bangladesh, inside India, inside Bangladesh: 6,880 square metres of farmland. The swap gave Bangladesh 111 enclaves and India 51. Only Dahagram-Angarpota is left, joined to Bangladesh by the Tin Bigha Corridor."
+  },
+  {
+   "id": "swiss",
+   "t": "Büsingen and Campione",
+   "k": "Switzerland's two foreign islands",
+   "c": [
+    46.8,
+    8.85
+   ],
+   "z": 7.0,
+   "bb": [
+    8.3,
+    45.7,
+    9.3,
+    47.85
+   ],
+   "own": [
+    "CHE"
+   ],
+   "pts": [
+    [
+     47.69694,
+     8.69028,
+     "Büsingen"
+    ],
+    [
+     45.967,
+     8.967,
+     "Campione"
+    ]
+   ],
+   "s": "Büsingen am Hochrhein is a German village of 7.62 km² surrounded by Switzerland, at its narrowest about 680 m from Germany, and inside the Swiss customs area. Campione d'Italia, an Italian town of 1.6 km² on Lake Lugano, is less than a kilometre from Italy as the crow flies but over 14 km by road through Switzerland. Neither appears in Natural Earth: both are swallowed by Switzerland."
+  },
+  {
+   "id": "llivia",
+   "t": "Llívia",
+   "k": "A town, not a village",
+   "c": [
+    42.464,
+    1.98
+   ],
+   "z": 10.6,
+   "bb": [
+    1.75,
+    42.33,
+    2.2,
+    42.58
+   ],
+   "own": [
+    "ESP"
+   ],
+   "pts": [
+    [
+     42.46444,
+     1.98083,
+     "Llívia"
+    ]
+   ],
+   "s": "The Treaty of the Pyrenees of 1659 gave France the villages of the Cerdanya valley. Llívia was a town, so it stayed Spanish: 12.84 km² of Spain about 1.6 km inside France. This one is big enough for Natural Earth, which draws it at 13.2 km²."
+  },
+  {
+   "id": "jungholz",
+   "t": "Jungholz",
+   "k": "Attached by a single point",
+   "c": [
+    47.574,
+    10.447
+   ],
+   "z": 10.4,
+   "bb": [
+    10.2,
+    47.45,
+    10.7,
+    47.68
+   ],
+   "own": [
+    "AUT"
+   ],
+   "pts": [
+    [
+     47.57361,
+     10.44722,
+     "Jungholz"
+    ]
+   ],
+   "s": "Jungholz is Austrian, but it touches the rest of Austria only at one point, the summit of the Sorgschrofen, where four borders meet. Every road in comes through Germany. Natural Earth, which works at about a kilometre's precision, does not separate it from Austria."
+  },
+  {
+   "id": "kazungula",
+   "t": "Kazungula",
+   "k": "A quadripoint that is not",
+   "c": [
+    -17.794,
+    25.26
+   ],
+   "z": 11.0,
+   "bb": [
+    25.0,
+    -17.95,
+    25.5,
+    -17.62
+   ],
+   "own": [],
+   "pts": [
+    [
+     -17.794107,
+     25.259781,
+     "Kazungula"
+    ]
+   ],
+   "s": "Botswana, Namibia, Zambia and Zimbabwe come within a whisker of meeting here, where the Chobe joins the Zambezi. Wikipedia says all four states agreed in the late 2000s that Botswana and Zambia share a border of about 150 m, so there are two tripoints rather than one quadripoint; the Kazungula Bridge has crossed it since 2021. Natural Earth draws a single point where all four meet: the only quadripoint in its 1:10 million world."
+  },
+  {
+   "id": "roberts",
+   "t": "Point Roberts",
+   "k": "South of the 49th parallel",
+   "c": [
+    48.99,
+    -123.06
+   ],
+   "z": 10.6,
+   "bb": [
+    -123.35,
+    48.9,
+    -122.75,
+    49.12
+   ],
+   "own": [
+    "US1"
+   ],
+   "pts": [
+    [
+     48.98639,
+     -123.05694,
+     "Point Roberts"
+    ]
+   ],
+   "s": "The 49th parallel cut the tip off the Tsawwassen peninsula, leaving a piece of Washington State reachable by land only through 40 km of Canada. Its 1,191 residents (2020) have their own ZIP code. Natural Earth draws it as a separate part of the United States of 5.4 km²."
+  },
+  {
+   "id": "angle",
+   "t": "Northwest Angle",
+   "k": "A mapping mistake from 1783",
+   "c": [
+    49.33,
+    -95.1
+   ],
+   "z": 9.0,
+   "bb": [
+    -95.6,
+    48.95,
+    -94.5,
+    49.55
+   ],
+   "own": [
+    "US1"
+   ],
+   "pts": [
+    [
+     49.39,
+     -95.153,
+     "Northwest Angle"
+    ]
+   ],
+   "s": "The 1783 Treaty of Paris drew the border from a map that got the Lake of the Woods wrong. The result is the only part of the contiguous United States north of the 49th parallel, reachable by land only through Manitoba. 149 people lived there in 2020."
+  },
+  {
+   "id": "kaliningrad",
+   "t": "Kaliningrad",
+   "k": "Russia on the Baltic",
+   "c": [
+    54.75,
+    21.3
+   ],
+   "z": 6.7,
+   "bb": [
+    19.2,
+    53.7,
+    23.2,
+    55.6
+   ],
+   "own": [
+    "RUS"
+   ],
+   "pts": [
+    [
+     54.71,
+     20.51,
+     "Kaliningrad"
+    ]
+   ],
+   "s": "Russia's westernmost region, the northern half of what was East Prussia, is bordered by Poland, Lithuania and the Baltic Sea. Wikipedia gives it 15,125 km²; Natural Earth's outline, which leaves out the lagoons, measures 13,449 km²."
+  },
+  {
+   "id": "nakhchivan",
+   "t": "Nakhchivan",
+   "k": "A landlocked exclave",
+   "c": [
+    39.25,
+    45.4
+   ],
+   "z": 7.1,
+   "bb": [
+    44.3,
+    38.6,
+    46.8,
+    40.0
+   ],
+   "own": [
+    "AZE"
+   ],
+   "pts": [
+    [
+     39.21,
+     45.41,
+     "Nakhchivan"
+    ]
+   ],
+   "s": "Azerbaijan's exclave of 5,500 km² is bordered by Armenia, Iran and Turkey and has no coast at all. In Natural Earth it is the only exclave that has no coast and touches more than one country."
+  },
+  {
+   "id": "cabinda",
+   "t": "Cabinda",
+   "k": "Angola north of the Congo",
+   "c": [
+    -5.0,
+    12.4
+   ],
+   "z": 7.3,
+   "bb": [
+    11.3,
+    -6.3,
+    13.4,
+    -4.2
+   ],
+   "own": [
+    "AGO"
+   ],
+   "pts": [
+    [
+     -5.55,
+     12.19,
+     "Cabinda"
+    ]
+   ],
+   "s": "A strip of the Democratic Republic of the Congo, the country's only coast, separates Cabinda from the rest of Angola. Wikipedia gives the province 7,290 km²; Natural Earth draws 6,702 km²."
+  },
+  {
+   "id": "madha",
+   "t": "Musandam, Madha and Nahwa",
+   "k": "Oman, the Emirates, Oman, the Emirates",
+   "c": [
+    25.6,
+    56.25
+   ],
+   "z": 8.2,
+   "bb": [
+    55.85,
+    24.85,
+    56.65,
+    26.45
+   ],
+   "own": [
+    "OMN"
+   ],
+   "pts": [
+    [
+     25.28444,
+     56.33306,
+     "Madha"
+    ],
+    [
+     25.26833,
+     56.28028,
+     "Nahwa",
+     "l"
+    ],
+    [
+     25.917,
+     56.283,
+     "Musandam"
+    ]
+   ],
+   "s": "Oman's Musandam peninsula, on the Strait of Hormuz, is cut off from the rest of Oman by the United Arab Emirates. Halfway between the two lies Madha, a piece of Oman surrounded by the Emirates, and inside Madha lies Nahwa, a village of about 40 buildings that belongs to Sharjah. The lines were settled in 1969. Natural Earth draws all three, Nahwa at 7.3 km²."
+  },
+  {
+   "id": "pheasant",
+   "t": "Pheasant Island",
+   "k": "Six months French, six months Spanish",
+   "c": [
+    43.3428,
+    -1.7656
+   ],
+   "z": 12.0,
+   "bb": [
+    -1.92,
+    43.27,
+    -1.62,
+    43.42
+   ],
+   "own": [],
+   "pts": [
+    [
+     43.34278,
+     -1.76556,
+     "Pheasant Island"
+    ]
+   ],
+   "s": "This river island in the Bidasoa, 6,820 square metres in the condominium table, belongs to both France and Spain. France runs it from 1 August to 31 January, Spain from 1 February to 31 July. Louis XIV met his bride here, the Treaty of the Pyrenees was signed here, and there are no pheasants."
+  },
+  {
+   "id": "birtawil",
+   "t": "Bir Tawil",
+   "k": "The land nobody wants",
+   "c": [
+    21.87,
+    33.75
+   ],
+   "z": 7.6,
+   "bb": [
+    32.6,
+    21.1,
+    36.9,
+    22.9
+   ],
+   "own": [],
+   "pts": [
+    [
+     21.86917,
+     33.74778,
+     "Bir Tawil"
+    ]
+   ],
+   "s": "Two lines drawn by Britain, in 1899 and 1902, disagree. Egypt claims the 1899 line and Sudan the 1902 one, because each gives it the larger Halaib Triangle on the Red Sea. That leaves Bir Tawil, 2,060 km² of desert, claimed by neither. Natural Earth draws it as an indeterminate zone, which this page does not count as a country."
+  },
+  {
+   "id": "market",
+   "t": "Märket",
+   "k": "A border that zigzags round a lighthouse",
+   "c": [
+    60.3008,
+    19.1314
+   ],
+   "z": 8.6,
+   "bb": [
+    18.35,
+    59.95,
+    20.15,
+    60.55
+   ],
+   "own": [],
+   "pts": [
+    [
+     60.30083,
+     19.13139,
+     "Märket"
+    ]
+   ],
+   "s": "A treaty of 1809 ran the border between Sweden and Finland straight through the middle of this 3.3 hectare skerry. In 1885 Finland built a lighthouse on its highest point, which turned out to be on the Swedish half. In 1985 the line was redrawn as an inverted S of about 480 m, putting the lighthouse in Finland with no net change of territory. It is the smallest sea island shared by two countries, and far too small for Natural Earth."
+  }
+ ],
+ "tour_n": 15,
+ "sizes_n": 267,
+ "condos": [
+  {
+   "name": "Abyei Area",
+   "states": "South Sudan Sudan",
+   "km2": 10546.0,
+   "created": "9 January 2005"
+  },
+  {
+   "name": "Antarctica",
+   "states": "29 state parties",
+   "km2": 14200000.0,
+   "created": "1 December 1959"
+  },
+  {
+   "name": "Brčko District",
+   "states": "Bosnia and Herzegovina : Federation of Bosnia and Herzegovina Republika Srpska",
+   "km2": 493.0,
+   "created": "8 March 2000"
+  },
+  {
+   "name": "Gulf of Fonseca",
+   "states": "El Salvador Honduras Nicaragua",
+   "km2": 3200.0,
+   "created": "24 May 1980"
+  },
+  {
+   "name": "Joint Regime Area",
+   "states": "Colombia Jamaica",
+   "km2": null,
+   "created": "November 1993"
+  },
+  {
+   "name": "Koalou",
+   "states": "Benin Burkina Faso",
+   "km2": 68.0,
+   "created": "March 2008"
+  },
+  {
+   "name": "Lake Constance",
+   "states": "Austria Germany Switzerland",
+   "km2": 536.0,
+   "created": "No official treaty"
+  },
+  {
+   "name": "Lake Titicaca",
+   "states": "Bolivia Peru",
+   "km2": 8372.0,
+   "created": "1987"
+  },
+  {
+   "name": "Moselle",
+   "states": "Germany Luxembourg",
+   "km2": 0.723,
+   "created": "1816"
+  },
+  {
+   "name": "MOU 74 Box",
+   "states": "Australia Indonesia",
+   "km2": 50000.0,
+   "created": "1974"
+  },
+  {
+   "name": "Paraná River",
+   "states": "Brazil Paraguay",
+   "km2": null,
+   "created": "13 August 1973"
+  },
+  {
+   "name": "Pheasant Island",
+   "states": "France Spain",
+   "km2": 0.00682,
+   "created": "1659"
+  },
+  {
+   "name": "Río de la Plata",
+   "states": "Argentina Uruguay",
+   "km2": 35500.0,
+   "created": "19 November 1973"
+  },
+  {
+   "name": "Tort-Kocho",
+   "states": "Kyrgyzstan Tajikistan",
+   "km2": null,
+   "created": "13 March 2025"
+  },
+  {
+   "name": "Yacyretá Dam",
+   "states": "Argentina Paraguay",
+   "km2": null,
+   "created": "27 March 1974"
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+<!-- wp:paragraph -->
+<p><em>There is a front door in the Netherlands with a Belgian house number. There was, until 2015, a field in India inside Bangladesh inside India inside Bangladesh. I went looking for every strange border in the world, and then checked what a map can actually see.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/border-oddities/">Explore the interactive map and tour</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23873011">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>An enclave is a piece of one country with another country on every side. Wikipedia keeps a long list of them, along with exclaves, semi-enclaves, pieces of countries you can only drive to through a neighbour, and islands split down the middle. I turned the national-level part of that list into a map: {{wiki.mapped|int}} places, with every tripoint I could compute from Natural Earth, the free map of the world's countries that most data maps are drawn on.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_map.png|World map with coloured dots for 107 border oddities and small black triangles for 167 tripoints. Red dots for true enclaves cluster in western Europe, the Caucasus and Central Asia, green dots for divided islands run along the Canada and United States border, and the triangles crowd Europe and Africa where many countries meet|Every national-level oddity in Wikipedia's lists that the sources place on the map, by type, with tripoints computed from Natural Earth.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Forty-two true enclaves</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Strictly, a true enclave is both: entirely surrounded by one other country, and part of a country somewhere else. Wikipedia lists {{wiki.true_enclaves|int}} of them, in {{wiki.true_parcels|int}} separate pieces, belonging to {{wiki.n_owner_countries|int}} countries. Germany owns the most, {{wiki.top_owner_n|int}}: Büsingen on the Rhine, inside Switzerland, and {{wiki.vennbahn_n|int}} scraps of land cut off when the Treaty of Versailles handed Belgium a railway line that ran through Germany. Belgium owns the most pieces, {{wiki.top_parcels|int}}, all in one Dutch town.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_owners.png|Bar chart of true international enclaves by owner country. Germany leads with 6, then Azerbaijan and Cyprus with 4, Argentina and Tajikistan with 3. Belgium has a single entry made of 22 pieces and the Netherlands one of 8|Who owns the world's true enclaves. Light bars are islands or water; labels give the number of separate pieces.}}
+
+<!-- wp:paragraph -->
+<p>That town is Baarle. Medieval land deals between the Lords of Breda and the Dukes of Brabant, written down in 1843, left {{baarle.belgian|int}} pieces of Belgium scattered through the Netherlands, and {{baarle.dutch|int}} pieces of the Netherlands inside those or inside Belgium. The smallest Belgian parcel is {{baarle.smallest_m2|int}} square metres. Wikipedia's parcel tables have the border running through about {{baarle.houses_split|int}} homes, and in one place through the middle of a front door, which has a Belgian house number and a Dutch one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>Until 2015 a farmer in Dahala Khagrabari lived in India, inside Bangladesh, inside India, inside Bangladesh.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:paragraph -->
+<p>Baarle is nothing next to what there was in Bengal. Wikipedia counts {{chhits.indian|int}} Indian enclaves in Bangladesh and {{chhits.bangladeshi|int}} Bangladeshi enclaves in India, with {{chhits.counter_bd|int}} and {{chhits.counter_in|int}} counter-enclaves inside them, and one counter-counter-enclave: Dahala Khagrabari, {{chhits.dk_m2|int}} square metres of India in the middle of all that. {{chhits.people_2010|int}} people lived in the enclaves in 2010. At midnight on {{chhits.swap_date|raw}} the two countries swapped them; only Dahagram-Angarpota survives. Today the deepest nesting left is in the mountains of Arabia, where Nahwa, a village of the emirate of Sharjah, sits inside Madha, a piece of Oman, which sits inside the United Arab Emirates.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_insets.png|Fifteen small maps drawn from Natural Earth: Baarle, Cooch Behar, Büsingen and Campione, Llívia, Jungholz, Kazungula, Point Roberts, the Northwest Angle, Kaliningrad, Nakhchivan, Cabinda, Musandam with Madha and Nahwa, Pheasant Island, Bir Tawil and Märket, each with the owner's land in red and a dot on the place|The fifteen stops on the tour, as Natural Earth draws them. Several are too small to appear at all.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">From a front garden to a kingdom</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The smallest entry in Wikipedia's list is Rückschlag, {{wiki.smallest_entry_m2|int}} square metres of Germany: a house and its garden. The largest true enclave on land is Uzbekistan's Sokh inside Kyrgyzstan, {{wiki.largest_land_km2|int}} km². Then there are the three countries that are themselves enclaves: the Vatican and San Marino inside Italy, and Lesotho inside South Africa, {{wiki.lesotho_km2|int}} km², more than ten million times the size of Baarle's smallest parcel.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_sizes.png|Strip chart on a log scale of the areas of enclaves and exclaves. Baarle's 30 parcels sit between about 2,500 square metres and 150 hectares, 189 parcels of the former India and Bangladesh enclaves from about 1,000 square metres to 16 square kilometres, today's true enclaves from a garden to a few hundred square kilometres, and the enclaved countries reach Lesotho at 30,355 square kilometres|Every enclave and exclave with an area in the sources, on a log scale.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Where three countries meet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Natural Earth's countries share their border points exactly, which means a computer can find every place where three of them meet. I count {{tri.n|int}}. China has the most, {{tri.leader_n|int}}, and China and Russia also have the most neighbours, {{nei.china|int}} each. On the number of neighbours, the map and Wikipedia agree for {{nei.cmp_same|int}} of {{nei.cmp_n|int}} countries, and the exceptions are oddities in their own right, like Canada and Denmark, which have shared a border only since they split Hans Island in 2022.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_neighbours.png|Two bar charts. Left, countries with the most neighbours in Natural Earth: Russia and China 14, France 11, Brazil 10, DR Congo and Germany 9. Right, the most tripoints: China 15, Russia 10, Austria and DR Congo 9. Black ticks mark Wikipedia's figures, which mostly match|Neighbours and tripoints per country: Natural Earth (bars) against Wikipedia (ticks).}}
+
+<!-- wp:paragraph -->
+<p>The map also finds one point where four countries meet, at Kazungula on the Zambezi: Botswana, Namibia, Zambia and Zimbabwe. On the ground it is not a quadripoint. According to Wikipedia, the four agreed in the late 2000s that Botswana and Zambia share a border about 150 m long, now crossed by a bridge. At the scale of the map, 150 m vanishes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Landlocked, twice</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Counting the Caspian as a lake, {{land.n|int}} countries on the map have no coast. Two are doubly landlocked, with only landlocked neighbours: Liechtenstein, between Austria and Switzerland, and Uzbekistan, between Afghanistan, Kazakhstan, Kyrgyzstan, Tajikistan and Turkmenistan. To reach the sea from either you must cross at least two borders.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_landlocked.png|World map with landlocked countries in orange across Africa, Central Asia, South America and central Europe, Liechtenstein and Uzbekistan in red as the two doubly landlocked countries, and countries with only one neighbour, such as Canada, Portugal and Ireland, in pale blue|Landlocked and doubly landlocked countries, and the countries with a single neighbour.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Shared, unclaimed, and too small to see</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pheasant Island, {{facts.pheasant_m2|int}} square metres in a river between France and Spain, is French from August to January and Spanish from February to July, and has been shared since 1659. It has no pheasants. Bir Tawil, {{facts.bir_tawil_km2|int}} km² of desert between Egypt and Sudan, belongs to nobody, because each country prefers the line that gives it the larger Halaib Triangle on the Red Sea. And Märket, a rock in the Baltic, has a border shaped like a backwards S, redrawn in 1985 so that its lighthouse would be in Finland.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most of these places are too small for a world map. Of the {{wiki.true_enclaves|int}} true enclaves, Natural Earth draws only {{wiki.true_in_ne|int}} as separate pieces; Baarle, Büsingen and Campione are simply not there. What the map does contain, {{ne.exclave_parts|int}} detached pieces of countries that touch a neighbour, includes a couple that come from the drawing rather than the world. All the borders here are Natural Earth's de facto lines and Wikipedia's descriptions, and neither is an endorsement of any claim.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I read Wikipedia's List of enclaves and exclaves and {{source.articles_minus1|int}} other articles, saved with their revision ids, and kept the national-level tables and lists. Places are put on the map from the list's own coordinates, the infobox of each place's article, or the Natural Earth piece that is the place. From Natural Earth's 1:10m countries, grouped by sovereignty, I computed neighbours, border lengths, tripoints, detached pieces and landlocked status from the edges that countries share. The code checks every number in the text, and {{source.facts_checked|int}} quoted facts word for word against the articles. The paper sets out every step and caveat.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/border-oddities/">Explore the interactive map and tour</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23873011">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/border-oddities">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Wikipedia contributors, <a href="https://en.wikipedia.org/wiki/List_of_enclaves_and_exclaves">List of enclaves and exclaves</a> and related articles (revision ids in the data), CC BY-SA 4.0.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://www.naturalearthdata.com/">Natural Earth</a> 1:10m countries and populated places (public domain). Wikidata (CC0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

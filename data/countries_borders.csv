@@ -1,0 +1,201 @@
+unit,name,n_neighbours,neighbours,land_border_km,sea_coast_km,lake_shore_km,zones,tripoints,landlocked,exclave_parts,area_km2,parts,main_part_km2,doubly_landlocked,landlocked_neighbours,wikipedia_neighbours
+AFG,Afghanistan,6,China; Iran; Pakistan; Tajikistan; Turkmenistan; Uzbekistan,5224.9,0.0,0.0,,6,1,0,642182,1,642182,0,3,7.0
+AGO,Angola,4,DR Congo; Namibia; Republic of the Congo; Zambia,4887.8,1884.2,0.0,,3,0,1,1244654,3,1237868,0,1,4.0
+ALB,Albania,4,Greece; Kosovo; Montenegro; North Macedonia,634.2,456.0,0.0,,3,0,0,28336,1,28336,0,2,4.0
+AND,Andorra,2,France; Spain,96.6,0.0,0.0,,2,1,0,452,1,452,0,0,2.0
+ARE,United Arab Emirates,2,Oman; Saudi Arabia,1024.4,1245.4,0.0,,1,0,1,71085,10,70368,0,0,2.0
+ARG,Argentina,5,Bolivia; Brazil; Chile; Paraguay; Uruguay,8590.1,5918.3,0.0,Brazilian Island; Southern Patagonian Ice Field,3,0,2,2782897,8,2761232,0,2,5.0
+ARM,Armenia,4,Azerbaijan; Georgia; Iran; Turkey,1207.7,0.0,0.0,,5,1,1,29588,2,29553,0,1,4.0
+ATG,Antigua and Barbuda,0,,0.0,180.6,0.0,,0,0,0,452,3,282,0,0,0.0
+AU1,Australia,0,,0.0,34104.8,0.0,,0,0,0,7691726,101,7598703,0,0,0.0
+AUT,Austria,8,Czechia; Germany; Hungary; Italy; Liechtenstein; Slovakia; Slovenia; Switzerland,2079.5,0.0,0.0,,9,1,0,83993,1,83993,0,5,8.0
+AZE,Azerbaijan,5,Armenia; Georgia; Iran; Russia; Turkey,1927.3,0.0,725.1,,6,1,3,86250,6,81391,0,1,5.0
+BDI,Burundi,3,DR Congo; Rwanda; Tanzania,895.7,0.0,0.0,,3,1,0,27041,1,27041,0,1,3.0
+BEL,Belgium,4,France; Germany; Luxembourg; Netherlands,1050.6,94.7,0.0,,3,0,0,30670,1,30670,0,1,4.0
+BEN,Benin,4,Burkina Faso; Niger; Nigeria; Togo,1874.9,121.4,0.0,,3,0,0,116113,1,116113,0,2,4.0
+BFA,Burkina Faso,6,Benin; Ghana; Ivory Coast; Mali; Niger; Togo,3272.6,0.0,0.0,,6,1,0,272769,1,272769,0,2,6.0
+BGD,Bangladesh,2,India; Myanmar,2566.1,3138.7,0.0,,1,0,0,136904,22,133774,0,0,2.0
+BGR,Bulgaria,5,Greece; North Macedonia; Romania; Serbia; Turkey,1628.3,338.3,0.0,,4,0,0,112761,1,112761,0,2,5.0
+BHR,Bahrain,0,,0.0,245.7,0.0,,0,0,0,688,7,585,0,0,1.0
+BHS,Bahamas,0,,0.0,3799.7,0.0,,0,0,0,12604,44,3574,0,0,0.0
+BIH,Bosnia and Herzegovina,3,Croatia; Montenegro; Serbia,1296.1,18.4,0.0,,3,0,0,51827,1,51827,0,1,3.0
+BLR,Belarus,5,Latvia; Lithuania; Poland; Russia; Ukraine,2738.9,0.0,0.0,,5,1,0,207499,1,207499,0,0,5.0
+BLZ,Belize,2,Guatemala; Mexico,403.4,782.5,0.0,,1,0,0,22299,10,22010,0,0,2.0
+BOL,Bolivia,5,Argentina; Brazil; Chile; Paraguay; Peru,5901.4,0.0,0.0,,5,1,0,1086811,1,1086811,0,1,5.0
+BRA,Brazil,10,Argentina; Bolivia; Colombia; France; Guyana; Paraguay; Peru; Suriname; Uruguay; Venezuela,12300.5,18674.7,0.0,Brazilian Island,8,0,0,8472670,43,8418130,0,2,10.0
+BRB,Barbados,0,,0.0,89.7,0.0,,0,0,0,444,1,444,0,0,0.0
+BRN,Brunei,1,Malaysia,399.1,184.7,0.0,,0,0,1,5717,2,4418,0,0,1.0
+BTN,Bhutan,2,China; India,1027.0,0.0,0.0,,2,1,0,40421,1,40421,0,0,2.0
+BWA,Botswana,3,Namibia; South Africa; Zimbabwe,3751.2,0.0,0.0,,3,1,0,579029,1,579029,0,1,4.0
+CAF,Central African Republic,6,Cameroon; Chad; DR Congo; Republic of the Congo; South Sudan; Sudan,4935.1,0.0,0.0,,6,1,0,617984,1,617984,0,2,6.0
+CAN,Canada,1,United States,7935.9,137274.0,0.0,,0,0,1,9945629,412,8138058,0,0,2.0
+CH1,China,14,Afghanistan; Bhutan; India; Kazakhstan; Kyrgyzstan; Laos; Mongolia; Myanmar; Nepal; North Korea; Pakistan; Russia; Tajikistan; Vietnam,18995.3,16839.6,0.0,Siachen Glacier,15,0,0,9376306,75,9336706,0,8,14.0
+CHE,Switzerland,5,Austria; France; Germany; Italy; Liechtenstein,1479.4,0.0,0.0,,6,1,0,41436,1,41436,0,2,5.0
+CHL,Chile,3,Argentina; Bolivia; Peru,5932.9,31333.9,0.0,Southern Patagonian Ice Field,2,0,1,736593,163,648332,0,1,3.0
+CIV,Ivory Coast,5,Burkina Faso; Ghana; Guinea; Liberia; Mali,2735.6,1272.8,0.0,,4,0,1,320677,2,320612,0,2,5.0
+CMR,Cameroon,6,Central African Republic; Chad; Equatorial Guinea; Gabon; Nigeria; Republic of the Congo,4299.4,786.6,0.0,,5,0,0,464319,1,464319,0,2,6.0
+COD,DR Congo,9,Angola; Burundi; Central African Republic; Republic of the Congo; Rwanda; South Sudan; Tanzania; Uganda; Zambia,9480.1,210.6,0.0,,9,0,0,2325240,2,2325122,0,6,9.0
+COG,Republic of the Congo,5,Angola; Cameroon; Central African Republic; DR Congo; Gabon,4211.8,175.9,0.0,,4,0,0,344889,1,344889,0,1,5.0
+COL,Colombia,5,Brazil; Ecuador; Panama; Peru; Venezuela,5522.0,3548.6,0.0,,3,0,0,1135118,11,1134546,0,0,5.0
+COM,Comoros,0,,0.0,342.3,0.0,,0,0,0,1672,3,1025,0,0,0.0
+CPV,Republic of Cabo Verde,0,,0.0,845.6,0.0,,0,0,0,3927,11,961,0,0,
+CRI,Costa Rica,2,Nicaragua; Panama,578.6,1453.3,0.0,,0,0,0,51151,4,51093,0,0,2.0
+CU1,Cuba,0,,0.0,5751.8,0.0,,0,0,0,109995,41,105810,0,0,0.0
+CYN,Northern Cyprus,1,United Kingdom,44.6,319.2,0.0,Cyprus UN buffer zone,0,0,0,3320,2,3314,0,0,
+CYP,Cyprus,1,United Kingdom,88.4,236.2,0.0,Cyprus UN buffer zone,0,0,3,5395,4,5198,0,0,1.0
+CZE,Czechia,4,Austria; Germany; Poland; Slovakia,1728.7,0.0,0.0,,4,1,0,78759,1,78759,0,2,4.0
+DEU,Germany,9,Austria; Belgium; Czechia; Denmark; France; Luxembourg; Netherlands; Poland; Switzerland,3008.7,2664.2,0.0,,7,0,1,357674,22,355707,0,4,9.0
+DJI,Djibouti,3,Eritrea; Ethiopia; Somaliland,504.6,318.1,0.0,,2,0,0,21848,1,21848,0,1,3.0
+DMA,Dominica,0,,0.0,127.7,0.0,,0,0,0,730,1,730,0,0,0.0
+DN1,Denmark,1,Germany,55.9,48999.4,0.0,,0,0,0,2198406,154,28626,0,0,1.0
+DOM,Dominican Republic,1,Haiti,260.9,1292.1,0.0,,0,0,0,48440,3,48281,0,0,1.0
+DZA,Algeria,7,Libya; Mali; Mauritania; Morocco; Niger; Tunisia; Western Sahara,6152.5,1203.3,0.0,,6,0,0,2308858,1,2308858,0,2,7.0
+ECU,Ecuador,2,Colombia; Peru,1812.1,2588.7,0.0,,1,0,0,255014,16,246171,0,0,2.0
+EGY,Egypt,4,Israel; Libya; Palestine; Sudan,2494.1,3791.3,270.9,Bir Tawil,2,0,0,1001058,8,1000869,0,0,4.0
+ERI,Eritrea,3,Djibouti; Ethiopia; Sudan,1597.4,1418.8,0.0,,2,0,0,122538,3,121764,0,1,3.0
+ESP,Spain,5,Andorra; France; Morocco; Portugal; United Kingdom,1706.2,5005.8,0.0,,2,0,3,506884,23,494246,0,1,5.0
+EST,Estonia,2,Latvia; Russia,539.9,1490.4,0.0,,1,0,0,45819,8,41624,0,0,2.0
+ETH,Ethiopia,7,Djibouti; Eritrea; Kenya; Somalia; Somaliland; South Sudan; Sudan,5222.4,0.0,0.0,,7,1,0,1127376,1,1127376,0,1,6.0
+FI1,Finland,3,Norway; Russia; Sweden,2386.9,4199.7,0.0,,2,0,0,334001,58,331390,0,0,3.0
+FJI,Fiji,0,,0.0,2608.7,0.0,,0,0,0,18930,44,10893,0,0,0.0
+FR1,France,11,Andorra; Belgium; Brazil; Germany; Italy; Luxembourg; Monaco; Netherlands; Spain; Suriname; Switzerland,3321.1,12193.3,0.0,,7,0,2,666696,145,538723,0,3,11.0
+FSM,Micronesia,0,,0.0,344.0,0.0,,0,0,0,634,20,341,0,0,
+GAB,Gabon,3,Cameroon; Equatorial Guinea; Republic of the Congo,2231.5,1891.3,0.0,,2,0,0,259968,3,259843,0,0,3.0
+GB1,United Kingdom,4,Cyprus; Ireland; Northern Cyprus; Spain,504.8,16723.0,0.0,Cyprus UN buffer zone,0,0,4,261907,141,218624,0,0,3.0
+GEO,Georgia,4,Armenia; Azerbaijan; Russia; Turkey,1403.0,308.0,0.0,,3,0,0,69571,1,69571,0,2,4.0
+GHA,Ghana,3,Burkina Faso; Ivory Coast; Togo,1991.1,587.9,0.0,,2,0,0,238669,1,238669,0,1,3.0
+GIN,Guinea,6,Guinea-Bissau; Ivory Coast; Liberia; Mali; Senegal; Sierra Leone,3160.9,877.2,0.0,,5,0,0,244302,1,244302,0,1,6.0
+GMB,The Gambia,1,Senegal,731.0,496.7,0.0,,0,0,0,10501,1,10501,0,0,1.0
+GNB,Guinea-Bissau,2,Guinea; Senegal,688.3,1915.5,0.0,,1,0,0,32830,13,31357,0,0,2.0
+GNQ,Equatorial Guinea,2,Cameroon; Gabon,488.7,494.0,0.0,,1,0,0,26672,3,24672,0,0,2.0
+GRC,Greece,4,Albania; Bulgaria; North Macedonia; Turkey,1020.7,9480.8,0.0,,3,0,0,131353,74,106704,0,1,4.0
+GRD,Grenada,0,,0.0,114.0,0.0,,0,0,0,347,2,313,0,0,0.0
+GTM,Guatemala,4,Belize; El Salvador; Honduras; Mexico,1523.5,404.0,0.0,,2,0,0,108811,1,108811,0,0,4.0
+GUY,Guyana,3,Brazil; Suriname; Venezuela,2358.0,823.0,0.0,,2,0,0,211214,2,211150,0,0,3.0
+HND,Honduras,3,El Salvador; Guatemala; Nicaragua,1307.4,1505.8,0.0,,1,0,0,112237,7,111907,0,0,3.0
+HRV,Croatia,5,Bosnia and Herzegovina; Hungary; Montenegro; Serbia; Slovenia,1720.9,2731.0,0.0,,4,0,1,55023,25,51491,0,2,5.0
+HTI,Haiti,1,Dominican Republic,260.9,1474.1,0.0,,0,0,0,26892,5,25938,0,0,1.0
+HUN,Hungary,7,Austria; Croatia; Romania; Serbia; Slovakia; Slovenia; Ukraine,1670.5,0.0,0.0,,7,1,0,93201,1,93201,0,3,7.0
+IDN,Indonesia,3,Malaysia; Papua New Guinea; Timor-Leste,2451.8,52375.3,0.0,,0,0,3,1879827,264,529906,0,0,3.0
+IND,India,6,Bangladesh; Bhutan; China; Myanmar; Nepal; Pakistan,10645.0,11015.2,0.0,Siachen Glacier,6,0,0,3150747,35,3143125,0,2,7.0
+IRL,Ireland,1,United Kingdom,370.1,3460.4,0.0,,0,0,0,69445,7,69177,0,0,1.0
+IRN,Iran,7,Afghanistan; Armenia; Azerbaijan; Iraq; Pakistan; Turkey; Turkmenistan,5012.0,2661.4,731.9,,6,0,0,1622510,12,1620677,0,4,7.0
+IRQ,Iraq,6,Iran; Jordan; Kuwait; Saudi Arabia; Syria; Turkey,3394.0,90.7,0.0,,5,0,0,437367,1,437367,0,0,6.0
+IS1,Israel,5,Egypt; Jordan; Lebanon; Palestine; Syria,1069.0,199.7,0.0,,5,0,0,22101,1,22101,0,0,5.0
+ISL,Iceland,0,,0.0,5212.7,0.0,,0,0,0,102390,5,102362,0,0,0.0
+ITA,Italy,6,Austria; France; San Marino; Slovenia; Switzerland; Vatican City,1542.1,6023.1,0.0,,3,0,0,301185,29,250835,0,4,6.0
+JAM,Jamaica,0,,0.0,640.5,0.0,,0,0,0,11033,1,11033,0,0,0.0
+JOR,Jordan,5,Iraq; Israel; Palestine; Saudi Arabia; Syria,1656.1,26.9,0.0,,5,0,0,88863,1,88863,0,0,5.0
+JPN,Japan,0,,0.0,15474.3,0.0,,0,0,0,373508,109,229141,0,0,0.0
+KA1,Kazakhstan,5,China; Kyrgyzstan; Russia; Turkmenistan; Uzbekistan,11734.5,0.0,2095.4,,4,1,0,2720765,6,2720362,0,3,5.0
+KEN,Kenya,5,Ethiopia; Somalia; South Sudan; Tanzania; Uganda,3288.1,821.9,0.0,,4,0,0,585703,2,585530,0,3,5.0
+KGZ,Kyrgyzstan,4,China; Kazakhstan; Tajikistan; Uzbekistan,3742.7,0.0,0.0,,4,1,0,198990,1,198990,0,3,4.0
+KHM,Cambodia,3,Laos; Thailand; Vietnam,2062.0,793.1,0.0,,2,0,0,181060,6,180798,0,1,3.0
+KIR,Kiribati,0,,0.0,1163.0,0.0,,0,0,0,950,35,436,0,0,0.0
+KNA,Saint Kitts and Nevis,0,,0.0,106.4,0.0,,0,0,0,264,2,176,0,0,0.0
+KOR,South Korea,1,North Korea,203.9,4859.5,0.0,,0,0,0,98544,53,93718,0,0,1.0
+KOS,Kosovo,4,Albania; Montenegro; North Macedonia; Serbia,559.4,0.0,0.0,,4,1,0,10913,1,10913,0,2,4.0
+KWT,Kuwait,2,Iraq; Saudi Arabia,421.6,482.7,0.0,,1,0,0,17474,4,16683,0,0,2.0
+LAO,Laos,5,Cambodia; China; Myanmar; Thailand; Vietnam,4388.6,0.0,0.0,,5,1,0,228114,1,228114,0,0,5.0
+LBN,Lebanon,2,Israel; Syria,389.5,226.3,0.0,,1,0,0,10004,1,10004,0,0,2.0
+LBR,Liberia,3,Guinea; Ivory Coast; Sierra Leone,1277.4,605.4,0.0,,2,0,0,95298,1,95298,0,0,3.0
+LBY,Libya,6,Algeria; Chad; Egypt; Niger; Sudan; Tunisia,4290.5,1780.9,0.0,,5,0,0,1623761,1,1623761,0,2,6.0
+LCA,Saint Lucia,0,,0.0,106.6,0.0,,0,0,0,605,1,605,0,0,0.0
+LIE,Liechtenstein,2,Austria; Switzerland,59.2,0.0,0.0,,2,1,0,137,1,137,1,2,2.0
+LKA,Sri Lanka,0,,0.0,1982.1,0.0,,0,0,0,66291,5,65966,0,0,0.0
+LSO,Lesotho,1,South Africa,784.2,0.0,0.0,,0,1,0,30107,1,30107,0,0,1.0
+LTU,Lithuania,4,Belarus; Latvia; Poland; Russia,1205.1,212.2,0.0,,3,0,1,64939,2,64806,0,1,4.0
+LUX,Luxembourg,3,Belgium; France; Germany,263.3,0.0,0.0,,3,1,0,2608,1,2608,0,0,3.0
+LVA,Latvia,4,Belarus; Estonia; Lithuania; Russia,1040.1,523.9,0.0,,3,0,0,64576,1,64576,0,1,4.0
+MAR,Morocco,3,Algeria; Spain; Western Sahara,2904.6,2709.3,0.0,,1,0,0,591745,1,591745,0,0,3.0
+MCO,Monaco,1,France,9.5,7.1,0.0,,0,0,0,19,1,19,0,0,1.0
+MDA,Moldova,2,Romania; Ukraine,1324.4,0.0,0.0,,2,1,0,33206,1,33206,0,0,2.0
+MDG,Madagascar,0,,0.0,5430.0,0.0,,0,0,0,592984,3,592484,0,0,0.0
+MDV,Maldives,0,,0.0,518.1,0.0,,0,0,0,109,176,35,0,0,0.0
+MEX,Mexico,3,Belize; Guatemala; United States,3690.0,15549.9,0.0,,1,0,0,1957847,51,1952159,0,0,3.0
+MHL,Marshall Islands,0,,0.0,406.0,0.0,,0,0,0,165,22,41,0,0,0.0
+MKD,North Macedonia,5,Albania; Bulgaria; Greece; Kosovo; Serbia,719.7,0.0,0.0,,5,1,0,25385,1,25385,0,2,5.0
+MLI,Mali,7,Algeria; Burkina Faso; Guinea; Ivory Coast; Mauritania; Niger; Senegal,7242.1,0.0,0.0,,7,1,0,1252724,1,1252724,0,2,7.0
+MLT,Malta,0,,0.0,108.2,0.0,,0,0,0,326,2,261,0,0,0.0
+MMR,Myanmar,5,Bangladesh; China; India; Laos; Thailand,5211.7,6308.7,0.0,,4,0,0,663159,39,658367,0,1,5.0
+MNE,Montenegro,5,Albania; Bosnia and Herzegovina; Croatia; Kosovo; Serbia,582.0,167.6,0.0,,4,0,0,13727,1,13727,0,2,5.0
+MNG,Mongolia,2,China; Russia,7290.8,0.0,0.0,,2,1,0,1564649,1,1564649,0,0,2.0
+MOZ,Mozambique,6,Eswatini; Malawi; South Africa; Tanzania; Zambia; Zimbabwe,4401.2,3836.2,0.0,,6,0,0,788449,4,788153,0,4,6.0
+MRT,Mauritania,4,Algeria; Mali; Senegal; Western Sahara,4889.3,1008.5,0.0,,3,0,0,1036392,5,1036172,0,1,4.0
+MUS,Mauritius,0,,0.0,249.7,0.0,,0,0,0,2014,3,1901,0,0,0.0
+MWI,Malawi,3,Mozambique; Tanzania; Zambia,2716.0,0.0,0.0,,3,1,2,119398,3,119198,0,1,3.0
+MYS,Malaysia,3,Brunei; Indonesia; Thailand,2326.9,5258.0,0.0,,0,0,2,327885,17,130471,0,0,3.0
+NAM,Namibia,4,Angola; Botswana; South Africa; Zambia,3860.7,1505.5,0.0,,3,0,0,822713,1,822713,0,2,4.0
+NER,Niger,7,Algeria; Benin; Burkina Faso; Chad; Libya; Mali; Nigeria,5586.1,0.0,0.0,,7,1,0,1181301,1,1181301,0,3,7.0
+NGA,Nigeria,4,Benin; Cameroon; Chad; Niger,3852.9,2185.2,0.0,,3,0,0,907501,3,907206,0,2,4.0
+NIC,Nicaragua,2,Costa Rica; Honduras,1059.3,1365.4,0.0,,0,0,1,128685,5,128624,0,0,2.0
+NL1,Netherlands,3,Belgium; France; Germany,848.7,1357.5,0.0,,1,0,2,38054,15,35681,0,0,2.0
+NOR,Norway,3,Finland; Russia; Sweden,2437.9,27511.3,0.0,,2,0,0,382067,120,302204,0,0,3.0
+NPL,Nepal,2,China; India,2595.7,0.0,0.0,,2,1,0,147105,1,147105,0,0,2.0
+NRU,Nauru,0,,0.0,19.8,0.0,,0,0,0,29,1,29,0,0,0.0
+NZ1,New Zealand,0,,0.0,10276.1,0.0,,0,0,0,268912,40,113970,0,0,0.0
+OMN,Oman,3,Saudi Arabia; United Arab Emirates; Yemen,1514.4,2286.8,0.0,,2,0,2,311213,6,308809,0,0,3.0
+PAK,Pakistan,4,Afghanistan; China; India; Iran,6069.8,1448.5,0.0,Siachen Glacier,2,0,0,872939,2,872903,0,1,4.0
+PAN,Panama,2,Colombia; Costa Rica,557.9,3374.4,0.0,,0,0,0,74530,15,73380,0,0,2.0
+PER,Peru,5,Bolivia; Brazil; Chile; Colombia; Ecuador,5426.7,2642.7,0.0,,4,0,0,1289866,5,1289807,0,1,5.0
+PHL,Philippines,0,,0.0,17313.1,0.0,,0,0,0,293291,97,105515,0,0,0.0
+PLW,Palau,0,,0.0,274.6,0.0,,0,0,0,492,9,351,0,0,0.0
+PNG,Papua New Guinea,1,Indonesia,748.6,11219.4,0.0,,0,0,0,465147,58,400121,0,0,1.0
+POL,Poland,7,Belarus; Czechia; Germany; Lithuania; Russia; Slovakia; Ukraine,2443.9,679.1,0.0,,6,0,0,313431,1,313431,0,3,7.0
+PRK,North Korea,3,China; Russia; South Korea,1240.3,2144.4,0.0,,1,0,0,122379,10,122220,0,0,3.0
+PRT,Portugal,1,Spain,1064.5,2121.6,0.0,,0,0,0,91391,17,87952,0,0,1.0
+PRY,Paraguay,3,Argentina; Bolivia; Brazil,3484.5,0.0,0.0,,3,1,0,399901,1,399901,0,1,3.0
+PSX,Palestine,3,Egypt; Israel; Jordan,508.1,40.5,0.0,,3,0,1,6074,2,5735,0,0,3.0
+QAT,Qatar,1,Saudi Arabia,53.3,542.1,0.0,,0,0,0,11150,1,11150,0,0,1.0
+ROU,Romania,5,Bulgaria; Hungary; Moldova; Serbia; Ukraine,2344.2,469.0,0.0,,5,0,0,236377,1,236377,0,3,5.0
+RUS,Russia,14,Azerbaijan; Belarus; China; Estonia; Finland; Georgia; Kazakhstan; Latvia; Lithuania; Mongolia; North Korea; Norway; Poland; Ukraine,19013.3,75253.2,1307.4,,10,0,2,16980200,214,16531214,0,4,14.0
+RWA,Rwanda,4,Burundi; DR Congo; Tanzania; Uganda,822.2,0.0,0.0,,4,1,0,25305,1,25305,0,2,4.0
+SAH,Western Sahara,3,Algeria; Mauritania; Morocco,2911.8,74.6,0.0,,2,0,0,90495,1,90495,0,0,3.0
+SAU,Saudi Arabia,7,Iraq; Jordan; Kuwait; Oman; Qatar; United Arab Emirates; Yemen,4151.4,4017.8,0.0,,4,0,0,1921725,11,1920804,0,0,8.0
+SDN,Sudan,7,Central African Republic; Chad; Egypt; Eritrea; Ethiopia; Libya; South Sudan,6437.5,733.0,32.3,Bir Tawil,6,0,0,1855614,2,1855581,0,4,7.0
+SDS,South Sudan,6,Central African Republic; DR Congo; Ethiopia; Kenya; Sudan; Uganda,4823.0,0.0,0.0,,6,1,0,626862,1,626862,0,3,6.0
+SEN,Senegal,5,Guinea; Guinea-Bissau; Mali; Mauritania; The Gambia,2489.9,1254.0,0.0,,3,0,0,196224,1,196224,0,1,5.0
+SGP,Singapore,0,,0.0,97.0,0.0,,0,0,0,511,1,511,0,0,0.0
+SLB,Solomon Islands,0,,0.0,4489.8,0.0,,0,0,0,27199,48,5347,0,0,0.0
+SLE,Sierra Leone,2,Guinea; Liberia,874.8,974.1,0.0,,1,0,0,71612,2,70990,0,0,2.0
+SLV,El Salvador,2,Guatemala; Honduras,475.4,457.7,0.0,,1,0,0,20539,3,20516,0,0,2.0
+SMR,San Marino,1,Italy,29.3,0.0,0.0,,0,1,0,60,1,60,0,0,1.0
+SOL,Somaliland,3,Djibouti; Ethiopia; Somalia,1216.3,753.9,0.0,,2,0,0,167407,1,167407,0,1,
+SOM,Somalia,3,Ethiopia; Kenya; Somaliland,1933.7,2437.7,0.0,,2,0,0,471815,1,471815,0,1,3.0
+SRB,Serbia,8,Bosnia and Herzegovina; Bulgaria; Croatia; Hungary; Kosovo; Montenegro; North Macedonia; Romania,1892.9,0.0,0.0,,8,1,0,77629,1,77629,0,3,8.0
+STP,São Tomé and Principe,0,,0.0,184.7,0.0,,0,0,0,1037,2,881,0,0,0.0
+SUR,Suriname,3,Brazil; France; Guyana,1442.8,607.8,0.0,,2,0,0,145124,1,145124,0,0,3.0
+SVK,Slovakia,5,Austria; Czechia; Hungary; Poland; Ukraine,1266.5,0.0,0.0,,5,1,0,48458,1,48458,0,3,5.0
+SVN,Slovenia,4,Austria; Croatia; Hungary; Italy,911.6,27.1,0.0,,3,0,0,20327,1,20327,0,2,4.0
+SWE,Sweden,2,Finland; Norway,2077.7,6541.8,0.0,,1,0,0,446178,41,440544,0,0,2.0
+SWZ,Eswatini,2,Mozambique; South Africa,536.6,0.0,0.0,,2,1,0,17112,1,17112,0,0,2.0
+SYC,Seychelles,0,,0.0,390.4,0.0,,0,0,0,436,26,164,0,0,0.0
+SYR,Syria,5,Iraq; Israel; Jordan; Lebanon; Turkey,2097.9,175.6,0.0,,4,0,0,185939,1,185939,0,0,5.0
+TCD,Chad,6,Cameroon; Central African Republic; Libya; Niger; Nigeria; Sudan,5788.0,0.0,0.0,,6,1,0,1266282,1,1266282,0,2,6.0
+TGO,Togo,3,Benin; Burkina Faso; Ghana,1602.2,49.9,0.0,,2,0,0,56863,1,56863,0,1,3.0
+THA,Thailand,4,Cambodia; Laos; Malaysia; Myanmar,4545.0,3863.0,0.0,,2,0,0,514454,20,512523,0,1,4.0
+TJK,Tajikistan,4,Afghanistan; China; Kyrgyzstan; Uzbekistan,3531.3,0.0,0.0,,4,1,2,142238,3,142088,0,3,4.0
+TKM,Turkmenistan,4,Afghanistan; Iran; Kazakhstan; Uzbekistan,3649.8,0.0,1886.6,,3,1,0,470850,3,470735,0,3,4.0
+TLS,Timor-Leste,1,Indonesia,208.4,701.2,0.0,,0,0,1,15082,3,14193,0,0,1.0
+TON,Tonga,0,,0.0,345.6,0.0,,0,0,0,603,10,257,0,0,0.0
+TTO,Trinidad and Tobago,0,,0.0,512.3,0.0,,0,0,0,5123,2,4832,0,0,0.0
+TUN,Tunisia,2,Algeria; Libya,1365.8,1387.4,0.0,,1,0,0,156612,4,155956,0,0,2.0
+TUR,Turkey,8,Armenia; Azerbaijan; Bulgaria; Georgia; Greece; Iran; Iraq; Syria,2386.7,5859.9,0.0,,6,0,1,780080,6,756230,0,2,8.0
+TUV,Tuvalu,0,,0.0,77.5,0.0,,0,0,0,23,9,9,0,0,0.0
+TWN,Taiwan,0,,0.0,1270.4,0.0,,0,0,0,36198,8,35858,0,0,0.0
+TZA,Tanzania,8,Burundi; DR Congo; Kenya; Malawi; Mozambique; Rwanda; Uganda; Zambia,3750.9,1903.8,0.0,,7,0,0,941506,7,938517,0,5,8.0
+UGA,Uganda,5,DR Congo; Kenya; Rwanda; South Sudan; Tanzania,2434.7,0.0,0.0,,5,1,0,241854,1,241854,0,2,5.0
+UKR,Ukraine,7,Belarus; Hungary; Moldova; Poland; Romania; Russia; Slovakia,4543.0,1978.1,0.0,,7,0,0,571999,4,571823,0,4,7.0
+URY,Uruguay,2,Argentina; Brazil,1091.2,867.8,0.0,Brazilian Island,0,0,0,177342,1,177342,0,0,2.0
+US1,United States,2,Canada; Mexico,10577.1,69651.3,0.0,,0,0,2,9474941,382,7930896,0,0,2.0
+UZB,Uzbekistan,5,Afghanistan; Kazakhstan; Kyrgyzstan; Tajikistan; Turkmenistan,6085.3,0.0,0.0,,5,1,2,447830,3,447372,1,5,5.0
+VAT,Vatican City,1,Italy,0.4,0.0,0.0,,0,1,0,0,1,0,0,0,1.0
+VCT,St. Vin. and Gren.,0,,0.0,134.8,0.0,,0,0,0,368,5,330,0,0,
+VEN,Venezuela,3,Brazil; Colombia; Guyana,4335.3,5470.9,0.0,,2,0,0,912684,29,909123,0,0,3.0
+VNM,Vietnam,3,Cambodia; China; Laos,3765.4,5766.8,0.0,,2,0,0,328892,25,326814,0,1,3.0
+VUT,Vanuatu,0,,0.0,2262.1,0.0,,0,0,0,12297,27,4078,0,0,0.0
+WSM,Samoa,0,,0.0,341.8,0.0,,0,0,0,2780,2,1135,0,0,0.0
+YEM,Yemen,2,Oman; Saudi Arabia,1513.0,2535.5,0.0,,1,0,0,453076,9,448952,0,0,2.0
+ZAF,South Africa,6,Botswana; Eswatini; Lesotho; Mozambique; Namibia; Zimbabwe,4480.9,3064.9,0.0,,5,0,0,1219827,3,1219507,0,4,6.0
+ZMB,Zambia,7,Angola; DR Congo; Malawi; Mozambique; Namibia; Tanzania; Zimbabwe,5601.8,0.0,0.0,,7,1,0,751915,1,751915,0,2,8.0
+ZWE,Zimbabwe,4,Botswana; Mozambique; South Africa; Zambia,2897.6,0.0,0.0,,4,1,0,389337,1,389337,0,2,4.0

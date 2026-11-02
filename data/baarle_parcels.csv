@@ -1,0 +1,31 @@
+parcel,name,country,area_ha,area_m2,notes,houses_split
+N1,De Loversche Akkers – De Tommelsche Akkers,Netherlands,5.3667,53667,"Counter-enclave surrounded by Belgian exclave H1, in Baarle-Hertog ; contains a mix of dwellings and farmland; boundary of N1 and H1 runs through one building.",0
+N2,De Tommelsche Akkers,Netherlands,1.3751,13751,"Counter-enclave surrounded by Belgian exclave H1, in Baarle-Hertog ; contains 8 dwellings.",0
+N3,De Tommelsche Akkers,Netherlands,0.2863,2863,"Counter-enclave surrounded by Belgian exclave H1, in Baarle-Hertog ; boundary of N3 and H1 bisects the loading dock of a liquor store.",0
+N4,De Rethsche Akkers,Netherlands,1.2324,12324,"Counter-enclave surrounded by Belgian exclave H1, in Baarle-Hertog ; boundary of N4 and H1 runs through a warehouse, with vacant Dutch land to the rear of the warehouse.",0
+N5,De Rethsche Akkers,Netherlands,1.9212,19212,"Counter-enclave surrounded by Belgian exclave H1, in Baarle-Hertog ; boundary of N5 and H1 runs through a furniture showroom, a shed and a barn.",0
+N6,Gierle Straat,Netherlands,1.4527,14527,"Counter-enclave surrounded by Belgian exclave H1, in Baarle-Hertog ; consists of farmland with two buildings.",0
+N7,De Kastelein,Netherlands,0.5812,5812,"Counter-enclave surrounded by Belgian Oordeel exclave H8, in Baarle-Hertog ; occupies part of a field.",0
+N8,Vossenberg,Netherlands,2.8528,28528,"Farmland enclave situated within Zondereigen, Belgium, less than 50 meters south of the Dutch border.",0
+H1,Aen het Klooster Straetje - Hoofdbraek - Loveren - De Boschcovensche Akkers - De Loversche Akkers - De Tommelsche Akkers - De Tommel - De Gierle Straat - De Reth - De Rethsche Akkers - Het Dorp - De Kapel Akkers - De Kastelein,Belgium,153.6448,1536448,"Forms a quadripoint with enclave H2; largest Belgian exclave; encompasses six Dutch enclaves; consists of dwellings for the most part, with outlying farmland and an industrial area; boundary runs through numerous buildings; contains a portion of the former Turnhout-Tilburg rail line, now a cycle path.",0
+H2,De Rethsche Akkers,Belgium,2.4116,24116,Consists of farmland with a single point of connection (quadripoint) between enclaves H1 and H2 in the middle of a corn field.,0
+H3,De Rethsche Akkers,Belgium,0.3428,3428,Occupies part of a field; boundary runs through a shed in one instance.,0
+H4,De Rethsche Akkers,Belgium,1.476,14760,Consists of farmland; boundary runs through a house and three sheds.,1
+H5,De Kapel Akkers,Belgium,0.9245,9245,Consists of farmland with a dwelling.,0
+H6,Hoofdbraek,Belgium,1.7461,17461,Mixed land usage; boundary runs through a warehouse/factory.,0
+H7,De Loversche Akkers,Belgium,0.2469,2469,"Boundary runs through two dwellings, including the middle of one front door (giving it two house numbers: Loveren 2, Baarle-Hertog / Loveren 19, Baarle-Nassau ).",2
+H8,Boschcoven - De Kastelein - De Oordelsche Straat,Belgium,41.8781,418781,"Second-largest Belgian exclave, contains a mix of dwellings and farmland; boundary runs through a barn, a dwelling and two businesses.",1
+H9,De Kapel Akkers,Belgium,0.4005,4005,Boundary runs through a printing factory/warehouse in an industrial area.,0
+H10,De Oordelsche Straat,Belgium,0.65,6500,Consists of farmland.,0
+H11,De Oordelsche Straat,Belgium,0.93,9300,Consists of farmland.,0
+H12,Boschcoven,Belgium,0.2822,2822,Consists of farmland.,0
+H13,Boschcoven,Belgium,1.5346,15346,Boundary runs through about 20 dwellings.,20
+H14,Boschcoven,Belgium,0.7193,7193,Boundary runs through about 13 dwellings.,13
+H15,Boschcoven,Belgium,1.7211,17211,Boundary runs through about 16 dwellings.,16
+H16,Keizershoek - Oordelsche Straat,Belgium,4.4252,44252,"Boundary runs through a house and three sheds; inside one of the sheds, the linear boundary changes direction three times",1
+H17,Moleriet Heide,Belgium,14.9248,149248,"Rural area containing a portion of the former Turnhout-Tilburg rail line, now a cycle path.",0
+H18,De Manke Gooren,Belgium,2.9247,29247,Consists of farmland.,0
+H19,De Peruiters,Belgium,0.6851,6851,Consists of several ponds and a field.,0
+H20,Wurstenbosch - Vossenberg,Belgium,1.1681,11681,Consists of farmland.,0
+H21,Baelbrugsche Beemden,Belgium,1.1845,11845,Consists of farmland.,0
+H22,De Wit Hagen,Belgium,0.2632,2632,South of the village of Ulicoten; occupies part of a field; nationality was contested from the 1830s until 1995 (remained unallocated to either country in boundary treaty of 26 April 1974),0
