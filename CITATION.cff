@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "Islands on Land: Enclaves, Exclaves, Tripoints and Other Oddities of the World's Borders"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.23873011"
+url: "https://maps.tristanhotham.com/border-oddities/"
+repository-code: "https://github.com/Tristan-Hotham/border-oddities"
+license: CC-BY-4.0
+keywords:
+  - "political geography"
+  - "enclaves"
+  - "exclaves"
+  - "tripoints"
+  - "land borders"
+  - "landlocked countries"
+  - "Natural Earth"
+  - "Wikipedia"
+  - "open data"
+  - "maps"
